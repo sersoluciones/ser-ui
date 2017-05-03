@@ -1,0 +1,48 @@
+﻿@import 'mixins.scss';
+
+md-dialog-container .zoomContainer {
+    z-index: 1000;
+}
+
+.zoomContainer {
+    z-index: 1;
+}
+
+img-zoom{
+    position: relative;
+    overflow: hidden;
+}
+
+img-zoom .controls {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    z-index: 3;
+    @include row;
+}
+
+img-zoom:hover .controls {
+    transition: opacity 0.2s ease-in;
+    opacity: 1;
+}
+
+img-zoom .target {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img-zoom .controls > * {
+    margin: 0 8px;
+    background: white;
+}
+
+@media print {
+    img-zoom .controls {
+        display: none;
+    }
+}

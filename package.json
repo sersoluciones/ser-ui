@@ -1,0 +1,33 @@
+{
+  "name": "ser-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sersoluciones/ser-ui.git"
+  },
+  "author": "SER Soluciones SAS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sersoluciones/ser-ui/issues"
+  },
+  "homepage": "https://github.com/sersoluciones/ser-ui#readme",
+  "dependencies": {
+    "gulp": "latest",
+    "gulp-concat": "latest",
+    "gulp-jsonminify": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "latest",
+    "gulp-uglifycss": "latest",
+    "gulp-wrap": "latest",
+    "streamqueue": "latest",
+    "gulp-gzip": "latest"
+  }
+}

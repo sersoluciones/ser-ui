@@ -1,0 +1,40 @@
+﻿@import 'mixins.scss';
+
+.dropzone{
+    position: relative;
+    cursor: pointer;
+    min-height: 200px;
+    padding: 8px;
+    border: 2px dashed rgba(0, 0, 0, 0.55);
+    border-radius: 6px;
+    @include row;
+    @include center-center;
+}
+
+.dropzone.file{
+    min-height: 50px;
+}
+
+.dropzone.dragover{
+    background-color: grey;
+    color: white;
+    border-color: white;
+}
+
+.dropzone .placeholder{
+    text-align: center;
+}
+
+.dropzone .thumbnail{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 200px;
+    width: 200px;
+}
+
+.dropzone .clean-file{
+    position: absolute;
+    bottom: 8px;
+    right: 4px;
+}

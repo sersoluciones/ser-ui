@@ -1,0 +1,38 @@
+﻿@import 'mixins.scss';
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: rgba(0,0,0,0.87);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: rgba(0, 0, 0, 0.15) 0 0 1px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.info {
+    color: $blue-primary;
+    fill: $blue-primary;
+}
+
+.success {
+    color: #24BC24;
+    fill: #24BC24;
+}
+
+.alert {
+    color: #ffbe00;
+    fill: #ffbe00;
+}
+
+.danger {
+    color: red;
+    fill: red;
+}
+
+.warning {
+    color: $orange-font;
+    fill: $orange-font;
+}

@@ -1,0 +1,157 @@
+﻿@import 'mixins';
+
+sidebar {
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: white;
+    z-index: 3;
+    @include md-shadow;
+}
+
+sidebar .logo {
+    position: relative;
+    height: 80px;
+    padding: 0 6px;
+    margin-bottom: 16px;
+    @include row;
+    @include start-center;
+}
+
+sidebar .logo::after {
+    content: '';
+    position: absolute;
+    width: 170px;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+}
+
+sidebar .logo .name{
+    font-size: rem(16);
+    padding-left: 16px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); 
+}
+
+.sidebar-collapse,
+.sidebar-show{
+    position: absolute;
+    background: white;
+    color: #2f323a;
+    width: 33px;
+    height: 37px;
+    top: 8px;
+    left: -2px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    @include row;
+    @include center-center;
+}
+
+.sidebar-show{
+    display: none;
+    width: 37px;
+}
+
+@media (max-width: 900px){
+    .sidebar-show{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+    }
+    .sidebar-collapse{
+        display: none;
+    }
+}
+
+sidebar .user {
+    position: relative;
+    cursor: pointer;
+    @include column;
+    @include center-center;
+}
+
+sidebar .user > img{
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+sidebar .user .name{
+    @include row;
+    @include center-center;
+    font-size: rem(12);
+    margin-top: 10px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+    outline: none;
+}
+
+sidebar .navigation a{
+    text-decoration: none;
+    color: black;
+}
+
+sidebar .navigation a:hover{
+    color: $primary_color;
+    text-decoration: underline;
+}
+
+sidebar .navigation ul{
+    list-style: none;
+    padding: 0;
+}
+
+sidebar .navigation > ul > li > .title {
+    padding: 16px 8px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); 
+    text-decoration: none;
+    font-weight: 600;
+    @include row;
+    @include start-center;
+}
+
+sidebar .navigation ul.submenu{
+    padding: 0 0 24px 24px;
+}
+
+sidebar .navigation ul.submenu li{
+    padding: 4px 0;
+}
+
+sidebar .navigation ul.submenu li a.active{
+    color: $primary_color;
+}
+
+sidebar + .backdrop{
+    display: none;
+    z-index: 20;
+}
+
+@media (max-width : 1000px) {
+    sidebar {
+        position: fixed;
+        z-index: 30;
+        left: -250px;
+        -webkit-transition: all .4s cubic-bezier(.25,.8,.25,1);
+        transition: all .4s cubic-bezier(.25,.8,.25,1);
+    }
+
+    sidebar.show {
+        left: 0;
+        -webkit-transition: all .4s cubic-bezier(.25,.8,.25,1);
+        transition: all .4s cubic-bezier(.25,.8,.25,1);
+    }
+
+    sidebar.show + .backdrop{
+        display: block;
+    }
+}

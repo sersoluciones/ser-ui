@@ -1,0 +1,17 @@
+﻿@import 'mixins';
+
+table.bordered {
+    border: 1px solid $grey-border;
+    border-collapse: collapse;
+}
+
+table.bordered th,
+table.bordered td {
+    border: 1px solid $grey-border;
+    border-collapse: collapse;
+}
+
+table tbody.centered td{
+    text-align: center;
+    vertical-align: middle;
+}
