@@ -23844,6 +23844,34 @@ ser-autocomplete .not-results {
 ser-autocomplete .results .item:hover {
   background: #efefef; }
 
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  line-height: 12px;
+  background: white;
+  padding: 4px;
+  border-radius: 50%;
+  min-width: 14px;
+  min-height: 14px;
+  text-align: center;
+  font-size: 14px; }
+
+.badge.light-blue {
+  background: #84d0fd; }
+
+.badge.blue {
+  background: #84d0fd; }
+
+.badge.yellow {
+  background: #fff242; }
+
+.badge.orange {
+  background: #ff6d00; }
+
+.badge.green {
+  background: #87ec6d; }
+
 .breadcrumb {
   font-size: 0.85714rem;
   margin: 16px;

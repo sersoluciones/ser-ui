@@ -1,0 +1,35 @@
+@import 'mixins.scss';
+
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    line-height: 12px;
+    background: white;
+    padding: 4px;
+    border-radius: 50%;
+    min-width: 14px;
+    min-height: 14px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.badge.light-blue{
+    background: $blue-background;
+}
+
+.badge.blue{
+    background: $blue-background;
+}
+
+.badge.yellow{
+    background: $yellow-background;
+}
+
+.badge.orange{
+    background: $orange-border;
+}
+
+.badge.green{
+    background: $green-background;
+}
