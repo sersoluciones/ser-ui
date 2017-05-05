@@ -1,9 +1,9 @@
 @import 'mixins.scss';
 
-.badge {
+.bdg {
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: -8px;
+    right: -8px;
     line-height: 12px;
     background: white;
     padding: 4px;
@@ -14,26 +14,28 @@
     font-size: 14px;
 }
 
-.badge.light-blue{
+.bdg.light-blue {
+    background: $light-blue-background;
+}
+
+.bdg.blue {
     background: $blue-background;
 }
 
-.badge.blue{
-    background: $blue-background;
+.bdg.green {
+    background: $green-background;
 }
 
-.badge.yellow{
+.bdg.yellow {
     background: $yellow-background;
 }
 
-.badge.orange{
+.bdg.orange {
     background: $orange-border;
+    color: white;
 }
 
-.badge.red{
+.bdg.red {
     background: red;
-}
-
-.badge.green{
-    background: $green-background;
+    color: white;
 }

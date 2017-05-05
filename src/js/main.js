@@ -1,6 +1,15 @@
 ﻿angular.module('SER', [
+    // Angular modules
+    'ngAnimate',
+    'ngMessages',
+    'ngSanitize',
+    'ngResource',
+    'ngMaterial',
+    // Third Party modules
     'ui.router',
+    'ngFileUpload',
     'angular.filter',
+    // SER modules
     'SER.i18n',
     'SER.auth',
     'SER.selector',

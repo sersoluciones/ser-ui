@@ -23869,6 +23869,9 @@ ser-autocomplete .results .item:hover {
 .badge.orange {
   background: #ff6d00; }
 
+.badge.red {
+  background: red; }
+
 .badge.green {
   background: #87ec6d; }
 

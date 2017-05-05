@@ -1,8 +1,5 @@
 ﻿@import 'mixins.scss';
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Lato');
-
 html,
 body{
     margin: 0;
@@ -306,6 +303,10 @@ small {
 
 .show-in-mobile{
     display: none;
+}
+
+.inline{
+    display: inline-block;
 }
 
 .flex,

@@ -18,7 +18,7 @@ gulp.task('deploy-js', function () {
         'bower_components/jquery/dist/jquery.js',
         'bower_components/js-cookie/src/js.cookie.js',
         'bower_components/tooltipster/dist/js/tooltipster.bundle.js',
-        'bower_components/fullcalendar/dist/fullcalendar.js',
+        'src/js/third-party/fullcalendar.js',
         'src/js/third-party/jurlp.js',
         'src/js/third-party/image-zoom.js',
         'src/js/third-party/jquery.daterangepicker.js',
