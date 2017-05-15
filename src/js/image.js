@@ -140,10 +140,10 @@ angular.module('SER.image').directive('imgZoom', ['$timeout', function ($timeout
         template: function () {
             return '' +
                 '<div class="controls">' +
-                    '<button class="icon" ng-click="zoomOut()"><i class="icon-zoom-out"></i></button>' +
-                    '<button class="icon" ng-click="zoomReset()"><i class="icon-zoom-actual"></i></button>' +
-                    '<button class="icon" ng-click="zoomExpand()"><i class="icon-zoom-expand"></i></button>' +
-                    '<button class="icon" ng-click="zoomIn()"><i class="icon-zoom-in"></i></button>' +
+                    '<button class="bttn icon" ng-click="zoomOut()"><i class="icon-zoom-out"></i></button>' +
+                    '<button class="bttn icon" ng-click="zoomReset()"><i class="icon-zoom-actual"></i></button>' +
+                    '<button class="bttn icon" ng-click="zoomExpand()"><i class="icon-zoom-expand"></i></button>' +
+                    '<button class="bttn icon" ng-click="zoomIn()"><i class="icon-zoom-in"></i></button>' +
                 '</div>' +
                 '<div class="loader dots">' + __('loading') + '</div>' +
                 '<img class="target" ng-src="{{ image }}" ng-style="{width: size}" callback-image="/images/' + __("no_image_available.svg") + '" />';

@@ -33,6 +33,7 @@ gulp.task('deploy-js', function () {
         'bower_components/angular-sanitize/angular-sanitize.js',
         'bower_components/angular-ui-router/release/angular-ui-router.js',
         'bower_components/ng-file-upload/ng-file-upload.js',
+        'bower_components/angular-websocket/dist/angular-websocket.js',
         'bower_components/randexp/build/randexp.min.js',
         'src/js/utils.js',
         'src/js/auth.js',
