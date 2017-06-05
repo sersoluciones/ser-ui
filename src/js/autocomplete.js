@@ -10,7 +10,7 @@ angular.module('SER.search').directive('serAutocomplete', ['$http', '$compile', 
             keywordField: '@',
             placeholder: '=?',
             disabled: '=?',
-            selectItem: '=?'
+            selectItem: '&?'
         },
         controller: ['$scope', function ($scope) {
 
@@ -38,7 +38,7 @@ angular.module('SER.search').directive('serAutocomplete', ['$http', '$compile', 
 
             $scope.selectInternalItem = function (item) {
                 if (angular.isFunction($scope.selectItem)) {
-                    $scope.selectItem(item);
+                    $scope.selectItem({ newValue: item });
                 }
 
                 if (hasValue($scope.keywordField)) {
