@@ -37,6 +37,7 @@ gulp.task('deploy-js', function () {
         'bower_components/ng-file-upload/ng-file-upload.js',
         'bower_components/angular-websocket/dist/angular-websocket.js',
         'bower_components/randexp/build/randexp.min.js',
+        'bower_components/JsBarcode/dist/JsBarcode.all.js',
         'src/js/utils.js',
         'src/js/auth.js',
         'src/js/autocomplete.js',
@@ -49,6 +50,7 @@ gulp.task('deploy-js', function () {
         'src/js/selector.js',
         'src/js/tooltipster.js',
         'src/js/validation-match.js',
+        'src/js/barcode.js',
         'src/js/main.js'
     ])
     .pipe(sourcemaps.init({loadMaps: true}))

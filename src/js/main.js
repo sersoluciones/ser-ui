@@ -19,7 +19,8 @@
     'SER.tooltipster',
     'SER.datepicker',
     'SER.loader',
-    'SER.filters'
+    'SER.filters',
+    'SER.barcode'
 ]);
 
 (function (url) {
