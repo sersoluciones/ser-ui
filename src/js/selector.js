@@ -32,10 +32,11 @@ angular.module('SER.selector', []).directive('selector', [
                 closeAfterSelection: '=?'
             },
             link: function (scope, element, attrs, controller, transclude) {
-
-                // Igualar actualizacion de posicion de tooltipster
-                var scrollmask = angular.element('<div class="scroll-mask"><div class="scroll-mask-bar"></div></div>');
+            
                 var dropdown = angular.element(element[0].querySelector('.selector-dropdown'));
+                var originParents = element.parents();
+                var namespace = 'selector-' + Math.round(Math.random() * 1000000);
+                dropdown.attr('id', namespace);
 
                 transclude(scope, function (clone, scope) {
                     var filter = $filter('filter'),
@@ -144,7 +145,7 @@ angular.module('SER.selector', []).directive('selector', [
                         });
                         scope.updateSelected();
                     };
-                    
+
                     // Initialization
                     scope.initialize = function () {
                         if (!angular.isArray(scope.options) || !scope.options.length)
@@ -164,19 +165,33 @@ angular.module('SER.selector', []).directive('selector', [
                         $timeout(scope.setInputWidth);
                     });
 
-                    // Dropdown utilities
-                    scope.dropdownPosition = function () {
-                        var label = input.parent()[0],
-                            functionPosition = angular.element('body').hasClass('md-dialog-is-showing') ? 'getClientRects' : 'getBoundingClientRect';
+                    var dropdownPosition = function () {
+                        var label = input.parent()[0];
 
-                        dropdown.css({
-                            top: label.offsetHeight + label[functionPosition]().top + 'px',
-                            left: label[functionPosition]().left + 'px',
+                        var style = {
+                            top: '',
+                            bottom: '',
+                            left: label.getBoundingClientRect().left + 'px',
                             width: label.offsetWidth + 'px'
-                        });
+                        };
 
-                        element.append(dropdown);
-                        angular.element('body').append(scrollmask);
+                        if (angular.element(document.body).height() - (label.offsetHeight + label.getBoundingClientRect().top) >= 220) {
+                            style.top = label.offsetHeight + label.getBoundingClientRect().top;
+                            dropdown.removeClass('ontop');
+                        } else {
+                        
+                            style.bottom = angular.element(document.body).height() - label.getBoundingClientRect().top;
+                            dropdown.addClass('ontop');
+                        }
+
+                        dropdown.css(style);
+                    };
+
+                    // Dropdown utilities
+                    scope.showDropdown = function () {
+                        dropdownPosition();
+                        angular.element(document.body).append(dropdown);
+
                         $timeout(function () {
                             angular.element(window).triggerHandler('resize');
                         }, 50);
@@ -184,14 +199,13 @@ angular.module('SER.selector', []).directive('selector', [
                     scope.open = function () {
                         if (scope.multiple && (scope.selectedValues || []).length >= scope.limit) return;
                         scope.isOpen = true;
-                        scope.dropdownPosition();
+                        scope.showDropdown();
                         $timeout(scope.scrollToHighlighted);
                     };
                     scope.close = function () {
                         scope.isOpen = false;
-                        scrollmask.detach();
                         dropdown.detach();
-                        scope.resetInput();
+                        scope.resetInput()
                     };
                     var highlight = function (index) {
                         if (scope.filteredOptions.length)
@@ -327,7 +341,7 @@ angular.module('SER.selector', []).directive('selector', [
                             // set input width
                             scope.setInputWidth();
                             // repositionate dropdown
-                            if (scope.isOpen) scope.dropdownPosition();
+                            if (scope.isOpen) scope.showDropdown();
                         });
                     }, true);
 
@@ -382,10 +396,20 @@ angular.module('SER.selector', []).directive('selector', [
                         .on('input', function () {
                             scope.setInputWidth();
                         });
+
                     dropdown
                         .on('mousedown', function (e) {
                             e.preventDefault();
                         });
+
+                    // scrolling may require the tooltip to be moved or even
+                    // repositioned in some cases
+
+                    originParents.each(function (i, parent) {
+                        angular.element(parent).on('scroll.' + namespace, function (e) {
+                            dropdownPosition();
+                        });
+                    });
 
                     // Update select controller
                     scope.$watch(function () { return inputCtrl.$pristine; }, function ($pristine) {
@@ -422,7 +446,14 @@ angular.module('SER.selector', []).directive('selector', [
 
                 scope.$on('$destroy', function () {
                     dropdown.remove();
-                    scrollmask.remove();
+                    dropdown.off('mousedown');
+                    angular.element(element[0].querySelector('.selector-input input')).off('focus blur keydown input ');
+                    angular.element(document.body).off('resize.' + namespace);
+                    originParents.each(function (i, el) {
+                        $(el).off('scroll.' + namespace  + ' resize.' + namespace);
+                    });
+                    // clear the array to prevent memory leaks
+                    originParents = null;
                 });
             },
             template: function (element, attrs) {
@@ -472,4 +503,5 @@ angular.module('SER.selector', []).directive('selector', [
                 return template;
             }
         };
-    }]);
+    }
+]);

@@ -1,0 +1,28 @@
+<html ng-app="SER">
+    <link rel="stylesheet" href="" />
+    <body>
+        <selector ></selector>
+    </body>
+    <script>
+        angular.module('SER').run(function($rootScope){
+            $rootScope.options = [
+                {
+                    label: 'a',
+                    value: 1
+                },
+                {
+                    label: 'b',
+                    value: 2
+                },
+                {
+                    label: 'c',
+                    value: 3
+                },
+                {
+                    label: 'd',
+                    value: 4
+                }
+            ];
+        });
+    </script>
+</html>

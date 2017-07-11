@@ -23248,7 +23248,6 @@ button.print .icon-print:before {
 
 /* Dropdown */
 .selector-dropdown {
-  display: none;
   list-style: none;
   padding: 0 !important;
   margin: 0 !important;
@@ -23257,6 +23256,7 @@ button.print .icon-print:before {
   border: 1px solid #ccc;
   border-top: 0;
   max-height: 220px;
+  height: 220px;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 1000;
@@ -23269,6 +23269,11 @@ button.print .icon-print:before {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.selector-dropdown.ontop {
+  border-top: 1px solid #ccc;
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0; }
+
 .selector-dropdown .selector-option {
   padding: 10px 12px;
   cursor: pointer; }
@@ -23276,9 +23281,6 @@ button.print .icon-print:before {
 .selector-dropdown .selector-option.active,
 .selector-dropdown .selector-option:hover {
   background: #f5fafd; }
-
-.selector-container.open .selector-dropdown {
-  display: block; }
 
 sidebar {
   display: block;
