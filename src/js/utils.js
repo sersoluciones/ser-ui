@@ -28,6 +28,8 @@ function arrayGroupBy(array, field) {
 function hasValue(value) {
     if (angular.isArray(value)) {
         return 0 < value.length;
+    } else if (angular.isDate(value)) {
+        return true;
     } else if (angular.isObject(value)) {
         return !angular.element.isEmptyObject(value);
     } else {
@@ -38,10 +40,10 @@ function hasValue(value) {
 function notValue(value) {
     if (angular.isArray(value)) {
         return 0 === value.length;
+    } else if (angular.isDate(value)) {
+        return false;
     } else if (angular.isObject(value)) {
         return angular.element.isEmptyObject(value);
-    } else if (angular.isObject(value)) {
-        return $.isEmptyObject(value);
     } else {
         return ['', null, undefined, {}, []].indexOf(value) > -1;
     }
