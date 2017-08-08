@@ -23,6 +23,7 @@ angular.module('SER.selector', []).directive('selector', [
                 valueAttr: '@',
                 labelAttr: '@?',
                 options: '=?',
+                dropdownClass: '@?',
                 limit: '=?',
                 rtl: '=?',
                 api: '=?',
@@ -495,7 +496,7 @@ angular.module('SER.selector', []).directive('selector', [
                                 '<span class="selector-icon"></span>' +
                             '</div>' +
                         '</label>' +
-                        '<ul md-virtual-repeat-container md-auto-shrink md-top-index="highlighted" class="selector-dropdown">' +
+                        '<ul md-virtual-repeat-container md-auto-shrink md-top-index="highlighted" class="selector-dropdown ' + attrs.dropdownClass + '">' +
                             '<li md-virtual-repeat="option in filteredOptions" ng-class="{active: highlighted == $index}" class="selector-option" ng-click="set(option)">' + dropdownItemTemplate + '</li>' +
                         '</ul>' +
                     '</div>';
