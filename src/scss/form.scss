@@ -161,7 +161,8 @@ select[disabled]{
 
 .form-group input.ng-invalid.ng-dirty:not(.not-styled),
 .form-group textarea.ng-invalid.ng-dirty:not(.not-styled),
-.form-group select.ng-invalid.ng-dirty:not(.not-styled) {
+.form-group select.ng-invalid.ng-dirty:not(.not-styled),
+.form-group .selector-container.ng-invalid.ng-dirty .selector-input {
     border-color: $red-border;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($red-border,.6);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($red-border, 0.6);

@@ -35,6 +35,7 @@ angular.module('SER.selector', []).directive('selector', [
             link: function (scope, element, attrs, controller, transclude) {
             
                 var dropdown = angular.element(element[0].querySelector('.selector-dropdown'));
+                var selectInput = angular.element(element[0].querySelector('select'));
                 var originParents = element.parents();
                 var namespace = 'selector-' + Math.round(Math.random() * 1000000);
                 dropdown.attr('id', namespace);
@@ -442,6 +443,14 @@ angular.module('SER.selector', []).directive('selector', [
                         });
                     };
 
+                    scope.isDirty = function () {
+                        return selectInput.hasClass('ng-dirty');
+                    };
+
+                    scope.isInvalid = function () {
+                        return selectInput.hasClass('ng-invalid');
+                    };
+
                     scope.initialize();
                 });
 
@@ -479,7 +488,7 @@ angular.module('SER.selector', []).directive('selector', [
                 }
 
                 var template = $templateCache.get('selector/Base') ? $templateCache.get('selector/Base') : '' +
-                    '<div class="selector-container" ng-attr-dir="{{rtl ? \'rtl\' : \'ltr\'}}" ng-class="{open: isOpen, empty: !filteredOptions.length && !search, multiple: multiple, \'has-value\': hasValue(), rtl: rtl, \'remove-button\': removeButton, disabled: disabled}">' +
+                    '<div class="selector-container" ng-attr-dir="{{rtl ? \'rtl\' : \'ltr\'}}" ng-class="{open: isOpen, empty: !filteredOptions.length && !search, \'ng-dirty\': isDirty(), \'ng-invalid\': isInvalid(),multiple: multiple, \'has-value\': hasValue(), rtl: rtl, \'remove-button\': removeButton, disabled: disabled}">' +
                         '<select ' + name + ' ng-required="required && !hasValue()" class="not-styled" ng-model="selectedValues" multiple style="display: none;"></select>' +
                         '<label class="selector-input">' +
                             '<ul class="selector-values">' +
