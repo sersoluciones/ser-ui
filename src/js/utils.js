@@ -33,7 +33,7 @@ function hasValue(value) {
     } else if (angular.isObject(value)) {
         return !angular.element.isEmptyObject(value);
     } else {
-        return ['', null, undefined, {}].indexOf(value) === -1;
+        return ['', null, undefined, NaN].indexOf(value) === -1;
     }
 }
 
@@ -45,7 +45,7 @@ function notValue(value) {
     } else if (angular.isObject(value)) {
         return angular.element.isEmptyObject(value);
     } else {
-        return ['', null, undefined, {}, []].indexOf(value) > -1;
+        return ['', null, undefined, NaN].indexOf(value) > -1;
     }
 }
 
