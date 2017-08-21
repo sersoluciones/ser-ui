@@ -23,7 +23,8 @@
   "dependencies": {
     "angular": "1.6.1",
     "jquery": "3.1.1",
-    "moment": "2.18.1"
+    "moment": "2.18.1",
+    "angular-material": "1.1.4"
   },
   "devDependencies": {
     "angular": "1.6.1",
@@ -31,7 +32,6 @@
     "angular-aria": "1.6.1",
     "angular-filter": "0.5.14",
     "angular-fullscreen": "latest",
-    "angular-material": "1.1.4",
     "angular-messages": "1.6.1",
     "angular-resource": "1.6.1",
     "angular-sanitize": "1.6.1",

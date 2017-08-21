@@ -79,7 +79,6 @@ gulp.task('deploy-js', function () {
         'bower_components/angular-aria/angular-aria.js',
         'bower_components/angular-filter/dist/angular-filter.js',
         'bower_components/angular-fullscreen/src/angular-fullscreen.js',
-        'bower_components/angular-material/angular-material.js',
         'bower_components/angular-messages/angular-messages.js',
         'bower_components/angular-resource/angular-resource.js',
         'bower_components/angular-sanitize/angular-sanitize.js',
