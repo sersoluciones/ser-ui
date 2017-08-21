@@ -75,7 +75,6 @@ gulp.task('deploy-js', function () {
         'src/js/third-party/jurlp.js',
         'src/js/third-party/image-zoom.js',
         'src/js/third-party/jquery.daterangepicker.js',
-        'bower_components/angular/angular.js',
         'bower_components/angular-animate/angular-animate.js',
         'bower_components/angular-aria/angular-aria.js',
         'bower_components/angular-filter/dist/angular-filter.js',
