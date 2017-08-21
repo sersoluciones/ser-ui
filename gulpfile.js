@@ -10,9 +10,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var wrap = require("gulp-wrap");
 var gzip = require("gulp-gzip");
 
-gulp.task('deploy', ['deploy-css', 'deploy-js', 'deploy-css-all', 'deploy-js-all']);
+gulp.task('deploy', ['deploy-css', 'deploy-js', 'deploy-css-bundle', 'deploy-js-bundle']);
 
-gulp.task('deploy-js-all', function () {
+gulp.task('deploy-js-bundle', function () {
     gulp.src([
         'bower_components/moment/moment.js',
         'bower_components/jquery/dist/jquery.js',
@@ -114,7 +114,7 @@ gulp.task('deploy-js', function () {
     .pipe(gulp.dest('gzip/js'));
 });
 
-gulp.task('deploy-css-all', function () {
+gulp.task('deploy-css-bundle', function () {
     streamqueue({ objectMode: true },
         gulp.src([
             'bower_components/angular-material/angular-material.css'
