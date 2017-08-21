@@ -21,20 +21,20 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.6.1",
+    "angular": "1.6.6",
     "jquery": "3.1.1",
     "moment": "2.18.1",
     "angular-material": "1.1.4"
   },
   "devDependencies": {
-    "angular": "1.6.1",
-    "angular-animate": "1.6.1",
-    "angular-aria": "1.6.1",
+    "angular": "1.6.6",
+    "angular-animate": "1.6.6",
+    "angular-aria": "1.6.6",
     "angular-filter": "0.5.14",
     "angular-fullscreen": "latest",
-    "angular-messages": "1.6.1",
-    "angular-resource": "1.6.1",
-    "angular-sanitize": "1.6.1",
+    "angular-messages": "1.6.6",
+    "angular-resource": "1.6.6",
+    "angular-sanitize": "1.6.6",
     "angular-ui-router": "1.0.0-rc.1",
     "angular-websocket": "latest",
     "jquery": "3.1.1",
@@ -43,12 +43,12 @@
     "ng-file-upload": "12.2.13",
     "randexp": "0.4.5",
     "tooltipster": "4.1.7",
-    "angular-i18n": "1.6.1",
+    "angular-i18n": "1.6.6",
     "fullcalendar": "2.1.1",
     "JsBarcode": "3.8.0"
   },
   "resolutions": {
-    "angular": "1.6.1",
+    "angular": "1.6.6",
     "jquery": ">=3.1.1",
     "moment": ">=2.18.1"
   }

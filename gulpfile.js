@@ -10,7 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var wrap = require("gulp-wrap");
 var gzip = require("gulp-gzip");
 
-gulp.task('deploy', ['deploy-css', 'deploy-js', 'deploy-js-all']);
+gulp.task('deploy', ['deploy-css', 'deploy-js', 'deploy-css-all', 'deploy-js-all']);
 
 gulp.task('deploy-js-all', function () {
     gulp.src([
@@ -54,7 +54,7 @@ gulp.task('deploy-js-all', function () {
         'src/js/main.js'
     ])
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(concat('ser-ui.all.js'))
+    .pipe(concat('ser-ui.bundle.js'))
     .pipe(gulp.dest('dist/js'))
     .pipe(uglify())
     .pipe(rename({
@@ -114,13 +114,28 @@ gulp.task('deploy-js', function () {
     .pipe(gulp.dest('gzip/js'));
 });
 
-gulp.task('deploy-css', function () {
+gulp.task('deploy-css-all', function () {
     streamqueue({ objectMode: true },
         gulp.src([
             'bower_components/angular-material/angular-material.css'
         ]),
         gulp.src('src/scss/*.scss').pipe(sass().on('error', sass.logError))
     )
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(concat({path: 'ser-ui.bundle.css', cwd: ''}))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(minifyCss())
+    .pipe(rename({
+            extname: '.min.css'
+        }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(gzip({ append: false }))
+    .pipe(gulp.dest('gzip/css'));
+});
+
+gulp.task('deploy-css', function () {
+    gulp.src('src/scss/*.scss').pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(concat({path: 'ser-ui.css', cwd: ''}))
     .pipe(gulp.dest('dist/css'))
