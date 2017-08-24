@@ -20,7 +20,8 @@
     'SER.datepicker',
     'SER.loader',
     'SER.filters',
-    'SER.barcode'
+    'SER.barcode',
+    'SER.diff'
 ]);
 
 (function (url) {
