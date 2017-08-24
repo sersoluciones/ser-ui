@@ -51,6 +51,7 @@ gulp.task('deploy-js-bundle', function () {
         'src/js/tooltipster.js',
         'src/js/validation-match.js',
         'src/js/barcode.js',
+        'src/js/diff.js',
         'src/js/main.js'
     ])
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -99,6 +100,7 @@ gulp.task('deploy-js', function () {
         'src/js/tooltipster.js',
         'src/js/validation-match.js',
         'src/js/barcode.js',
+        'src/js/diff.js',
         'src/js/main.js'
     ])
     .pipe(sourcemaps.init({loadMaps: true}))
