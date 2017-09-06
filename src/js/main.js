@@ -56,7 +56,7 @@
     // Actually loads the image
     SerImagePowered.src = url;
 
-})('https://www.sersoluciones.com/wp-content/uploads/2017/04/powered.jpg');
+})('https://s3.amazonaws.com/ser-ui/images/powered.jpg');
 
 
 //Routes & Http

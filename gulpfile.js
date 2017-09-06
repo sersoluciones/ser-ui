@@ -149,4 +149,10 @@ gulp.task('deploy-css', function () {
     .pipe(gulp.dest('dist/css'))
     .pipe(gzip({ append: false }))
     .pipe(gulp.dest('gzip/css'));
+
+    gulp.src('src/css/ser-ui-fonts.css').pipe(sass().on('error', sass.logError))
+    .pipe(minifyCss())
+    .pipe(gulp.dest('dist/css'))
+    .pipe(gzip({ append: false }))
+    .pipe(gulp.dest('gzip/css'));
 });
