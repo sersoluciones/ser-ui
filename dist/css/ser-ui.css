@@ -929,7 +929,10 @@ label {
   box-sizing: border-box;
   max-width: 100%; }
 
-.form-group select:not(.not-styled),
+.form-group > input:not(.not-styled),
+.form-group > select:not(.not-styled) {
+  max-height: 33px; }
+
 .form-group .selector-container {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -980,6 +983,11 @@ select[disabled] {
   -webkit-align-content: center;
   align-content: center;
   max-width: 100%; }
+
+.input-group input:not(.not-styled),
+.input-group textarea:not(.not-styled),
+.input-group select:not(.not-styled) {
+  width: 100%; }
 
 .input-group > input:not(.not-styled):first-child,
 .input-group > textarea:not(.not-styled):first-child,
@@ -4848,7 +4856,6 @@ button.print .icon-print:before {
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5); }
 
 .selector-input {
-  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -4865,13 +4872,7 @@ button.print .icon-print:before {
   box-sizing: border-box;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  font-weight: inherit;
-  /*background-color: #f9f9f9;
-	background-image: -webkit-linear-gradient(#fafafa, #eee);
-	background-image:    -moz-linear-gradient(#fafafa, #eee);
-	background-image:     -ms-linear-gradient(#fafafa, #eee);
-	background-image:      -o-linear-gradient(#fafafa, #eee);
-	background-image:         linear-gradient(#fafafa, #eee); */ }
+  font-weight: inherit; }
 
 .selector-container.rtl .selector-input {
   padding-right: .7em;

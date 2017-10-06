@@ -75,7 +75,11 @@ label{
     max-width: 100%;
 }
 
-.form-group select:not(.not-styled),
+.form-group > input:not(.not-styled),
+.form-group > select:not(.not-styled) {
+    max-height: 33px;
+}
+
 .form-group .selector-container{
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -113,6 +117,12 @@ select[disabled]{
     user-select: none;
     @include row;
     @include center-center;
+}
+
+.input-group input:not(.not-styled),
+.input-group textarea:not(.not-styled),
+.input-group select:not(.not-styled) {
+    width: 100%;
 }
 
 .input-group > input:not(.not-styled):first-child, 
