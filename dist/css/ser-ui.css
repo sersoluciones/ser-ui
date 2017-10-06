@@ -984,9 +984,9 @@ select[disabled] {
   align-content: center;
   max-width: 100%; }
 
-.input-group input:not(.not-styled),
-.input-group textarea:not(.not-styled),
-.input-group select:not(.not-styled) {
+.input-group > input:not(.not-styled),
+.input-group > textarea:not(.not-styled),
+.input-group > select:not(.not-styled) {
   width: 100%; }
 
 .input-group > input:not(.not-styled):first-child,
@@ -4604,6 +4604,13 @@ button.print .icon-print:before {
     display: none; }
   md-backdrop {
     background: white; } }
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  text-align: left; }
 
 .loader-wrapper {
   position: absolute;

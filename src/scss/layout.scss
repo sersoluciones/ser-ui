@@ -498,3 +498,11 @@ button.print .icon-print:before {
     }
 
 }
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+}

@@ -119,9 +119,9 @@ select[disabled]{
     @include center-center;
 }
 
-.input-group input:not(.not-styled),
-.input-group textarea:not(.not-styled),
-.input-group select:not(.not-styled) {
+.input-group > input:not(.not-styled),
+.input-group > textarea:not(.not-styled),
+.input-group > select:not(.not-styled) {
     width: 100%;
 }
 
