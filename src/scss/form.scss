@@ -27,6 +27,7 @@ label{
 .form-group {
     position: relative;
     padding: 0 4px 8px;
+    @include column;
 }
 
 .form-group.no-padding {
@@ -43,12 +44,9 @@ label{
 }
 
 .form-group .input-group {
-    //overflow: hidden;
+    overflow-x: hidden;
     position: relative;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    @include row;
 }
 
 .form-group input:not(.not-styled),
@@ -59,7 +57,6 @@ label{
     -ms-flex: 1;
     flex: 1;
     margin: 0;
-    width: calc(100% - 24px);
     padding: 6px 12px;
     font-family: inherit;
     font-size: rem(13);
@@ -70,7 +67,12 @@ label{
     border: 1px solid #989898;
     border-radius: 6px;
     outline: none;
+    -moz-appearance: none;
     -webkit-appearance: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .form-group select:not(.not-styled),
@@ -78,6 +80,8 @@ label{
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     flex: 1;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 

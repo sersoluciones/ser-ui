@@ -872,7 +872,15 @@ label {
 
 .form-group {
   position: relative;
-  padding: 0 4px 8px; }
+  padding: 0 4px 8px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-direction: normal; }
 
 .form-group.no-padding {
   padding-bottom: 0; }
@@ -886,11 +894,16 @@ label {
   letter-spacing: 1px; }
 
 .form-group .input-group {
+  overflow-x: hidden;
   position: relative;
-  width: 100%;
+  box-sizing: border-box;
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  flex-direction: row; }
 
 .form-group input:not(.not-styled),
 .form-group textarea:not(.not-styled),
@@ -900,7 +913,6 @@ label {
   -ms-flex: 1;
   flex: 1;
   margin: 0;
-  width: calc(100% - 24px);
   padding: 6px 12px;
   font-family: inherit;
   font-size: 0.92857rem;
@@ -910,13 +922,20 @@ label {
   border: 1px solid #989898;
   border-radius: 6px;
   outline: none;
-  -webkit-appearance: none; }
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 100%; }
 
 .form-group select:not(.not-styled),
 .form-group .selector-container {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   flex: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .form-group input:not(.not-styled):focus,
