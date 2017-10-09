@@ -66,7 +66,7 @@ angular.module('SER.tooltipster').directive('tooltipsterHtml', function () {
                 position: 'top'
             };
 
-            angular.merge(tooltipster_default, scope.$eval(attrs.tooltipsterMenu));
+            angular.merge(tooltipster_default, scope.$eval(attrs.tooltipsterHtml));
             element.tooltipster(tooltipster_default);
 
         }
