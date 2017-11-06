@@ -59,8 +59,8 @@ gulp.task('deploy-js-bundle', function () {
     .pipe(gulp.dest('dist/js'))
     .pipe(uglify())
     .pipe(rename({
-         extname: '.min.js'
-       }))
+        extname: '.min.js'
+    }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist/js'))
     .pipe(gzip({ append: false }))
@@ -108,8 +108,8 @@ gulp.task('deploy-js', function () {
     .pipe(gulp.dest('dist/js'))
     .pipe(uglify())
     .pipe(rename({
-         extname: '.min.js'
-       }))
+        extname: '.min.js'
+    }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist/js'))
     .pipe(gzip({ append: false }))
@@ -119,7 +119,8 @@ gulp.task('deploy-js', function () {
 gulp.task('deploy-css-bundle', function () {
     streamqueue({ objectMode: true },
         gulp.src([
-            'bower_components/angular-material/angular-material.css'
+            'bower_components/angular-material/angular-material.css',
+            'bower_components/fullcalendar/dist/fullcalendar.css'
         ]),
         gulp.src('src/scss/*.scss').pipe(sass().on('error', sass.logError))
     )
@@ -128,8 +129,8 @@ gulp.task('deploy-css-bundle', function () {
     .pipe(gulp.dest('dist/css'))
     .pipe(minifyCss())
     .pipe(rename({
-            extname: '.min.css'
-        }))
+        extname: '.min.css'
+    }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css'))
     .pipe(gzip({ append: false }))
@@ -143,8 +144,8 @@ gulp.task('deploy-css', function () {
     .pipe(gulp.dest('dist/css'))
     .pipe(minifyCss())
     .pipe(rename({
-            extname: '.min.css'
-        }))
+        extname: '.min.css'
+    }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css'))
     .pipe(gzip({ append: false }))

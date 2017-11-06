@@ -34245,13 +34245,8 @@ ngFileUpload.service('UploadExif', ['UploadResize', '$q', function (UploadResize
 
       var backoffDelay = this._getBackoffDelay(++this._reconnectAttempts);
 
-<<<<<<< HEAD
       var backoffDelaySeconds = backoffDelay / 1000;
       console.log('Reconnecting in ' + backoffDelaySeconds + ' seconds');
-=======
-            angular.merge(tooltipster_default, scope.$eval(attrs.tooltipsterHtml));
-            element.tooltipster(tooltipster_default);
->>>>>>> master
 
       $timeout(_angular2.default.bind(this, this._connect), backoffDelay);
 
@@ -35764,7 +35759,7 @@ angular.module('SER.tooltipster').directive('tooltipsterHtml', function () {
                 position: 'top'
             };
 
-            angular.merge(tooltipster_default, scope.$eval(attrs.tooltipsterMenu));
+            angular.merge(tooltipster_default, scope.$eval(attrs.tooltipsterHtml));
             element.tooltipster(tooltipster_default);
 
         }
