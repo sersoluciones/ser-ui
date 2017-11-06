@@ -112,6 +112,36 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function hasFiles(Files) {
+    
+    var result = false;
+
+    var isFile = function (file) {
+        return file != null && (file instanceof window.Blob || (file.flashId && file.name && file.size));
+    };
+
+    for (var key in Files) {
+        if (isFile(Files[key])) {
+            result = true;
+            break;
+        }
+    }
+
+    return result;
+
+}
+
+function guid() {
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        s4() + '-' + s4() + s4() + s4();
+}
+
+function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+}
+
 window.onbeforeprint = function () {
     console.log('Functionality to run before printing: ', window.location.href);
 };
