@@ -9,6 +9,8 @@
     z-index: 20;
     background: white;
     cursor: wait;
+    @include column;
+    @include center-center;
 }
 
 .loader-wrapper.fixed{
@@ -18,18 +20,11 @@
 }
 
 .loader-wrapper .logo{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     width: 60px;
 }
 
 .loader-wrapper .message{
-    position: absolute;
-    left: calc(50% - 15px);
-    top: calc(50% + 80px);
-    transform: translate(-50%, -50%);
+    margin-top: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
