@@ -27,7 +27,7 @@ angular.module('SER.filters').filter('getItem', ['$filter', function ($filter) {
     };
 }]);
 
-angular.module('SERApp').filter('minutesTime', [function () {
+angular.module('SER.filters').filter('minutesTime', [function () {
     /**
      * input should be a number of minutes to be parsed
      * @param {input} number of minutes
@@ -43,7 +43,7 @@ angular.module('SERApp').filter('minutesTime', [function () {
     };
 }]);
 
-angular.module('SERApp').filter('timeMinutes', [function () {
+angular.module('SER.filters').filter('timeMinutes', [function () {
 
     return function (input) {
         return (parseInt(input.split(':')[0]) * 60) + parseInt(input.split(':')[1]);
@@ -51,7 +51,7 @@ angular.module('SERApp').filter('timeMinutes', [function () {
 
 }]);
 
-angular.module('SERApp').filter('leadingChar', function () {
+angular.module('SER.filters').filter('leadingChar', function () {
     return function (input, width, char) {
         char = char || '0';
         if (hasValue(input)) {
