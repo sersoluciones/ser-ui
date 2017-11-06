@@ -10,7 +10,10 @@
     "dist/js/ser-ui.css"
   ],
   "keywords": [
-    "css", "js", "angular", "spa"
+    "css",
+    "js",
+    "angular",
+    "spa"
   ],
   "license": "MIT",
   "ignore": [
@@ -25,7 +28,8 @@
     "jquery": "3.1.1",
     "moment": "2.18.1",
     "angular-material": "1.1.5",
-    "fullcalendar": "3.6.2"
+    "fullcalendar": "3.6.2",
+    "angularjs-slider": "^6.4.0"
   },
   "devDependencies": {
     "angular-animate": "1.6.6",
