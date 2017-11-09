@@ -1,5 +1,59 @@
 ﻿angular.module('SER.datepicker', []);
 
+angular.module('SER.datepicker').directive('weekDay', function () {
+    return {
+        restrict: 'E',
+        require: ['ngModel'],
+        scope: {
+            ngModel: '='
+        },
+        link: function (scope, element, attrs, controller) {
+
+            scope.toggleDay = function (day) {
+
+                if ('multiple' in attrs) {
+
+                    if (notValue(scope.ngModel)) {
+                        console.log('entra');
+                        scope.ngModel = [];
+                    }
+
+                    if (notInArray(day, scope.ngModel)) {
+                        scope.ngModel.push(day);
+                    } else {
+                        scope.ngModel.splice(scope.ngModel.indexOf(day), 1);
+                    }
+
+                } else {
+                    scope.ngModel = day;
+                }
+                
+            }
+
+            scope.isSet = function (day) {
+                if ('multiple' in attrs) {
+                    return inArray(day, scope.ngModel);
+                } else {
+                    return day === scope.ngModel;
+                }
+            }
+
+        },
+        template: function () {
+            return '' +
+                '<div class="wrapper">' +
+                '<div class="day" ng-click="toggleDay(1)" ng-class="{active: isSet(1)}">' + __('LUN') + '</div>' +
+                '<div class="day" ng-click="toggleDay(2)" ng-class="{active: isSet(2)}">' + __('MAR') + '</div>' +
+                '<div class="day" ng-click="toggleDay(3)" ng-class="{active: isSet(3)}">' + __('MIE') + '</div>' +
+                '<div class="day" ng-click="toggleDay(4)" ng-class="{active: isSet(4)}">' + __('JUE') + '</div>' +
+                '<div class="day" ng-click="toggleDay(5)" ng-class="{active: isSet(5)}">' + __('VIE') + '</div>' +
+                '<div class="day" ng-click="toggleDay(6)" ng-class="{active: isSet(6)}">' + __('SAB') + '</div>' +
+                '<div class="day" ng-click="toggleDay(7)" ng-class="{active: isSet(7)}">' + __('DOM') + '</div>' +
+                '</div>'
+        }
+    };
+});
+
 angular.module('SER.datepicker').directive('serDate', ['$filter', function ($filter) {
 
     return {

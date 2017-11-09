@@ -1,0 +1,31 @@
+@import 'mixins.scss';
+
+.week-day,
+week-day {
+    display: block;
+    padding: 16px;
+}
+
+.week-day .wrapper,
+week-day .wrapper {
+    @include row;
+    @include space-around-center;
+}
+
+.week-day .wrapper .day,
+week-day .wrapper .day {
+    display: -webkit-flex;
+    display: flex;
+    @include center-center;
+    padding: 4px;
+    border: 1px solid $primary_color;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.week-day .wrapper .day.active,
+week-day .wrapper .day.active {
+    background: $primary_color;
+    color: white;
+}
