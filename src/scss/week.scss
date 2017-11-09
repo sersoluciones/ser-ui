@@ -18,7 +18,8 @@ week-day .wrapper .day {
     display: flex;
     @include center-center;
     padding: 4px;
-    border: 1px solid $primary_color;
+    border: 1px solid $blue-border;
+    color: $blue-font;
     border-radius: 50%;
     height: 40px;
     width: 40px;
@@ -26,6 +27,6 @@ week-day .wrapper .day {
 
 .week-day .wrapper .day.active,
 week-day .wrapper .day.active {
-    background: $primary_color;
-    color: white;
+    background: $blue-background;
+    color: $blue-font;
 }

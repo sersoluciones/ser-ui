@@ -14,7 +14,6 @@ angular.module('SER.datepicker').directive('weekDay', function () {
                 if ('multiple' in attrs) {
 
                     if (notValue(scope.ngModel)) {
-                        console.log('entra');
                         scope.ngModel = [];
                     }
 
