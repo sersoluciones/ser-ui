@@ -1,10 +1,12 @@
 ﻿@import 'mixins.scss';
 
-.bttn{
+.fc button,
+.bttn {
     height: 38px;
     padding: 0 20px;
     color: #555;
     font-family: 'Lato', sans-serif;
+    background-image: none;
     font-size: rem(10);
     font-weight: 600;
     line-height: 38px;
@@ -35,13 +37,16 @@
     width: 35px;
 }
 
-.bttn[disabled]{
+.bttn[disabled],
+.fc button.fc-state-disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
 
 .bttn:active,
-.bttn.pressed{
+.bttn.pressed,
+.fc-state-down, 
+.fc-state-active {
     -webkit-box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
     -moz-box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
@@ -112,30 +117,35 @@
     color: $green-font;
 }
 
-.bttn-group{
+.bttn-group,
+.fc-button-group {
     @include row;
 }
 
-.bttn-group .bttn:first-child {
+.bttn-group .bttn:first-child,
+.fc-button-group button:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     margin-right: 0;
     border-right-width: 0;
 }
 
-.bttn-group .bttn:last-child {
+.bttn-group .bttn:last-child,
+.fc-button-group button:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-left: 0;
 }
 
-.bttn-group .bttn:not(:first-child):not(:last-child) {
+.bttn-group .bttn:not(:first-child):not(:last-child),
+.fc-button-group button:not(:first-child):not(:last-child) {
     border-radius: 0;
     margin: 0;
     border-right-width: 0;
 }
 
-.bttn-group .bttn.active{
+.bttn-group .bttn.active,
+.fc-button-group button.active {
     -webkit-box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
     -moz-box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
