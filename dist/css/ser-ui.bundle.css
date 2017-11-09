@@ -24985,3 +24985,53 @@ h1, h2, h3, h4, h5, h6 {
 .warning {
   color: #c35300;
   fill: #c35300; }
+
+.week-day,
+week-day {
+  display: block;
+  padding: 16px; }
+
+.week-day .wrapper,
+week-day .wrapper {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  align-content: center;
+  max-width: 100%; }
+
+.week-day .wrapper .day,
+week-day .wrapper .day {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  align-content: center;
+  max-width: 100%;
+  padding: 4px;
+  border: 1px solid #653182;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px; }
+
+.week-day .wrapper .day.active,
+week-day .wrapper .day.active {
+  background: #653182;
+  color: white; }
