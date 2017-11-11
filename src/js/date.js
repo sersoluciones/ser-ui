@@ -24,7 +24,7 @@ angular.module('SER.datepicker').directive('weekDay', function () {
                     }
 
                 } else {
-                    scope.ngModel = day;
+                    scope.ngModel = day !== scope.ngModel ? day: null;
                 }
                 
             }
