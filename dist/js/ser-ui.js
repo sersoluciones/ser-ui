@@ -34714,7 +34714,6 @@ angular.module('SER.datepicker').directive('weekDay', function () {
                 if ('multiple' in attrs) {
 
                     if (notValue(scope.ngModel)) {
-                        console.log('entra');
                         scope.ngModel = [];
                     }
 
@@ -34725,7 +34724,7 @@ angular.module('SER.datepicker').directive('weekDay', function () {
                     }
 
                 } else {
-                    scope.ngModel = day;
+                    scope.ngModel = day !== scope.ngModel ? day: null;
                 }
                 
             }

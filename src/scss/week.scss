@@ -23,6 +23,7 @@ week-day .wrapper .day {
     border-radius: 50%;
     height: 40px;
     width: 40px;
+    user-select: none;
 }
 
 .week-day .wrapper .day.active,

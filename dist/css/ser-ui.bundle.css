@@ -25026,12 +25026,14 @@ week-day .wrapper .day {
   align-content: center;
   max-width: 100%;
   padding: 4px;
-  border: 1px solid #653182;
+  border: 1px solid #3694f7;
+  color: #185698;
   border-radius: 50%;
   height: 40px;
-  width: 40px; }
+  width: 40px;
+  user-select: none; }
 
 .week-day .wrapper .day.active,
 week-day .wrapper .day.active {
-  background: #653182;
-  color: white; }
+  background: #84d0fd;
+  color: #185698; }
