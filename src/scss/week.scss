@@ -26,6 +26,13 @@ week-day .wrapper .day {
     user-select: none;
 }
 
+.week-day .wrapper .day:active,
+week-day .wrapper .day:active {
+    -webkit-box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
+}
+
 .week-day .wrapper .day.active,
 week-day .wrapper .day.active {
     background: $blue-background;

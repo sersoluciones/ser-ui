@@ -198,27 +198,33 @@ angular.module('SER.selector', []).directive('selector', [
                             angular.element(window).triggerHandler('resize');
                         }, 50);
                     };
+
                     scope.open = function () {
                         if (scope.multiple && (scope.selectedValues || []).length >= scope.limit) return;
                         scope.isOpen = true;
                         scope.showDropdown();
                         $timeout(scope.scrollToHighlighted);
                     };
+
                     scope.close = function () {
                         scope.isOpen = false;
                         dropdown.detach();
                         scope.resetInput()
                     };
+
                     var highlight = function (index) {
                         if (scope.filteredOptions.length)
                             scope.highlighted = (scope.filteredOptions.length + index) % scope.filteredOptions.length;
                     };
+
                     var decrementHighlighted = function () {
                         highlight(scope.highlighted - 1);
                     };
+                    
                     var incrementHighlighted = function () {
                         highlight(scope.highlighted + 1);
                     };
+
                     scope.set = function (option) {
                         if (scope.multiple && (scope.selectedValues || []).length >= scope.limit) return;
 
@@ -234,12 +240,14 @@ angular.module('SER.selector', []).directive('selector', [
                         scope.resetInput();
                         selectCtrl.$setDirty();
                     };
+
                     scope.unset = function (index) {
                         if (!scope.multiple) scope.selectedValues = [];
                         else scope.selectedValues.splice(angular.isDefined(index) ? index : scope.selectedValues.length - 1, 1);
                         scope.resetInput();
                         selectCtrl.$setDirty();
                     };
+
                     scope.keydown = function (e) {
                         switch (e.keyCode) {
                             case KEYS.up:
@@ -299,6 +307,7 @@ angular.module('SER.selector', []).directive('selector', [
                     scope.inOptions = function (options, value) {
                         return options.indexOf(value) >= 0;
                     };
+
                     scope.filterOptions = function () {
                         scope.filteredOptions = filter(scope.options || [], scope.search);
                         if (!angular.isArray(scope.selectedValues)) scope.selectedValues = [];
@@ -326,10 +335,12 @@ angular.module('SER.selector', []).directive('selector', [
                         shadow.remove();
                         return width;
                     };
+
                     scope.setInputWidth = function () {
                         var width = scope.measureWidth() + 1;
                         input.css('width', width + 'px');
                     };
+
                     scope.resetInput = function () {
                         input.val('');
                         scope.setInputWidth();
@@ -352,6 +363,7 @@ angular.module('SER.selector', []).directive('selector', [
                         if (!angular.isDefined(origin)) origin = scope.selectedValues || [];
                         scope.setValue(!scope.multiple ? origin[0] : origin);
                     };
+
                     scope.$watch('selectedValues', function (newValue, oldValue) {
                         if (angular.equals(newValue, oldValue)) return;
                         scope.updateValue();
@@ -360,6 +372,7 @@ angular.module('SER.selector', []).directive('selector', [
                                 ? { newValue: newValue, oldValue: oldValue }
                                 : { newValue: (newValue || [])[0], oldValue: (oldValue || [])[0] });
                     }, true);
+
                     scope.$watchCollection('options', function (newValue, oldValue) {
                         if (angular.equals(newValue, oldValue)) return;
                         scope.updateSelected();
@@ -375,6 +388,7 @@ angular.module('SER.selector', []).directive('selector', [
                                 })[0];
                             }).filter(function (value) { return angular.isDefined(value); }).slice(0, scope.limit);
                     };
+
                     scope.$watch('value', function (newValue, oldValue) {
                         if (angular.equals(newValue, oldValue)) return;
                         scope.updateSelected();
@@ -417,6 +431,7 @@ angular.module('SER.selector', []).directive('selector', [
                     scope.$watch(function () { return inputCtrl.$pristine; }, function ($pristine) {
                         selectCtrl[$pristine ? '$setPristine' : '$setDirty']();
                     });
+
                     scope.$watch(function () { return inputCtrl.$touched; }, function ($touched) {
                         selectCtrl[$touched ? '$setTouched' : '$setUntouched']();
                     });
@@ -425,12 +440,15 @@ angular.module('SER.selector', []).directive('selector', [
                     angular.forEach(['open', 'close'], function (api) {
                         scope.api[api] = scope[api];
                     });
+
                     scope.api.focus = function () {
                         input[0].focus();
                     };
+
                     scope.api.set = function (value) {
                         return scope.value = value;
                     };
+                    
                     scope.api.unset = function (value) {
                         var values = !value ? scope.selectedValues : (scope.selectedValues || []).filter(function (option) { return scope.optionEquals(option, value); }),
                             indexes =

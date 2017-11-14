@@ -10,88 +10,23 @@ var sourcemaps = require('gulp-sourcemaps');
 var wrap = require("gulp-wrap");
 var gzip = require("gulp-gzip");
 
-gulp.task('deploy', ['deploy-css', 'deploy-js', 'deploy-css-bundle', 'deploy-js-bundle']);
-
-gulp.task('deploy-js-bundle', function () {
-    gulp.src([
-        'bower_components/moment/moment.js',
-        'bower_components/fullcalendar/dist/fullcalendar.js',
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/js-cookie/src/js.cookie.js',
-        'bower_components/tooltipster/dist/js/tooltipster.bundle.js',
-        'bower_components/file-saver/FileSaver.js',
-        'src/js/third-party/blob.js',
-        'src/js/third-party/jurlp.js',
-        'src/js/third-party/image-zoom.js',
-        'src/js/third-party/jquery.daterangepicker.js',
-        'bower_components/angular/angular.js',
-        'bower_components/angular-animate/angular-animate.js',
-        'bower_components/angular-aria/angular-aria.js',
-        'bower_components/angular-filter/dist/angular-filter.js',
-        'bower_components/angular-fullscreen/src/angular-fullscreen.js',
-        'bower_components/angular-material/angular-material.js',
-        'bower_components/angular-messages/angular-messages.js',
-        'bower_components/angular-resource/angular-resource.js',
-        'bower_components/angular-sanitize/angular-sanitize.js',
-        'bower_components/angular-ui-router/release/angular-ui-router.js',
-        'bower_components/ng-file-upload/ng-file-upload.js',
-        'bower_components/angular-websocket/dist/angular-websocket.js',
-        'bower_components/randexp/build/randexp.min.js',
-        'bower_components/JsBarcode/dist/JsBarcode.all.js',
-        'src/js/utils.js',
-        'src/js/auth.js',
-        'src/js/autocomplete.js',
-        'src/js/date.js',
-        'src/js/filters.js',
-        'src/js/i18n.js',
-        'src/js/image.js',
-        'src/js/loader.js',
-        'src/js/search.js',
-        'src/js/selector.js',
-        'src/js/tooltipster.js',
-        'src/js/validation-match.js',
-        'src/js/barcode.js',
-        'src/js/diff.js',
-        'src/js/main.js'
-    ])
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(concat('ser-ui.bundle.js'))
-    .pipe(gulp.dest('dist/js'))
-    .pipe(uglify())
-    .pipe(rename({
-        extname: '.min.js'
-    }))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('dist/js'))
-    .pipe(gzip({ append: false }))
-    .pipe(gulp.dest('gzip/js'));
-});
+gulp.task('deploy', ['deploy-css', 'deploy-js']);
 
 gulp.task('deploy-js', function () {
     gulp.src([
-        'bower_components/js-cookie/src/js.cookie.js',
         'bower_components/tooltipster/dist/js/tooltipster.bundle.js',
-        'bower_components/file-saver/FileSaver.js',
-        'src/js/third-party/blob.js',
-        'src/js/third-party/jurlp.js',
-        'src/js/third-party/image-zoom.js',
-        'src/js/third-party/jquery.daterangepicker.js',
-        'bower_components/angular-animate/angular-animate.js',
-        'bower_components/angular-aria/angular-aria.js',
-        'bower_components/angular-filter/dist/angular-filter.js',
-        'bower_components/angular-fullscreen/src/angular-fullscreen.js',
-        'bower_components/angular-messages/angular-messages.js',
-        'bower_components/angular-resource/angular-resource.js',
-        'bower_components/angular-sanitize/angular-sanitize.js',
-        'bower_components/angular-ui-router/release/angular-ui-router.js',
         'bower_components/ng-file-upload/ng-file-upload.js',
-        'bower_components/angular-websocket/dist/angular-websocket.js',
         'bower_components/randexp/build/randexp.min.js',
+        'src/js/jurlp.js',
+        'src/js/image-zoom.js',
+        'src/js/jquery.daterangepicker.js',
         'src/js/utils.js',
+        'src/js/cookies.js',
         'src/js/auth.js',
         'src/js/autocomplete.js',
         'src/js/date.js',
         'src/js/filters.js',
+        'src/js/fullscreen.js',
         'src/js/i18n.js',
         'src/js/image.js',
         'src/js/loader.js',
@@ -101,6 +36,7 @@ gulp.task('deploy-js', function () {
         'src/js/validation-match.js',
         'src/js/barcode.js',
         'src/js/diff.js',
+        'src/js/sentry.js',
         'src/js/main.js'
     ])
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -114,27 +50,6 @@ gulp.task('deploy-js', function () {
     .pipe(gulp.dest('dist/js'))
     .pipe(gzip({ append: false }))
     .pipe(gulp.dest('gzip/js'));
-});
-
-gulp.task('deploy-css-bundle', function () {
-    streamqueue({ objectMode: true },
-        gulp.src([
-            'bower_components/angular-material/angular-material.css',
-            'bower_components/fullcalendar/dist/fullcalendar.css'
-        ]),
-        gulp.src('src/scss/*.scss').pipe(sass().on('error', sass.logError))
-    )
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(concat({path: 'ser-ui.bundle.css', cwd: ''}))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(minifyCss())
-    .pipe(rename({
-        extname: '.min.css'
-    }))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(gzip({ append: false }))
-    .pipe(gulp.dest('gzip/css'));
 });
 
 gulp.task('deploy-css', function () {

@@ -21,7 +21,9 @@
     'SER.loader',
     'SER.filters',
     'SER.barcode',
-    'SER.diff'
+    'SER.diff',
+    'SER.fullscreen',
+    'SER.sentry'
 ]);
 
 (function (url) {
@@ -104,24 +106,10 @@ angular.module('SER').run(['$rootScope', '$sce', function ($rootScope, $sce) {
 
     $rootScope.__ = __;
 
-    $rootScope.isArray = angular.isArray;
-    $rootScope.isObject = angular.isObject;
-    $rootScope.isString = angular.isString;
-    $rootScope.isUndefined = angular.isUndefined;
-    $rootScope.isNumber = angular.isNumber;
-    $rootScope.isDefined = angular.isDefined;
-    $rootScope.isDate = angular.isDate;
-
-    $rootScope.hasProperty = hasProperty;
-    $rootScope.hasValue = hasValue;
-    $rootScope.notValue = notValue;
-    $rootScope.inArray = inArray;
-    $rootScope.getObjectByValue = getObjectByValue;
-    $rootScope.isEmptyObject = $.isEmptyObject;
-
     $rootScope.bodyHeight = function () {
         return angular.element('body').height();
     };
+
     $rootScope.browserWidth = browserWidth;
 
     $rootScope.trustAsHtml = function (string) {
