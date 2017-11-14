@@ -15067,7 +15067,7 @@ angular.module('SER.fullscreen').factory('Fullscreen', ['$document', '$rootScope
     return serviceInstance;
 }]);
 
-module.directive('fullscreen', ['Fullscreen', function(Fullscreen) {
+angular.module('SER.fullscreen').directive('fullscreen', ['Fullscreen', function(Fullscreen) {
     return {
     link : function ($scope, $element, $attrs) {
         // Watch for changes on scope if model is provided
