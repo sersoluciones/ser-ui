@@ -158,13 +158,13 @@ angular.module('SER.search').directive('serAutocomplete', ['$http', '$timeout', 
 
                     '<div class="input-group">' +
                         getSpanAddon() +
-                        '<input placeholder="{{placeholder}}" ng-model="ngModel" ' + (attrs.disabled ? 'disabled' : 'ng-disabled="ngDisabled"') + ' ng-focus="ngFocus" ng-blur="searchBlur()" ' + (attrs.required ? 'required' : 'ng-required="ngRequired"') + ' />' +
+                        '<input placeholder="{{placeholder}}" ' + (attrs.name ? 'name="' + attrs.name + '"' : '') + ' ng-model="ngModel" ' + (attrs.disabled ? 'disabled' : 'ng-disabled="ngDisabled"') + ' ng-focus="ngFocus" ng-blur="searchBlur()" ' + (attrs.required ? 'required' : 'ng-required="ngRequired"') + ' />' +
                     '</div>' +
 
                     '<div class="fetching line-loader" ng-show="isFetching"></div>' +
                 
                     '<ul md-virtual-repeat-container md-auto-shrink md-top-index="highlighted" class="ser-autocomplete-results ' + attrs.dropdownClass + '">' +
-                        '<li class="item" md-virtual-repeat="item in results" ng-click="selectInternalItem(item)">' + getTemplateTag() + '</li>' +
+                        '<li class="item" md-virtual-repeat="item in results" ' + (attrs.mdItemSize ? 'md-item-size="' + attrs.mdItemSize + '"' : '') + ' ng-click="selectInternalItem(item)">' + getTemplateTag() + '</li>' +
                     '</ul>' +
                 '</div>';
         }
