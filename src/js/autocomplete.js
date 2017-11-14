@@ -156,7 +156,7 @@ angular.module('SER.search').directive('serAutocomplete', ['$http', '$timeout', 
             return '' +
                 '<div class="ser-autocomplete-wrapper" ng-class="{open: isOpen}">' +
 
-                    '<div class="group">' +
+                    '<div class="input-group">' +
                         getSpanAddon() +
                         '<input placeholder="{{placeholder}}" ng-model="ngModel" ' + (attrs.disabled ? 'disabled' : 'ng-disabled="ngDisabled"') + ' ng-focus="ngFocus" ng-blur="searchBlur()" ' + (attrs.required ? 'required' : 'ng-required="ngRequired"') + ' />' +
                     '</div>' +

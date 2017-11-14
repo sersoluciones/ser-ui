@@ -14470,6 +14470,16 @@ if (window.matchMedia) {
 	return init(function () {});
 }));
 
+function deleteAllCookies() {
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
+}
 angular.module('SER.auth', []);
 
 angular.module('SER.auth').value('userPermissions', []);
@@ -14691,7 +14701,7 @@ angular.module('SER.search').directive('serAutocomplete', ['$http', '$timeout', 
             return '' +
                 '<div class="ser-autocomplete-wrapper" ng-class="{open: isOpen}">' +
 
-                    '<div class="group">' +
+                    '<div class="input-group">' +
                         getSpanAddon() +
                         '<input placeholder="{{placeholder}}" ng-model="ngModel" ' + (attrs.disabled ? 'disabled' : 'ng-disabled="ngDisabled"') + ' ng-focus="ngFocus" ng-blur="searchBlur()" ' + (attrs.required ? 'required' : 'ng-required="ngRequired"') + ' />' +
                     '</div>' +
@@ -16320,7 +16330,7 @@ angular.module('SER.sentry', []);
 
 angular.module('SER.sentry').factory('$exceptionHandler', ['$window', '$log', function ($window, $log) {
 
-    if ($window.Raven && RAVEN_CONFIG_DSN) {
+    if ($window.Raven && RAVEN_CONFIG_DSN && !DEBUG) {
         console.log('Using the RavenJS exception handler.');
         Raven.config(RAVEN_CONFIG_DSN).install();
         return function (exception, cause) {
