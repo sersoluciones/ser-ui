@@ -1,5 +1,33 @@
 ﻿angular.module('SER.image', []);
 
+angular.module('SER.image').directive('exifData', ['Upload', '$filter', 'afterPromises', function (Upload, $filter, afterPromises) {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+
+            var template = '<div class="exif">';
+
+            var initialPromises = new afterPromises(2, function () {
+                template += '</div>';
+                element.after(template);
+            });
+
+            element.on('load', function (ev) {
+                template += '<div><strong>' + __('dimensions') + ': </strong>' + ev.target.naturalWidth + 'x' + ev.target.naturalHeight + '</div>';
+                initialPromises.notify();
+            });
+
+            Upload.urlToBlob(attrs.src).then(function (blob) {
+                template += '<div><strong>' + __('size') + ': </strong>' + $filter('byteFmt')(blob.size, 0) + '</div><div><strong>' + __('type') + ': </strong>' + blob.type + '</div>';
+                initialPromises.notify();
+            }, function () {
+                initialPromises.notify();
+            });
+
+        }
+    };
+}]);
+
 angular.module('SER.image').directive('callbackImage', function () {
     return {
         restrict: 'A',

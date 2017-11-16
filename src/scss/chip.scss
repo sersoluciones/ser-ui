@@ -1,0 +1,38 @@
+@import 'mixins.scss';
+
+ser-chips {
+    @include row-wrap;
+    @include start-center;
+    position: relative;
+}
+
+ser-chips input.chip-input {
+    border: none;
+    background: transparent;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+ser-chips .chip {
+    @include row;
+    @include start-center;
+    font-weight: 300;
+    -webkit-border-radius: 3px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    color: white;
+    border: none;
+    padding: 1px 6px;
+    margin: 4px 4px 0 0;
+}
+
+ser-chips .chip .remove {
+    background: white;
+    border-radius: 12px;
+    font-size: 13px;
+    height: 13px;
+    width: 13px;
+    min-width: 13px;
+    min-height: 13px;
+    margin-left: 6px;
+}
