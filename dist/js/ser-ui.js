@@ -14628,19 +14628,15 @@ angular.module('SER.chip').directive('serChips', ['$document', function ($docume
         },
         template: function (element, attrs) {
 
-            var name = '', required = '';
+            var name = '';
 
             if (attrs.name) {
                 name = 'name="' + attrs.name + '"';
             }
 
-            if ('required' in attrs) {
-                required = 'required';
-            }
-
             return '<div class="chip" ng-repeat="chip in model track by $index">{{chip}}<md-icon class="remove" ng-click="removeChip($index)">close</md-icon></div> \
-                <input class="chip-input s-flex" ng-model="chipInput" ng-keydown="checkKeypress($event)" ng-focus="setFocus()" ng-blur="setBlur()" /> \
-                <select ' + name + ' style="display: none;" multiple ng-model="selectedValue" ' + required + ' ></select>';
+                <input class="chip-input not-styled s-flex" ng-model="chipInput" ng-keydown="checkKeypress($event)" ng-focus="setFocus()" ng-blur="setBlur()" /> \
+                <select ' + name + ' style="display: none;" multiple ng-model="selectedValue" ' + (('required' in attrs) ? 'required': '') + ' ></select>';
         }
     };
 }]);
