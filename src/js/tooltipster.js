@@ -3,6 +3,9 @@
 angular.module('SER.tooltipster').directive('tooltipster', function () {
     return {
         restrict: 'A',
+        scope: {
+            tooltipsterOptions: '='
+        },
         link: function (scope, element, attrs) {
 
             var tooltipster_default = {
@@ -11,11 +14,12 @@ angular.module('SER.tooltipster').directive('tooltipster', function () {
                 delay: 0,
                 contentAsHTML: true,
                 positionTracker: true,
+                interactive: true,
                 trigger: 'hover',
                 theme: 'tooltipster-borderless'
             };
 
-            angular.merge(tooltipster_default, scope.$eval(attrs.tooltipsterOptions));
+            angular.merge(tooltipster_default, scope.tooltipsterOptions);
             element.tooltipster(tooltipster_default);
 
         }
@@ -25,19 +29,22 @@ angular.module('SER.tooltipster').directive('tooltipster', function () {
 angular.module('SER.tooltipster').directive('tooltipsterMenu', function () {
     return {
         restrict: 'A',
+        scope: {
+            tooltipsterMenu: '='
+        },
         link: function (scope, element, attrs) {
 
             var tooltipster_default = {
                 content: element.find('.tooltip-content'),
                 delay: 0,
-                positionTracker: true,
                 trigger: 'click',
                 theme: 'tooltipster-borderless',
                 position: 'bottom',
+                positionTracker: true,
                 interactive: true
             };
 
-            angular.merge(tooltipster_default, scope.$eval(attrs.tooltipsterMenu));
+            angular.merge(tooltipster_default, scope.tooltipsterMenu);
             element.tooltipster(tooltipster_default);
 
             scope.closeTooltip = function () {
@@ -55,18 +62,21 @@ angular.module('SER.tooltipster').directive('tooltipsterMenu', function () {
 angular.module('SER.tooltipster').directive('tooltipsterHtml', function () {
     return {
         restrict: 'A',
+        scope: {
+            tooltipsterHtml: '='
+        },
         link: function (scope, element, attrs) {
 
             var tooltipster_default = {
                 content: element.find('.tooltip-content'),
                 delay: 0,
-                positionTracker: true,
                 trigger: 'hover',
                 theme: 'tooltipster-borderless',
-                position: 'top'
+                position: 'top',
+                positionTracker: true
             };
 
-            angular.merge(tooltipster_default, scope.$eval(attrs.tooltipsterHtml));
+            angular.merge(tooltipster_default, scope.tooltipsterHtml);
             element.tooltipster(tooltipster_default);
 
         }

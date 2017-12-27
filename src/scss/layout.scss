@@ -296,11 +296,6 @@ small {
     margin: 0 auto;
 }
 
-.field{
-    @include row;
-    @include start-center;
-}
-
 .show-in-mobile{
     display: none;
 }
