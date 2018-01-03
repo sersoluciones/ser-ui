@@ -14292,6 +14292,60 @@ if (window.matchMedia) {
         }
     });
 }
+
+function getLogo(name, version) {
+
+    if (typeof name === 'string') {
+
+        switch (name.toLowerCase().replace(/[0-9\. ]*/g, '')) {
+
+            // Browser
+            case 'chrome':
+            case 'chromium':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/chrome.svg';
+            case 'edge':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/edge.svg';
+            case 'firefox':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/firefox.svg';
+            case 'ie':
+            case 'iemobile':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/ie.svg';
+            case 'opera':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/opera.svg';
+            case 'safari':
+            case 'mobilesafari':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/safari.svg';
+            case 'webkit':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/webkit.svg';
+
+            // OS
+            case 'android':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/android.svg';
+            case 'ios':
+            case 'macos':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/apple.svg';
+            case 'debian':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/debian.svg';
+            case 'linux':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/linux.svg';
+            case 'ubuntu':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/ubuntu.svg';
+            case 'windows':
+                switch (version.toLowerCase()) {
+                    case 'xp':
+                    case '7':
+                        return 'https://s3.amazonaws.com/ser-ui/images/logos/windows-xp.svg';
+                    case '8':
+                    case '8.1':
+                    case '10':
+                        return 'https://s3.amazonaws.com/ser-ui/images/logos/windows.svg';
+                }
+                break;
+            case 'windowsphone':
+                return 'https://s3.amazonaws.com/ser-ui/images/logos/windows-phone.svg';
+        }
+    }
+}
 ;(function (factory) {
 	var registeredInModuleLoader = false;
 	if (typeof define === 'function' && define.amd) {
@@ -18314,8 +18368,8 @@ angular.module('SER.sentry').factory('$exceptionHandler', ['$window', '$log', fu
         console.log('Using the RavenJS exception handler.');
         Raven.config(RAVEN_CONFIG_DSN).install();
         return function (exception, cause) {
-            $log.error.apply($log, arguments);
             Raven.captureException(exception);
+            Raven.showReportDialog();
         };
     } else {
         console.log('Using the default logging exception handler.');
