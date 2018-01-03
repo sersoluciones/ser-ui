@@ -18369,7 +18369,7 @@ angular.module('SER.sentry').factory('$exceptionHandler', ['$window', '$log', fu
         Raven.config(RAVEN_CONFIG_DSN).install();
         return function (exception, cause) {
             Raven.captureException(exception);
-            Raven.showReportDialog();
+            if (RAVEN_SHOW_DIALOG) Raven.showReportDialog();
         };
     } else {
         console.log('Using the default logging exception handler.');
