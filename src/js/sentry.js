@@ -6,8 +6,8 @@ angular.module('SER.sentry').factory('$exceptionHandler', ['$window', '$log', fu
         console.log('Using the RavenJS exception handler.');
         Raven.config(RAVEN_CONFIG_DSN).install();
         return function (exception, cause) {
-            $log.error.apply($log, arguments);
             Raven.captureException(exception);
+            Raven.showReportDialog();
         };
     } else {
         console.log('Using the default logging exception handler.');
