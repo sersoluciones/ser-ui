@@ -1083,9 +1083,12 @@ label {
 
 input[disabled],
 textarea[disabled],
-select[disabled] {
+select[disabled],
+.selector-container.disabled .selector-input {
+  opacity: .8;
   cursor: not-allowed;
-  user-select: none; }
+  user-select: none;
+  background: #f1f1f1; }
 
 .input-group .addon {
   padding: 3px 12px;
@@ -4387,9 +4390,6 @@ button.print .icon-print:before {
 .selector-container.open input,
 .selector-container.has-value input {
   cursor: text; }
-
-.selector-container.disabled {
-  opacity: .6; }
 
 .selector-container.disabled label,
 .selector-container.disabled .selector-helper {

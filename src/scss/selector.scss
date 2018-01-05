@@ -46,9 +46,6 @@
 .selector-container input { outline: none; background: none !important; border-color: transparent !important; width: 2px; display: inline-block; cursor: pointer; }
 .selector-container.open input,
 .selector-container.has-value input { cursor: text; }
-.selector-container.disabled { 
-    opacity: .6;
-}
 
 .selector-container.disabled label,
 .selector-container.disabled .selector-helper{

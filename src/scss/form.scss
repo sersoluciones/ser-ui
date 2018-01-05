@@ -100,9 +100,12 @@ label{
 
 input[disabled],
 textarea[disabled],
-select[disabled]{
+select[disabled],
+.selector-container.disabled .selector-input {
+    opacity: .8;
     cursor: not-allowed;
     user-select: none;
+    background: #f1f1f1;
 }
 
 .input-group .addon {
