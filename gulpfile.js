@@ -38,6 +38,7 @@ gulp.task('deploy-js', function () {
         'src/js/validation-match.js',
         'src/js/barcode.js',
         'src/js/diff.js',
+        'src/js/map.js',
         'src/js/sentry.js',
         'src/js/main.js'
     ])
