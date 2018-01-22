@@ -4372,10 +4372,6 @@ button.print .icon-print:before {
   border-radius: 6px;
   font-weight: inherit; }
 
-.selector-container.rtl .selector-input {
-  padding-right: .7em;
-  padding-left: 2.6em; }
-
 .selector-container .selector-values {
   list-style: none; }
 
@@ -4399,10 +4395,6 @@ button.print .icon-print:before {
 .selector-container.remove-button.has-value .selector-input {
   padding-right: 3.5em; }
 
-.selector-container.remove-button.has-value.rtl .selector-input {
-  padding-right: .7em;
-  padding-left: 3.5em; }
-
 .selector-container.open .selector-input {
   background: none;
   border-bottom-color: #f0f0f0;
@@ -4421,22 +4413,13 @@ button.print .icon-print:before {
   border-radius: 4px;
   border-bottom-color: #bbb; }
 
-.selector-container.multiple input,
-.selector-container.multiple .selector-values {
-  float: left; }
-
-.selector-container.multiple.rtl input,
-.selector-container.multiple.rtl .selector-values {
-  float: right; }
-
 .selector-container input,
 .selector-container .selector-values,
 .selector-container .selector-values > li,
 .selector-container .selector-values > li > div {
   padding: 0;
   margin: 0;
-  border: 0;
-  display: inline; }
+  border: 0; }
 
 /* Multiple */
 .selector-container.multiple .selector-input {
@@ -4454,7 +4437,29 @@ button.print .icon-print:before {
   padding-right: .35em !important; }
 
 .selector-container.multiple .selector-values {
-  float: none; }
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  align-content: center;
+  max-width: 100%; }
 
 .selector-container.multiple input,
 .selector-container.multiple .selector-values > li {
@@ -4462,11 +4467,9 @@ button.print .icon-print:before {
   margin: 4px 4px 0 0;
   border-width: 1px;
   border-style: solid;
-  float: left;
   line-height: normal; }
 
 .selector-container.multiple .selector-values > li {
-  display: inline-block;
   position: relative;
   font-weight: 300;
   -webkit-border-radius: 3px;
@@ -4478,10 +4481,6 @@ button.print .icon-print:before {
 
 .selector-container.multiple.remove-button .selector-values > li {
   padding-right: 24px; }
-
-.selector-container.multiple.rtl input,
-.selector-container.multiple.rtl .selector-values > li {
-  float: right; }
 
 .selector-container.multiple.rtl.remove-button .selector-values > li {
   padding-right: .6em;

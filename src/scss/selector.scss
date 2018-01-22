@@ -41,11 +41,24 @@
     border-radius: 6px; 
     font-weight: inherit;
 }
-.selector-container.rtl .selector-input { padding-right: .7em; padding-left: 2.6em; }
-.selector-container .selector-values { list-style: none; }
-.selector-container input { outline: none; background: none !important; border-color: transparent !important; width: 2px; display: inline-block; cursor: pointer; }
+
+.selector-container .selector-values { 
+    list-style: none;
+}
+
+.selector-container input { 
+    outline: none; 
+    background: none !important; 
+    border-color: transparent !important; 
+    width: 2px; 
+    display: inline-block; 
+    cursor: pointer; 
+}
+
 .selector-container.open input,
-.selector-container.has-value input { cursor: text; }
+.selector-container.has-value input { 
+    cursor: text; 
+}
 
 .selector-container.disabled label,
 .selector-container.disabled .selector-helper{
@@ -53,16 +66,30 @@
 }
 
 /* Single */
-.selector-container.remove-button.has-value .selector-input { padding-right: 3.5em }
-.selector-container.remove-button.has-value.rtl .selector-input { padding-right: .7em; padding-left: 3.5em }
-.selector-container.open .selector-input { background: none; border-bottom-color: #f0f0f0; padding-right: 2.6em;
-	-webkit-border-radius: 4px 4px 0 0; -moz-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; }
-.selector-container.open.rtl .selector-input { padding-right: .7em; padding-left: 2.6em; }
-.selector-container.open.empty .selector-input { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; border-bottom-color: #bbb; }
-.selector-container.multiple input,
-.selector-container.multiple .selector-values { float: left; }
-.selector-container.multiple.rtl input,
-.selector-container.multiple.rtl .selector-values { float: right; }
+.selector-container.remove-button.has-value .selector-input { 
+    padding-right: 3.5em
+}
+
+.selector-container.open .selector-input {
+    background: none;
+    border-bottom-color: #f0f0f0;
+    padding-right: 2.6em;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.selector-container.open.rtl .selector-input {
+    padding-right: .7em;
+    padding-left: 2.6em;
+}
+
+.selector-container.open.empty .selector-input { 
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border-bottom-color: #bbb;
+}
 
 .selector-container input,
 .selector-container .selector-values,
@@ -71,7 +98,6 @@
     padding: 0; 
     margin: 0; 
     border: 0; 
-    display: inline; 
 }
 
 /* Multiple */
@@ -82,24 +108,34 @@
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1); 
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1); 
 }
+
 .selector-container:not(.multiple) select.ng-not-empty + label .selector-values{ 
     width: 100%;
 }
-.selector-container.multiple.has-value .selector-input { padding-left: .35em !important; padding-right: .35em !important; }
-.selector-container.multiple .selector-values { float: none; }
+
+.selector-container.multiple.has-value .selector-input {
+    padding-left: .35em !important;
+    padding-right: .35em !important;
+}
+
+.selector-container.multiple .selector-values { 
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    @include row-wrap;
+    @include start-center;
+}
 .selector-container.multiple input,
 .selector-container.multiple .selector-values>li { 
     padding: 4px 6px;
     margin: 4px 4px 0 0;
     border-width: 1px;
     border-style: solid;
-    float: left;
     line-height: normal;
 }
-.selector-container.multiple .selector-values>li { 
-    display: inline-block; 
+
+.selector-container.multiple .selector-values>li {
     position: relative;
-    //text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
 	font-weight: 300; 
     -webkit-border-radius: 3px; 
     border-radius: 3px; 
@@ -108,12 +144,14 @@
     background-color: $blue-background;
     border-color: $blue-border;
 }
+
 .selector-container.multiple.remove-button .selector-values>li { 
     padding-right: 24px;
 }
-.selector-container.multiple.rtl input,
-.selector-container.multiple.rtl .selector-values>li { float: right; }
-.selector-container.multiple.rtl.remove-button .selector-values>li { padding-right: .6em; padding-left: 1.9em; }
+
+.selector-container.multiple.rtl.remove-button .selector-values>li { 
+    padding-right: .6em; padding-left: 1.9em; 
+}
 
 /* Helper */
 .selector-helper { position: absolute; display: block; width: 2.6em; top: 0; right: 0; bottom: 0; }
