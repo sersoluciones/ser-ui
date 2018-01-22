@@ -28,6 +28,7 @@ gulp.task('deploy-js', function () {
         'src/js/date.js',
         'src/js/filters.js',
         'src/js/fullscreen.js',
+        'src/js/clipboard.js',
         'src/js/i18n.js',
         'src/js/image.js',
         'src/js/image-crop.js',

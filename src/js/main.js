@@ -13,6 +13,7 @@
     'SER.barcode',
     'SER.diff',
     'SER.fullscreen',
+    'SER.Clipboard',
     'SER.sentry'
 ]);
 
