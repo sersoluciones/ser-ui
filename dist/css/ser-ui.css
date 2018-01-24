@@ -981,6 +981,9 @@ ser-chips .chip .remove {
   bottom: 8px;
   right: 4px; }
 
+ng-form {
+  display: block; }
+
 fieldset {
   -webkit-padding-before: 16px;
   padding: 16px 16px 8px;
@@ -988,7 +991,8 @@ fieldset {
   border-radius: 4px;
   font-family: inherit;
   border: 1px solid #dcdcdc;
-  position: relative; }
+  position: relative;
+  min-width: 0; }
 
 legend {
   position: relative;

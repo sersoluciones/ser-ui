@@ -1,5 +1,9 @@
 ﻿@import 'mixins.scss';
 
+ng-form{
+    display: block;
+}
+
 fieldset {
     -webkit-padding-before: 16px;
     padding: 16px 16px 8px;
@@ -8,6 +12,7 @@ fieldset {
     font-family: inherit;
     border: 1px solid #dcdcdc;
     position: relative;
+    min-width: 0;
 }
 
 legend {

@@ -94,6 +94,35 @@ function getObjectByValue(array, attr, value) {
     }
 }
 
+function getObjIndexByValue(array, attr, value) {
+
+    for (var i = 0; i < array.length; i++) {
+
+        if (array[i].hasOwnProperty(attr)) {
+
+            if (array[i][attr] === value) {
+
+                return array[i];
+
+            } else {
+
+                for (var prop in array[i][attr]) {
+
+                    if (array[i][attr][prop] === value) {
+
+                        return i;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+
 function browserWidth() {
     return 0 < window.innerWidth ? window.innerWidth : screen.width;
 }
