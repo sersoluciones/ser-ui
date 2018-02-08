@@ -16,7 +16,12 @@ angular.module('SER.tooltipster').directive('tooltipster', function () {
                 positionTracker: true,
                 interactive: true,
                 trigger: 'hover',
-                theme: 'tooltipster-borderless'
+                theme: 'tooltipster-borderless',
+                functionReady: function (instance, helper) {
+                    $(helper.tooltip).on('click', function () {
+                        element.tooltipster('hide');
+                    });
+                }
             };
 
             angular.merge(tooltipster_default, scope.tooltipsterOptions);
@@ -41,19 +46,16 @@ angular.module('SER.tooltipster').directive('tooltipsterMenu', function () {
                 theme: 'tooltipster-borderless',
                 position: 'bottom',
                 positionTracker: true,
-                interactive: true
+                interactive: true,
+                functionReady: function (instance, helper) {
+                    $(helper.tooltip).on('click', function () {
+                        element.tooltipster('hide');
+                    });
+                }
             };
 
             angular.merge(tooltipster_default, scope.tooltipsterMenu);
             element.tooltipster(tooltipster_default);
-
-            scope.closeTooltip = function () {
-                element.tooltipster('close');
-            };
-
-            element.find('.action').on('click', function () {
-                scope.closeTooltip();
-            });
 
         }
     };
@@ -73,7 +75,12 @@ angular.module('SER.tooltipster').directive('tooltipsterHtml', function () {
                 trigger: 'hover',
                 theme: 'tooltipster-borderless',
                 position: 'top',
-                positionTracker: true
+                positionTracker: true,
+                functionReady: function (instance, helper) {
+                    $(helper.tooltip).on('click', function () {
+                        element.tooltipster('hide');
+                    });
+                }
             };
 
             angular.merge(tooltipster_default, scope.tooltipsterHtml);
