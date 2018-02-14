@@ -4263,7 +4263,8 @@ button.print .icon-print:before {
   padding: 10px; }
 
 .preview-file .img-wrapper {
-  overflow-y: auto; }
+  overflow-y: auto;
+  text-align: center; }
 
 .preview-file .img-wrapper img {
   max-width: 100%; }
@@ -4274,6 +4275,13 @@ button.print .icon-print:before {
   width: 3000px;
   height: 3000px;
   border: 0; }
+
+.preview-file .description {
+  background: white;
+  padding: 8px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 8px; }
 
 /*[zoom-image] img {
     vertical-align: top;
