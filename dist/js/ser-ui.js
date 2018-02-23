@@ -14394,6 +14394,10 @@ function getLogo(name, version) {
         }
     }
 }
+
+if (bowser) {
+    $('body').addClass('bos-' + bowser.osname + ' bosv-' + bowser.osversion + ' bn-' + bowser.name + ' bv-' + bowser.version);
+}
 ;(function (factory) {
 	var registeredInModuleLoader = false;
 	if (typeof define === 'function' && define.amd) {
