@@ -15104,7 +15104,8 @@ angular.module('SER.datepicker').directive('serDateRange', ['$filter', function 
             }
 
             scope.$watch('ngModel', function (newValue, oldValue) {
-                if (newValue && newValue != oldValue) {
+                if (hasValue(newValue) && hasValue(newValue.FromDate) && hasValue(newValue.ToDate)) {
+                    scope.placeholder = $filter('date')(newValue.FromDate, 'longDate') + ' - ' + $filter('date')(newValue.ToDate, 'longDate');
                     picker_instance.data('dateRangePicker').setStart(scope.ngModel.FromDate, true);
                     picker_instance.data('dateRangePicker').setEnd(scope.ngModel.ToDate, true);
                 }
