@@ -244,5 +244,5 @@ function getLogo(name, version) {
 }
 
 if (bowser) {
-    $('body').addClass('bos-' + bowser.osname + ' bosv-' + bowser.osversion + ' bn-' + bowser.name + ' bv-' + bowser.version);
+    $('body').addClass('bos-' + bowser.osname.replace(/ /g,"") + ' bosv-' + bowser.osversion.replace(/ /g, "") + ' bn-' + bowser.name.replace(/ /g,"") + ' bv-' + bowser.version.replace(/ /g,""));
 }
