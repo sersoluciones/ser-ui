@@ -17,17 +17,17 @@
   },
   "homepage": "https://github.com/sersoluciones/ser-ui#readme",
   "dependencies": {
-    "gulp": "latest",
-    "gulp-concat": "latest",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-jsonminify": "latest",
     "gulp-minify-css": "latest",
-    "gulp-rename": "latest",
-    "gulp-sass": "latest",
-    "gulp-sourcemaps": "latest",
-    "gulp-uglify": "latest",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "latest",
     "gulp-wrap": "latest",
-    "streamqueue": "latest",
+    "streamqueue": "^1.1.1",
     "gulp-gzip": "latest"
   }
 }

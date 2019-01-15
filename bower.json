@@ -7,7 +7,7 @@
   "description": "",
   "main": [
     "dist/css/ser-ui.css",
-    "dist/js/ser-ui.css"
+    "dist/js/ser-ui.js"
   ],
   "keywords": [
     "css",
@@ -50,7 +50,6 @@
   "resolutions": {
     "angular": "1.6.6",
     "jquery": ">=3.1.1",
-    "moment": ">=2.18.1",
-    "fullcalendar": "3.6.2"
+    "moment": ">=2.18.1"
   }
 }
