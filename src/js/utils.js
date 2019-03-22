@@ -102,7 +102,7 @@ function getObjIndexByValue(array, attr, value) {
 
             if (array[i][attr] === value) {
 
-                return array[i];
+                return i;
 
             } else {
 

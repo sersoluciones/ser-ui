@@ -14254,7 +14254,7 @@ function getObjIndexByValue(array, attr, value) {
 
             if (array[i][attr] === value) {
 
-                return array[i];
+                return i;
 
             } else {
 
@@ -17649,7 +17649,7 @@ angular.module('SER.selector', []).directive('selector', [
                         else scope.value = scope.valueAttr === null ? value || [] : (value || []).map(function (option) { return scope.getObjValue(option, scope.valueAttr); });
                     };
                     scope.hasValue = function () {
-                        return scope.multiple ? (scope.value || []).length > 0 : hasValue(scope.value);
+                        return hasValue(scope.value);
                     };
 
                     // Fill with options in the select
