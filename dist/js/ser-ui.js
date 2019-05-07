@@ -14341,7 +14341,9 @@ if (window.matchMedia) {
     });
 }
 
-function getLogo(name, version) {
+function getLogo(name, version, url) {
+
+    var BASE_URL = url ? url: AWS_S3_URL + 'icons/';
 
     if (typeof name === 'string') {
 
@@ -14350,47 +14352,47 @@ function getLogo(name, version) {
             // Browser
             case 'chrome':
             case 'chromium':
-                return AWS_S3_URL + 'images/logos/chrome.svg';
+                return BASE_URL + 'logos/chrome.svg';
             case 'edge':
-                return AWS_S3_URL + 'images/logos/edge.svg';
+                return BASE_URL + 'logos/edge.svg';
             case 'firefox':
-                return AWS_S3_URL + 'images/logos/firefox.svg';
+                return BASE_URL + 'logos/firefox.svg';
             case 'ie':
             case 'iemobile':
-                return AWS_S3_URL + 'images/logos/ie.svg';
+                return BASE_URL + 'logos/ie.svg';
             case 'opera':
-                return AWS_S3_URL + 'images/logos/opera.svg';
+                return BASE_URL + 'logos/opera.svg';
             case 'safari':
             case 'mobilesafari':
-                return AWS_S3_URL + 'images/logos/safari.svg';
+                return BASE_URL + 'logos/safari.svg';
             case 'webkit':
-                return AWS_S3_URL + 'images/logos/webkit.svg';
+                return BASE_URL + 'logos/webkit.svg';
 
             // OS
             case 'android':
-                return AWS_S3_URL + 'images/logos/android.svg';
+                return BASE_URL + 'logos/android.svg';
             case 'ios':
             case 'macos':
-                return AWS_S3_URL + 'images/logos/apple.svg';
+                return BASE_URL + 'logos/apple.svg';
             case 'debian':
-                return AWS_S3_URL + 'images/logos/debian.svg';
+                return BASE_URL + 'logos/debian.svg';
             case 'linux':
-                return AWS_S3_URL + 'images/logos/linux.svg';
+                return BASE_URL + 'logos/linux.svg';
             case 'ubuntu':
-                return AWS_S3_URL + 'images/logos/ubuntu.svg';
+                return BASE_URL + 'logos/ubuntu.svg';
             case 'windows':
                 switch (version.toLowerCase()) {
                     case 'xp':
                     case '7':
-                        return AWS_S3_URL + 'images/logos/windows-xp.svg';
+                        return BASE_URL + 'logos/windows-xp.svg';
                     case '8':
                     case '8.1':
                     case '10':
-                        return AWS_S3_URL + 'images/logos/windows.svg';
+                        return BASE_URL + 'logos/windows.svg';
                 }
                 break;
             case 'windowsphone':
-                return AWS_S3_URL + 'images/logos/windows-phone.svg';
+                return BASE_URL + 'logos/windows-phone.svg';
         }
     }
 }
