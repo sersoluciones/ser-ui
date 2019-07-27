@@ -1,4 +1,5 @@
 ﻿@import 'mixins.scss';
+@import 'colors.scss';
 
 ser-autocomplete {
     position: relative;
@@ -26,16 +27,18 @@ ser-autocomplete {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
 
-.ser-autocomplete-results .item {
-    padding: 0 4px;
-}
-
-.ser-autocomplete-results .not-results {
-    padding: 8px;
-}
-
-.ser-autocomplete-results .results .item:hover {
-    background: $grey-hover;
+    .item {
+        padding: 0 4px;
+    }
+    
+    .not-results {
+        padding: 8px;
+    }
+    
+    .results {
+        .item:hover {
+            background: $grey-hover;
+        }
+    }
 }

@@ -169,6 +169,7 @@ angular.module('SER.selector', []).directive('selector', [
 
                     var dropdownPosition = function () {
                         var label = input.parent()[0];
+                        var container = angular.element(element[0]);
 
                         var style = {
                             top: '',
@@ -180,10 +181,12 @@ angular.module('SER.selector', []).directive('selector', [
                         if (angular.element(document.body).height() - (label.offsetHeight + label.getBoundingClientRect().top) >= 220) {
                             style.top = label.offsetHeight + label.getBoundingClientRect().top;
                             dropdown.removeClass('ontop');
+                            container.removeClass('dropdown-ontop');
                         } else {
                         
                             style.bottom = angular.element(document.body).height() - label.getBoundingClientRect().top;
                             dropdown.addClass('ontop');
+                            container.addClass('dropdown-ontop');
                         }
 
                         dropdown.css(style);

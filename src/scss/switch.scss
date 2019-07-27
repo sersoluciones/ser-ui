@@ -1,44 +1,45 @@
 ﻿@import 'mixins.scss';
+@import 'colors.scss';
 
 .switch{
     @include row;
     @include start-center;
     cursor: pointer;
     user-select: none;
-}
 
-.switch input {
-    display: none;
-}
-.switch i {
-    display: inline-block;
-    cursor: pointer;
-    padding-right: 20px;
-    margin-right: 16px;
-    transition: all ease 0.2s;
+    input {
+        display: none;
+    }
+    i {
+        display: inline-block;
+        cursor: pointer;
+        padding-right: 20px;
+        margin-right: 16px;
         -webkit-transition: all ease 0.2s;
-    border-radius: 20px;
-    box-shadow: inset 0 0 1px rgba(0,0,0,.5);
-}
-.switch i:before {
-    display: block;
-    content: '';
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-    border-radius: 20px;
-    background: white;
-    box-shadow: 0 1px 2px rgba(0,0,0,.5);
-}
-.switch input:not(:checked) + i{
-    background-color: grey;
-}
-
-.switch :checked + i {
-    padding-right: 0;
-    padding-left: 20px;
-    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.5), inset 0 0 40px #3ed400;
-    -moz-box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px #3ed400;
-    box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px #3ed400;
-    background: #a9e296;
+        transition: all ease 0.2s;
+        border-radius: 20px;
+        box-shadow: inset 0 0 1px rgba(0,0,0,.5);
+    }
+    i:before {
+        display: block;
+        content: '';
+        width: 20px;
+        height: 20px;
+        margin: 2px;
+        border-radius: 20px;
+        background: white;
+        box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    }
+    input:not(:checked) + i{
+        background-color: grey;
+    }
+    
+    :checked + i {
+        padding-right: 0;
+        padding-left: 20px;
+        -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.5), inset 0 0 40px #3ed400;
+        -moz-box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px #3ed400;
+        box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px #3ed400;
+        background-color: #a9e296;
+    }
 }

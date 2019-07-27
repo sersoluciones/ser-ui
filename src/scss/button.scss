@@ -1,4 +1,5 @@
 ﻿@import 'mixins.scss';
+@import 'colors.scss';
 
 .fc button,
 .bttn {
@@ -149,4 +150,11 @@
     -webkit-box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
     -moz-box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode {
+    .fc button, 
+    .bttn:not(.light-blue):not(.blue):not(.red):not(.orange):not(.yellow):not(.green){
+        color: #c5c5c5;
+    }
 }

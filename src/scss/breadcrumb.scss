@@ -1,69 +1,86 @@
 ﻿@import 'mixins.scss';
+@import 'colors.scss';
 
 .breadcrumb {
     font-size: rem(12);
     margin: 16px;
     padding: 12px;
-    background: white;
-    @include shadow();
-}
+    border-radius: 4px;
+    background-color: $light-grey-1dp;
+    transition: all 500ms;
 
-.breadcrumb ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    @include row();
-    @include start-center();
-}
+    em, a {
+        font-style: normal;
+        padding: 0 10px;
+        display: inline-block;
+        white-space: nowrap; 
+    }
 
-.breadcrumb em,
-.breadcrumb a {
-  font-style: normal;
-  padding: 0 10px;
-  display: inline-block;
-  white-space: nowrap; 
-}
+    em {
+        color: rgba(black, 0.5);
+    }
 
-.breadcrumb em {
-  color: rgba(0, 0, 0, 0.5); 
-}
+    a {
+        color: black;
+        text-decoration: none;
+    }
 
-.breadcrumb a {
-  color: #000;
-  text-decoration: none; 
-}
+    a:hover {
+        -moz-transition: all linear 0.2s;
+        transition: all linear 0.2s;
+        color: rgba(black, 0.6);
+        text-decoration: underline; 
+    }
 
-.breadcrumb a:hover {
-    -moz-transition: all linear 0.2s;
-    transition: all linear 0.2s;
-    color: rgba(0, 0, 0, 0.6);
-    text-decoration: underline; 
-}
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include row();
+        @include start-center();
+    }
 
-.breadcrumb li:after {
-  display: inline-block;
-  content: '/';
-  color: $primary_color;
-}
 
-.breadcrumb li:last-child:after {
-  display: none; 
-}
+    li:after {
+        display: inline-block;
+        content: '/';
+        color: $primary_color;
+    }
 
-.breadcrumb li:first-child em,
-.breadcrumb li:first-child a {
-  padding-left: 0; 
-}
+    li:last-child:after {
+        display: none; 
+    }
 
-.breadcrumb li.active em,
-.breadcrumb li.active a {
-  text-decoration: none;
-  cursor: text;
-  color: rgba(0, 0, 0, 0.4); 
+    li:first-child em,
+    li:first-child a {
+        padding-left: 0; 
+    }
+
+    li.active em,
+    li.active a {
+        text-decoration: none;
+        cursor: text;
+        color: rgba(black, 0.4); 
+    }
 }
 
 @media (max-width: 800px) {
     .breadcrumb {
         margin: 16px 0;
+    }
+}
+
+.dark-mode {
+    .breadcrumb {
+        background-color: $dark-grey-1dp;
+
+        li.active em, li.active a, em {
+            color: rgba(white, 0.4);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
     }
 }

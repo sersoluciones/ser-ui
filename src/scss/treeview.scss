@@ -1,20 +1,22 @@
 ﻿@import 'mixins.scss';
+@import 'colors.scss';
 
 li.ivh-treeview-node {
     list-style: none;
-}
 
-li.ivh-treeview-node .group{
-    @include md-shadow;
-    margin-bottom: 8px;
-    padding: 8px 0 4px 0;
-    background-color: #fbfafa;
-}
+    .group{
+        @include md-shadow;
+        margin-bottom: 8px;
+        padding: 8px 0 4px 0;
+        background-color: #fbfafa;
 
-li.ivh-treeview-node .group .group-label{
-    font-size: rem(16);
-}
+        .group-label{
+            font-size: rem(16);
+        }
 
-li.ivh-treeview-node .group .group-children{
-    margin-top: 8px;
+        .group-children{
+            margin-top: 8px;
+        }
+    }
+
 }

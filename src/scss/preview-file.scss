@@ -1,52 +1,49 @@
 ﻿@import 'mixins.scss';
+@import 'colors.scss';
+
+.preview-file-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+
+    .title{
+        padding: 10px;
+    }
+}
 
 .preview-file {
     background: transparent;
     box-shadow: none;
     max-width: 90%;
     max-height: 90%;
-}
 
-.preview-file-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: white;
-}
+    .img-wrapper{
+        overflow-y: auto;
+        text-align: center;
 
-.preview-file-header .title{
-  padding: 10px;
+        img{
+            max-width: 100%;
+        }
+    }
+    
+    object{
+        max-width: 100%;
+        max-height: 100%;
+        width: 3000px;
+        height: 3000px;
+        border: 0;
+    }
+    
+    .description {
+        background: white;
+        padding: 8px;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-top: 8px;
+    }    
 }
-
-.preview-file .img-wrapper{
-  overflow-y: auto;
-  text-align: center;
-}
-
-.preview-file .img-wrapper img{
-  max-width: 100%;
-}
-
-.preview-file object{
-  max-width: 100%;
-  max-height: 100%;
-  width: 3000px;
-  height: 3000px;
-  border: 0;
-}
-
-.preview-file .description {
-    background: white;
-    padding: 8px;
-    font-weight: bold;
-    border-radius: 4px;
-    margin-top: 8px;
-}
-
-/*[zoom-image] img {
-    vertical-align: top;
-}*/
 
 .spzoom-zoom {
     z-index: 97;

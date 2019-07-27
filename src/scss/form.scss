@@ -1,4 +1,5 @@
 ﻿@import 'mixins.scss';
+@import 'colors.scss';
 
 ng-form{
     display: block;
@@ -33,74 +34,168 @@ label{
     position: relative;
     padding: 0 4px 8px;
     @include column;
+
+    > label:not(.switch) {
+        display: inline-block;
+        font-size: rem(10);
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+    }
+    
+    .input-group {
+        overflow-x: hidden;
+        position: relative;
+        @include row;
+
+        .addon {
+            padding: 3px 12px;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            color: black;
+            background-color: $light-grey-3dp;
+            transition: background-color 500ms;
+            border-radius: 6px;
+            user-select: none;
+            @include row;
+            @include center-center;
+        }
+        
+        > input:not(.not-styled),
+        > textarea:not(.not-styled),
+        > select:not(.not-styled) {
+            width: 100%;
+        }
+        
+        > input:not(.not-styled):first-child, 
+        > textarea:not(.not-styled):first-child, 
+        > select:not(.not-styled):first-child,
+        > .selector-container:first-child .selector-input,
+        > .addon:first-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+        .addon:first-child {
+            border-right-width: 0;
+        }
+        
+        > input:not(.not-styled):last-child, 
+        > textarea:not(.not-styled):last-child, 
+        > select:not(.not-styled):last-child, 
+        > .selector-container:last-child .selector-input,
+        > .addon:last-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        
+        .addon:last-child {
+            border-left-width: 0;
+        }
+        
+        > input:not(:first-child):not(:last-child), 
+        > textarea:not(:first-child):not(:last-child), 
+        > select:not(:first-child):not(:last-child), 
+        > .selector-container:not(:first-child):not(:last-child) .selector-input,
+        > .addon:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+        
+        > input:first-child:last-child:only-child, 
+        > textarea:first-child:last-child:only-child, 
+        > select:first-child:last-child:only-child, 
+        > .selector-container:first-child:last-child:only-child .selector-input,
+        > .addon:first-child:last-child:only-child{
+            border-radius: 6px;
+        }
+    }
+    
+    input:not(.not-styled),
+    textarea:not(.not-styled),
+    select:not(.not-styled) {
+        position: relative;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        margin: 0;
+        padding: 6px 12px;
+        font-family: inherit;
+        font-size: rem(13);
+        color: black;
+        background-color: $light-grey-2dp;
+        transition: background-color 500ms;
+        background-image: none;
+        background-clip: padding-box;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    input[disabled],
+    textarea[disabled],
+    select[disabled] {
+        background-color: #f3f3f3;
+        color: #a5a5a5;
+    }
+    
+    > input:not(.not-styled),
+    > select:not(.not-styled) {
+        max-height: 33px;
+    }
+    
+    .selector-container{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    input:not(.not-styled):focus,
+    textarea:not(.not-styled):focus,
+    .selector-container.open .selector-input,
+    select:not(.not-styled):focus {
+        border: 1px solid #66dee9;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 222, 233, 0.6);
+    }
+
+    [ng-messages].ng-active{
+        margin-top: 8px;
+        color: red;
+        user-select: none;
+    }
+    
+    input.ng-invalid.ng-dirty:not(.not-styled),
+    textarea.ng-invalid.ng-dirty:not(.not-styled),
+    select.ng-invalid.ng-dirty:not(.not-styled),
+    .selector-container.ng-invalid.ng-dirty .selector-input {
+        border: 1px solid rgba($red-border, 0.4);
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($red-border,.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($red-border, 0.6);
+    }
+    
+    .loader:after {
+      overflow: hidden;
+      position: absolute;
+      -webkit-animation: ellipsis steps(4,end) 4s infinite;      
+      animation: ellipsis steps(4,end) 4s infinite;
+      content: "...";
+      width: 0px;
+    }
 }
 
 .form-group.no-padding {
     padding-bottom: 0;
-}
-
-.form-group > label:not(.switch) {
-    display: inline-block;
-    font-size: rem(10);
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
-}
-
-.form-group .input-group {
-    overflow-x: hidden;
-    position: relative;
-    @include row;
-}
-
-.form-group input:not(.not-styled),
-.form-group textarea:not(.not-styled),
-.form-group select:not(.not-styled) {
-    position: relative;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    margin: 0;
-    padding: 6px 12px;
-    font-family: inherit;
-    font-size: rem(13);
-    color: rgba(0, 0, 0, 0.7);
-    //background-color: #f5f5f5;
-    background-image: none;
-    background-clip: padding-box;
-    border: 1px solid #989898;
-    border-radius: 6px;
-    outline: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-.form-group > input:not(.not-styled),
-.form-group > select:not(.not-styled) {
-    max-height: 33px;
-}
-
-.form-group .selector-container{
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.form-group input:not(.not-styled):focus,
-.form-group textarea:not(.not-styled):focus,
-.form-group .selector-container.open .selector-input,
-.form-group select:not(.not-styled):focus {
-    border-color: #66dee9;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 222, 233, 0.6);
 }
 
 input[disabled],
@@ -110,99 +205,49 @@ select[disabled],
     opacity: .8;
     cursor: not-allowed;
     user-select: none;
-    background: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
-.input-group .addon {
-    padding: 3px 12px;
-    margin-bottom: 0;
-    font-weight: normal;
-    color: #303030;
-    text-align: center;
-    border: 1px solid #989898;
-    background-color: #f5f5f5;
-    border-radius: 6px;
-    user-select: none;
-    @include row;
-    @include center-center;
-}
+.dark-mode {
 
-.input-group > input:not(.not-styled),
-.input-group > textarea:not(.not-styled),
-.input-group > select:not(.not-styled) {
-    width: 100%;
-}
+    .form-group {
+        input:not(.not-styled), 
+        textarea:not(.not-styled), 
+        select:not(.not-styled) {
+            transition: background-color 500ms, color 500ms;
+            background-color: $dark-grey-2dp;
+            color: white;
+            border: none;
+        }
 
-.input-group > input:not(.not-styled):first-child, 
-.input-group > textarea:not(.not-styled):first-child, 
-.input-group > select:not(.not-styled):first-child,
-.input-group > .selector-container:first-child .selector-input,
-.input-group > .addon:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
+        input:not(.not-styled)::placeholder, 
+        textarea:not(.not-styled)::placeholder, 
+        select:not(.not-styled)::placeholder {
+            color: white;
+        }
 
-.input-group .addon:first-child {
-    border-right-width: 0;
-}
+        input:not(.not-styled):focus,
+        textarea:not(.not-styled):focus,
+        .selector-container.open .selector-input,
+        select:not(.not-styled):focus {
+            border: 1px solid rgba(#66dee9, 0.4);
+        }
 
-.input-group > input:not(.not-styled):last-child, 
-.input-group > textarea:not(.not-styled):last-child, 
-.input-group > select:not(.not-styled):last-child, 
-.input-group > .selector-container:last-child .selector-input,
-.input-group > .addon:last-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
+        input.ng-invalid.ng-dirty:not(.not-styled), 
+        textarea.ng-invalid.ng-dirty:not(.not-styled), 
+        select.ng-invalid.ng-dirty:not(.not-styled) {
+            border: 1px solid rgba($red-border, 0.4);
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($red-border,.6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($red-border, 0.6);
+        }
 
-.input-group .addon:last-child {
-    border-left-width: 0;
-}
-
-.input-group > input:not(:first-child):not(:last-child), 
-.input-group > textarea:not(:first-child):not(:last-child), 
-.input-group > select:not(:first-child):not(:last-child), 
-.input-group > .selector-container:not(:first-child):not(:last-child) .selector-input,
-.input-group > .addon:not(:first-child):not(:last-child) {
-    border-radius: 0;
-}
-
-.input-group > input:first-child:last-child:only-child, 
-.input-group > textarea:first-child:last-child:only-child, 
-.input-group > select:first-child:last-child:only-child, 
-.input-group > .selector-container:first-child:last-child:only-child .selector-input,
-.input-group > .addon:first-child:last-child:only-child{
-    border-radius: 6px;
-}
-
-.form-group [ng-messages].ng-active{
-    margin-top: 8px;
-    color: red;
-    user-select: none;
-}
-
-.form-group input.ng-invalid.ng-dirty:not(.not-styled),
-.form-group textarea.ng-invalid.ng-dirty:not(.not-styled),
-.form-group select.ng-invalid.ng-dirty:not(.not-styled),
-.form-group .selector-container.ng-invalid.ng-dirty .selector-input {
-    border-color: $red-border;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($red-border,.6);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($red-border, 0.6);
-}
-
-/*.form-group .loader{
-    @include start-center;
-}
-
-.form-group label+.loader{
-    padding-top: 8px;
-}*/
-
-.form-group .loader:after {
-  overflow: hidden;
-  position: absolute;
-  -webkit-animation: ellipsis steps(4,end) 4s infinite;      
-  animation: ellipsis steps(4,end) 4s infinite;
-  content: "...";
-  width: 0px;
+        .input-group {
+            .addon {
+                color: white;
+                background-color: $dark-grey-3dp;
+                transition: background-color 500ms;
+            }
+        }
+    }
+    
 }
