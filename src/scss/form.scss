@@ -11,7 +11,7 @@ fieldset {
     margin: 0;
     border-radius: 4px;
     font-family: inherit;
-    border: 1px solid #dcdcdc;
+    border: 1px solid #bfbfbf;
     position: relative;
     min-width: 0;
 }
@@ -165,8 +165,6 @@ label{
     .selector-container.open .selector-input,
     select:not(.not-styled):focus {
         border: 1px solid #66dee9;
-        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
-        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 222, 233, 0.6);
     }
 
     [ng-messages].ng-active{
@@ -210,6 +208,10 @@ select[disabled],
 
 .dark-mode {
 
+    fieldset {
+        border: 1px solid #4e4e4e;
+    }
+
     .form-group {
         input:not(.not-styled), 
         textarea:not(.not-styled), 
@@ -248,6 +250,13 @@ select[disabled],
                 transition: background-color 500ms;
             }
         }
+    }
+
+    input[disabled],
+    textarea[disabled],
+    select[disabled],
+    .selector-container.disabled .selector-input {
+        background-color: #131313;
     }
     
 }

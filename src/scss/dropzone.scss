@@ -28,14 +28,21 @@
         bottom: -22px;
         right: -25px;
     }
+
+    &.file{
+        min-height: 50px;
+    }
+    
+    &.dragover{
+        background-color: grey;
+        color: white;
+        border-color: white;
+    }
 }
 
-.dropzone.file{
-    min-height: 50px;
-}
 
-.dropzone.dragover{
-    background-color: grey;
-    color: white;
-    border-color: white;
+.dark-mode {
+    .dropzone {
+        border: 2px dashed rgba(white, 0.55);
+    }
 }

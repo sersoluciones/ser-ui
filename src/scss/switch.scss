@@ -9,7 +9,12 @@
 
     input {
         display: none;
+
+        &:not(:checked) + i{
+            background-color: $light-grey-2dp;
+        }
     }
+
     i {
         display: inline-block;
         cursor: pointer;
@@ -19,19 +24,17 @@
         transition: all ease 0.2s;
         border-radius: 20px;
         box-shadow: inset 0 0 1px rgba(0,0,0,.5);
-    }
-    i:before {
-        display: block;
-        content: '';
-        width: 20px;
-        height: 20px;
-        margin: 2px;
-        border-radius: 20px;
-        background: white;
-        box-shadow: 0 1px 2px rgba(0,0,0,.5);
-    }
-    input:not(:checked) + i{
-        background-color: grey;
+
+        &:before {
+            display: block;
+            content: '';
+            width: 20px;
+            height: 20px;
+            margin: 2px;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0 1px 2px rgba(0,0,0,.5);
+        }
     }
     
     :checked + i {
@@ -41,5 +44,13 @@
         -moz-box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px #3ed400;
         box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px #3ed400;
         background-color: #a9e296;
+    }
+}
+
+.dark-mode {
+    .switch{
+        input:not(:checked) + i{
+            background-color: $dark-grey-2dp;
+        }
     }
 }

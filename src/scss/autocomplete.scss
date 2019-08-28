@@ -11,7 +11,7 @@ ser-autocomplete {
     padding: 0 !important;
     margin: 0 !important;
     position: fixed;
-    background: #fff;
+    background-color: #fff;
     border: 1px solid #ccc;
     border-top: 0;
     max-height: 220px;
@@ -40,5 +40,11 @@ ser-autocomplete {
         .item:hover {
             background: $grey-hover;
         }
+    }
+}
+
+.dark-mode {
+    .ser-autocomplete-results{
+        background-color: $dark-grey-6dp;
     }
 }
