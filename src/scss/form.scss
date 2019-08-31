@@ -30,6 +30,14 @@ label{
     user-select: none;
 }
 
+select,
+textarea, 
+input {
+    background-color: $light-grey-2dp;
+    color: black;
+    border: none;
+}
+
 .form-group {
     position: relative;
     padding: 0 4px 8px;
@@ -225,6 +233,13 @@ select[disabled],
 }
 
 .dark-mode {
+
+    select,
+    textarea, 
+    input {
+        background-color: $dark-grey-2dp;
+        color: white;
+    }
 
     fieldset {
         border: 1px solid #4e4e4e;

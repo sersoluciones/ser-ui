@@ -23,9 +23,9 @@
 
             .separator{
                 margin: 0 16px;
-                border-top: 1px solid black;
-                height: 1px;
-                width: 12px;
+                height: 14px;
+                width: 22px;
+                font-size: 14px;
             }
         }
     }
@@ -132,7 +132,7 @@
             font-style: inherit;
             font-weight: inherit;
             text-transform: inherit;
-            color: inherit;
+            color: black;
             cursor: pointer;
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -477,6 +477,17 @@
 }
 
 .dark-mode {
+
+    .date-picker-wrapper {
+        .shortcuts{
+    
+            a[shortcut]{
+                background-color: $dark-grey-2dp;
+                color: white;
+            }
+        }
+    }
+
     .ser-date-wrapper {
 
         .clear {
@@ -489,10 +500,6 @@
             &.bttn.value-wrapper {
                 color: white;
                 background-color: $dark-grey-2dp;
-    
-                .separator{
-                    border-top: 1px solid white;
-                }
             }
         }
     }

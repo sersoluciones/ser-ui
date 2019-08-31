@@ -230,13 +230,13 @@ angular.module('SER.datepicker').directive('serDateRange', ['$filter', function 
                     if ('time' in attrs) {
                         element.find('.value-wrapper').html(
                             '<span>' + moment(date1).format(formatDate) + '<br>' + moment(date1).format(formatTime) + '</span>' + 
-                            '<div class="separator"></div>' + 
+                            '<div class="separator">&#x27F7;</div>' + 
                             '<span>' + moment(date2).format(formatDate) + '<br>' + moment(date2).format(formatTime) + '</span>'
                         );
                     } else {
                         element.find('.value-wrapper').html(
                             '<span>' + moment(date1).format(formatDate) + '</span>' + 
-                            '<div class="separator"></div>' + 
+                            '<div class="separator">&#x27F7;</div>' + 
                             '<span>' + moment(date2).format(formatDate) + '</span>'
                         );
                     }
