@@ -12505,16 +12505,18 @@ if (typeof Object.create !== 'function') {
             "month-name": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
             "shortcuts": "Shortcuts",
             "custom-values": "Custom Values",
-            "past": "Past",
-            "following": "Following",
-            "previous": "Previous",
-            "prev-week": "Week",
-            "prev-month": "Month",
-            "prev-year": "Year",
-            "next": "Next",
-            "next-week": "Week",
-            "next-month": "Month",
-            "next-year": "Year",
+            "past": "Past to: ",
+            "following": "Following to: ",
+            "previous": "Previous to: ",
+            "prev-week": "1 Week",
+            "prev-month": "1 Month",
+            "prev-6month": "6 Months",
+            "prev-year": "1 Year",
+            "next": "Next to: ",
+            "next-week": "1 Week",
+            "next-month": "1 Month",
+            "next-6month": "6 Months",
+            "next-year": "1 Year",
             "less-than": "Date range should not be more than %d days",
             "more-than": "Date range should not be less than %d days",
             "default-more": "Please select a date range longer than %d days",
@@ -12543,13 +12545,13 @@ if (typeof Object.create !== 'function') {
             "past": "Vorherige",
             "following": "Folgende",
             "previous": "Vorherige",
-            "prev-week": "Woche",
-            "prev-month": "Monat",
-            "prev-year": "Jahr",
+            "prev-week": "1 Woche",
+            "prev-month": "1 Monat",
+            "prev-year": "1 Jahr",
             "next": "Nächste",
-            "next-week": "Woche",
-            "next-month": "Monat",
-            "next-year": "Jahr",
+            "next-week": "1 Woche",
+            "next-month": "1 Monat",
+            "next-year": "1 Jahr",
             "less-than": "Datumsbereich darf nicht größer sein als %d Tage",
             "more-than": "Datumsbereich darf nicht kleiner sein als %d Tage",
             "default-more": "Bitte mindestens %d Tage auswählen",
@@ -12575,102 +12577,37 @@ if (typeof Object.create !== 'function') {
             "week-7": "do",
             "month-name": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
             "shortcuts": "Accesos directos",
-            "past": "Pasado",
-            "following": "Siguiente",
-            "previous": "Anterior",
-            "prev-week": "Semana",
-            "prev-month": "Mes",
-            "prev-year": "Año",
-            "next": "Siguiente",
-            "next-week": "Semana",
-            "next-month": "Mes",
-            "next-year": "Año",
+            "past": "Pasado a: ",
+            "following": "Siguiente a: ",
+            "previous": "Anterior a: ",
+            "prev-week": "1 Semana",
+            "prev-month": "1 Mes",
+            "prev-6month": "6 Meses",
+            "prev-year": "1 Año",
+            "next": "Siguiente a: ",
+            "next-week": "1 Semana",
+            "next-month": "1 Mes",
+            "next-6month": "6 Meses",
+            "next-year": "1 Año",
             "less-than": "El rango no debería ser mayor de %d días",
             "more-than": "El rango no debería ser menor de %d días",
             "default-more": "Por favor selecciona un rango mayor a %d días",
             "default-single": "Por favor selecciona un día",
             "default-less": "Por favor selecciona un rango menor a %d días",
             "default-range": "Por favor selecciona un rango entre %d y %d días",
-            "default-default": "Por favor selecciona un rango de fechas."
-        },
-        "fr": {
-            "selected": "Sélection:",
-            "day": "Jour",
-            "days": "Jours",
-            "apply": "Fermer",
-            "week-1": "lu",
-            "week-2": "ma",
-            "week-3": "me",
-            "week-4": "je",
-            "week-5": "ve",
-            "week-6": "sa",
-            "week-7": "di",
-            "month-name": ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"],
-            "shortcuts": "Raccourcis",
-            "past": "Passé",
-            "following": "Suivant",
-            "previous": "Précédent",
-            "prev-week": "Semaine",
-            "prev-month": "Mois",
-            "prev-year": "Année",
-            "next": "Suivant",
-            "next-week": "Semaine",
-            "next-month": "Mois",
-            "next-year": "Année",
-            "less-than": "L'intervalle ne doit pas être supérieure à %d jours",
-            "more-than": "L'intervalle ne doit pas être inférieure à %d jours",
-            "default-more": "Merci de choisir une intervalle supérieure à %d jours",
-            "default-single": "Merci de choisir une date",
-            "default-less": "Merci de choisir une intervalle inférieure %d jours",
-            "default-range": "Merci de choisir une intervalle comprise entre %d et %d jours",
-            "default-default": "Merci de choisir une date"
-        },
-        "pt": //Portuguese (European)
-        {
-            "selected": "Selecionado:",
-            "day": "Dia",
-            "days": "Dias",
-            "apply": "Fechar",
-            "week-1": "seg",
-            "week-2": "ter",
-            "week-3": "qua",
-            "week-4": "qui",
-            "week-5": "sex",
-            "week-6": "sab",
-            "week-7": "dom",
-            "week-number": "N",
-            "month-name": ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
-            "shortcuts": "Atalhos",
-            "custom-values": "Valores Personalizados",
-            "past": "Passado",
-            "following": "Seguinte",
-            "previous": "Anterior",
-            "prev-week": "Semana",
-            "prev-month": "Mês",
-            "prev-year": "Ano",
-            "next": "Próximo",
-            "next-week": "Próxima Semana",
-            "next-month": "Próximo Mês",
-            "next-year": "Próximo Ano",
-            "less-than": "O período selecionado não deve ser maior que %d dias",
-            "more-than": "O período selecionado não deve ser menor que %d dias",
-            "default-more": "Selecione um período superior a %d dias",
-            "default-single": "Selecione uma data",
-            "default-less": "Selecione um período inferior a %d dias",
-            "default-range": "Selecione um período de %d a %d dias",
-            "default-default": "Selecione um período",
-            "time": "Tempo",
+            "default-default": "Por favor selecciona un rango de fechas.",
+            "time": "Tiempo",
             "hour": "Hora",
             "minute": "Minuto"
         }
     };
 
-    $.fn.dateRangePicker = function (opt) {
+    $.fn.dateRangePicker = function(opt) {
         if (!opt) opt = {};
         opt = $.extend(true, {
             autoClose: false,
             format: 'YYYY-MM-DD',
-            separator: ' - ',
+            separator: ' to ',
             language: 'auto',
             startOfWeek: 'sunday', // or monday
             getValue: function() {
@@ -12688,6 +12625,13 @@ if (typeof Object.create !== 'function') {
             },
             minDays: 0,
             maxDays: 0,
+            showShortcuts: false,
+            shortcuts: {
+                //'prev-days': [1,3,5,7],
+                // 'next-days': [3,5,7],
+                //'prev' : ['week','month','year'],
+                // 'next' : ['week','month','year']
+            },
             customShortcuts: [],
             inline: false,
             container: 'body',
@@ -12695,7 +12639,6 @@ if (typeof Object.create !== 'function') {
             singleDate: false,
             lookBehind: false,
             batchMode: false,
-            highlightToday: false,
             duration: 200,
             stickyMonths: false,
             dayDivAttrs: [],
@@ -12717,7 +12660,9 @@ if (typeof Object.create !== 'function') {
             customOpenAnimation: null,
             customCloseAnimation: null,
             customArrowPrevSymbol: null,
-            customArrowNextSymbol: null
+            customArrowNextSymbol: null,
+            monthSelect: false,
+            yearSelect: false
         }, opt);
 
         opt.start = false;
@@ -12740,6 +12685,10 @@ if (typeof Object.create !== 'function') {
         if (opt.startDate && typeof opt.startDate == 'string') opt.startDate = moment(opt.startDate, opt.format).toDate();
         if (opt.endDate && typeof opt.endDate == 'string') opt.endDate = moment(opt.endDate, opt.format).toDate();
 
+        if (opt.yearSelect && typeof opt.yearSelect === 'boolean') {
+            opt.yearSelect = function(current) { return [current - 5, current + 5]; }
+        }
+
         var languages = getLanguages();
         var box;
         var initiated = false;
@@ -12747,12 +12696,10 @@ if (typeof Object.create !== 'function') {
         var selfDom = $(self).get(0);
         var domChangeTimer;
 
-        $(this).unbind('.datepicker').bind('click.datepicker', function(evt) {
+        $(this).off('.datepicker').on('click.datepicker', function(evt) {
             var isOpen = box.is(':visible');
             if (!isOpen) open(opt.duration);
-        }).bind('change.datepicker', function(evt) {
-            checkAndSetDefaultValue();
-        }).bind('keyup.datepicker', function() {
+        }).on('keyup.datepicker', function() {
             try {
                 clearTimeout(domChangeTimer);
             } catch (e) {}
@@ -12769,13 +12716,13 @@ if (typeof Object.create !== 'function') {
 
         // expose some api
         $(this).data('dateRangePicker', {
-            setStart: function (d1, silent) {
+            setStart: function(d1) {
                 if (typeof d1 == 'string') {
                     d1 = moment(d1, opt.format).toDate();
                 }
 
                 opt.end = false;
-                setSingleDate(d1, silent);
+                setSingleDate(d1);
 
                 return this;
             },
@@ -12802,16 +12749,16 @@ if (typeof Object.create !== 'function') {
             getDatePicker: getDatePicker,
             resetMonthsView: resetMonthsView,
             destroy: function() {
-                $(self).unbind('.datepicker');
+                $(self).off('.datepicker');
                 $(self).data('dateRangePicker', '');
                 $(self).data('date-picker-opened', null);
                 box.remove();
-                $(window).unbind('resize.datepicker', calcPosition);
-                $(document).unbind('click.datepicker', closeDatePicker);
+                $(window).off('resize.datepicker', calcPosition);
+                $(document).off('click.datepicker', outsideClickClose);
             }
         });
 
-        $(window).bind('resize.datepicker', calcPosition);
+        $(window).on('resize.datepicker', calcPosition);
 
         return this;
 
@@ -12880,6 +12827,7 @@ if (typeof Object.create !== 'function') {
                 box.addClass('two-months');
             }
 
+
             setTimeout(function() {
                 updateCalendarWidth();
                 initiated = true;
@@ -12890,19 +12838,13 @@ if (typeof Object.create !== 'function') {
             });
 
             //if user click other place of the webpage, close date range picker window
-            $(document).bind('click.datepicker', function(evt) {
-                if (!IsOwnDatePickerClicked(evt, self[0])) {
-                    if (box.is(':visible')) closeDatePicker();
-                }
-            });
+            $(document).on('click.datepicker', outsideClickClose);
 
-            box.find('.next').click(function () {
-                $(self).trigger('datepicker-next-month-clicked');
+            box.find('.next').click(function() {
                 if (!opt.stickyMonths)
                     gotoNextMonth(this);
                 else
                     gotoNextMonth_stickily(this);
-                $(self).trigger('datepicker-next-month-finish-clicked');
             });
 
             function gotoNextMonth(self) {
@@ -12925,13 +12867,11 @@ if (typeof Object.create !== 'function') {
             }
 
 
-            box.find('.prev').click(function () {
-                $(self).trigger('datepicker-prev-month-clicked');
+            box.find('.prev').click(function() {
                 if (!opt.stickyMonths)
                     gotoPrevMonth(this);
                 else
                     gotoPrevMonth_stickily(this);
-                $(self).trigger('datepicker-prev-month-finish-clicked');
             });
 
             function gotoPrevMonth(self) {
@@ -12955,7 +12895,7 @@ if (typeof Object.create !== 'function') {
 
             box.attr('unselectable', 'on')
                 .css('user-select', 'none')
-                .bind('selectstart', function(e) {
+                .on('selectstart', function(e) {
                     e.preventDefault();
                     return false;
                 });
@@ -12984,43 +12924,51 @@ if (typeof Object.create !== 'function') {
 
             box.find('[shortcut]').click(function() {
                 var shortcut = $(this).attr('shortcut');
-                var end = new Date(),
-                    start = false;
-                var dir;
-                if (shortcut.indexOf('day') != -1) {
-                    var day = parseInt(shortcut.split(',', 2)[1], 10);
-                    start = new Date(new Date().getTime() + 86400000 * day);
-                    end = new Date(end.getTime() + 86400000 * (day > 0 ? 1 : -1));
-                } else if (shortcut.indexOf('week') != -1) {
-                    dir = shortcut.indexOf('prev,') != -1 ? -1 : 1;
-                    var stopDay;
-                    if (dir == 1)
-                        stopDay = opt.startOfWeek == 'monday' ? 1 : 0;
-                    else
-                        stopDay = opt.startOfWeek == 'monday' ? 0 : 6;
-
-                    end = new Date(end.getTime() - 86400000);
-                    while (end.getDay() != stopDay) end = new Date(end.getTime() + dir * 86400000);
-                    start = new Date(end.getTime() + dir * 86400000 * 6);
+                var dir = shortcut.indexOf('prev,') != -1 ? -1 : 1;
+                var start = moment();
+                var end = moment();
+                if (shortcut.indexOf('year') != -1) {
+                    if (dir == 1){
+                        start.endOf('day');
+                        end.add(1, 'years').endOf('day');
+                    } else {
+                        end.endOf('day');
+                        start.subtract(1, 'years').startOf('day');
+                    }
+                } else if (shortcut.indexOf('6month') != -1) {
+                    if (dir == 1){
+                        start.endOf('day');
+                        end.add(6, 'months').endOf('day');
+                    } else {
+                        end.endOf('day');
+                        start.subtract(6, 'months').startOf('day');
+                    }
                 } else if (shortcut.indexOf('month') != -1) {
-                    dir = shortcut.indexOf('prev,') != -1 ? -1 : 1;
-                    if (dir == 1)
-                        start = nextMonth(end);
-                    else
-                        start = prevMonth(end);
-                    start.setDate(1);
-                    end = nextMonth(start);
-                    end.setDate(1);
-                    end = new Date(end.getTime() - 86400000);
-                } else if (shortcut.indexOf('year') != -1) {
-                    dir = shortcut.indexOf('prev,') != -1 ? -1 : 1;
-                    start = new Date();
-                    start.setFullYear(end.getFullYear() + dir);
-                    start.setMonth(0);
-                    start.setDate(1);
-                    end.setFullYear(end.getFullYear() + dir);
-                    end.setMonth(11);
-                    end.setDate(31);
+                    if (dir == 1){
+                        start.endOf('day');
+                        end.add(1, 'months').endOf('day');
+                    } else {
+                        end.endOf('day');
+                        start.subtract(1, 'months').startOf('day');
+                    }
+                } else if (shortcut.indexOf('week') != -1) {
+                    if (dir == 1){
+                        start.endOf('day');
+                        end.add(1, 'weeks').endOf('day');
+                    } else {
+                        end.endOf('day');
+                        start.subtract(1, 'weeks').startOf('day');
+                    }
+                } else if (shortcut.indexOf('day') != -1) {
+                    var day = parseInt(shortcut.split(',', 2)[1], 10);
+                    
+                    if (dir == 1){
+                        start.endOf('day');
+                        end.add(day, 'days').endOf('day');
+                    } else {
+                        end.endOf('day');
+                        start.subtract(day, 'days').startOf('day');
+                    }
                 } else if (shortcut == 'custom') {
                     var name = $(this).html();
                     if (opt.customShortcuts && opt.customShortcuts.length > 0) {
@@ -13052,23 +13000,25 @@ if (typeof Object.create !== 'function') {
                     }
                 }
                 if (start && end) {
-                    setDateRange(start, end);
+                    setDateRange(start.toDate(), end.toDate());
                     checkSelectionValid();
                 }
             });
 
-            box.find('.time1 input[type=range]').bind('change touchmove', function(e) {
-                var target = e.target,
-                    hour = target.name == 'hour' ? $(target).val().replace(/^(\d{1})$/, '0$1') : undefined,
-                    min = target.name == 'minute' ? $(target).val().replace(/^(\d{1})$/, '0$1') : undefined;
-                setTime('time1', hour, min);
+            box.find('.time1 select').on('change', function(e) {
+                var hour = box.find('.time1 select.hour-range').val();
+                var min = box.find('.time1 select.minute-range').val();
+                var mr = box.find('.time1 select.meridiem-range').val();
+                var time = moment(hour + min + mr, ["hmmA"]);
+                setTime('time1', time.format('HH'), time.format('mm'));
             });
 
-            box.find('.time2 input[type=range]').bind('change touchmove', function(e) {
-                var target = e.target,
-                    hour = target.name == 'hour' ? $(target).val().replace(/^(\d{1})$/, '0$1') : undefined,
-                    min = target.name == 'minute' ? $(target).val().replace(/^(\d{1})$/, '0$1') : undefined;
-                setTime('time2', hour, min);
+            box.find('.time2 select').on('change', function(e) {
+                var hour = box.find('.time2 select.hour-range').val();
+                var min = box.find('.time2 select.minute-range').val();
+                var mr = box.find('.time2 select.meridiem-range').val();
+                var time = moment(hour + min + mr, ["hmmA"]);
+                setTime('time2', time.format('HH'), time.format('mm'));
             });
 
         }
@@ -13079,9 +13029,10 @@ if (typeof Object.create !== 'function') {
                 var offset = $(self).offset();
                 if ($(opt.container).css('position') == 'relative') {
                     var containerOffset = $(opt.container).offset();
+                    var leftIndent = Math.max(0, offset.left + box.outerWidth() - $('body').width() + 16);
                     box.css({
                         top: offset.top - containerOffset.top + $(self).outerHeight() + 4,
-                        left: offset.left - containerOffset.left
+                        left: offset.left - containerOffset.left - leftIndent
                     });
                 } else {
                     if (offset.left < 460) //left to right
@@ -13106,7 +13057,6 @@ if (typeof Object.create !== 'function') {
         }
 
         function open(animationTime) {
-            calcPosition();
             redrawDatePicker();
             checkAndSetDefaultValue();
             if (opt.customOpenAnimation) {
@@ -13127,6 +13077,7 @@ if (typeof Object.create !== 'function') {
             });
             showGap();
             updateCalendarWidth();
+            calcPosition();
         }
 
         function checkAndSetDefaultValue() {
@@ -13173,8 +13124,9 @@ if (typeof Object.create !== 'function') {
         }
 
         function renderTime(name, date) {
-            box.find('.' + name + ' input[type=range].hour-range').val(moment(date).hours());
-            box.find('.' + name + ' input[type=range].minute-range').val(moment(date).minutes());
+            box.find('.' + name + ' select.hour-range').val(moment(date).format('hh'));
+            box.find('.' + name + ' select.minute-range').val(moment(date).format('mm'));
+            box.find('.' + name + ' select.meridiem-range').val(moment(date).format('A'));
             setTime(name, moment(date).format('HH'), moment(date).format('mm'));
         }
 
@@ -13193,6 +13145,7 @@ if (typeof Object.create !== 'function') {
         }
 
         function setTime(name, hour, minute) {
+
             hour && (box.find('.' + name + ' .hour-val').text(hour));
             minute && (box.find('.' + name + ' .minute-val').text(minute));
             switch (name) {
@@ -13237,7 +13190,7 @@ if (typeof Object.create !== 'function') {
         }
 
         function handleStart(time) {
-            var r = time;
+            var r = moment(parseInt(time)).startOf('day').valueOf();
             if (opt.batchMode === 'week-range') {
                 if (opt.startOfWeek === 'monday') {
                     r = moment(parseInt(time)).startOf('isoweek').valueOf();
@@ -13251,7 +13204,7 @@ if (typeof Object.create !== 'function') {
         }
 
         function handleEnd(time) {
-            var r = time;
+            var r = moment(parseInt(time)).endOf('day').valueOf();
             if (opt.batchMode === 'week-range') {
                 if (opt.startOfWeek === 'monday') {
                     r = moment(parseInt(time)).endOf('isoweek').valueOf();
@@ -13418,7 +13371,7 @@ if (typeof Object.create !== 'function') {
             var tooltip = '';
 
             if (day.hasClass('has-tooltip') && day.attr('data-tooltip')) {
-                tooltip = '<span style="white-space:nowrap">' + day.attr('data-tooltip') + '</span>';
+                tooltip = '<span class="tooltip-content">' + day.attr('data-tooltip') + '</span>';
             } else if (!day.hasClass('invalid')) {
                 if (opt.singleDate) {
                     box.find('.day.hovering').removeClass('hovering');
@@ -13494,6 +13447,39 @@ if (typeof Object.create !== 'function') {
         function clearHovering() {
             box.find('.day.hovering').removeClass('hovering');
             box.find('.date-range-length-tip').hide();
+        }
+
+        function dateChanged(date) {
+            var value = date.val();
+            var name = date.attr('name');
+            var type = date.parents('table').hasClass('month1') ? 'month1' : 'month2';
+            var oppositeType = type === 'month1' ? 'month2' : 'month1';
+            var startDate = opt.startDate ? moment(opt.startDate) : false;
+            var endDate = opt.endDate ? moment(opt.endDate) : false;
+            var newDate = moment(opt[type])[name](value);
+
+
+            if (startDate && newDate.isSameOrBefore(startDate)) {
+                newDate = startDate.add(type === 'month2' ? 1 : 0, 'month');
+            }
+
+            if (endDate && newDate.isSameOrAfter(endDate)) {
+                newDate = endDate.add(!opt.singleMonth && type === 'month1' ? -1 : 0, 'month');
+            }
+
+            showMonth(newDate, type);
+
+            if (type === 'month1') {
+                if (opt.stickyMonths || moment(newDate).isSameOrAfter(opt[oppositeType], 'month')) {
+                    showMonth(moment(newDate).add(1, 'month'), oppositeType);
+                }
+            } else {
+                if (opt.stickyMonths || moment(newDate).isSameOrBefore(opt[oppositeType], 'month')) {
+                    showMonth(moment(newDate).add(-1, 'month'), oppositeType);
+                }
+            }
+
+            showGap();
         }
 
         function autoclose() {
@@ -13592,7 +13578,7 @@ if (typeof Object.create !== 'function') {
         }
 
         function countDays(start, end) {
-            return Math.abs(daysFrom1970(start) - daysFrom1970(end)) + 1;
+            return Math.abs(moment(start).diff(moment(end), 'd')) + 1;
         }
 
         function setDateRange(date1, date2, silent) {
@@ -13651,7 +13637,7 @@ if (typeof Object.create !== 'function') {
             autoclose();
         }
 
-        function setSingleDate(date1, silent) {
+        function setSingleDate(date1) {
 
             var valid = true;
             if (opt.startDate && compare_day(date1, opt.startDate) < 0) valid = false;
@@ -13674,7 +13660,7 @@ if (typeof Object.create !== 'function') {
                 showMonth(date2, 'month2');
             }
             showGap();
-            showSelectedInfo(false, silent);
+            showSelectedInfo();
             autoclose();
         }
 
@@ -13721,32 +13707,143 @@ if (typeof Object.create !== 'function') {
 
         function showMonth(date, month) {
             date = moment(date).toDate();
-            var monthName = nameMonth(date.getMonth());
-            box.find('.' + month + ' .month-name').html(monthName + ' ' + date.getFullYear());
+            var monthElement = generateMonthElement(date, month);
+            var yearElement = generateYearElement(date, month);
+
+            box.find('.' + month + ' .month-name').html(monthElement + ' ' + yearElement);
             box.find('.' + month + ' tbody').html(createMonthHTML(date));
             opt[month] = date;
             updateSelectableRange();
-            bindDayEvents();
+            bindEvents();
+            $(self).trigger('datepicker-change-month');
         }
 
-        function bindDayEvents() {
-            box.find('.day').unbind("click").click(function(evt) {
+        function generateMonthElement(date, month) {
+            date = moment(date);
+            var currentMonth = date.get('month');
+            var currentMonthName = nameMonth(currentMonth);
+            var nonSelectableMonth = '<div class="month-element">' + currentMonthName + '</div>';
+
+            if (!opt.monthSelect) { return nonSelectableMonth; }
+
+            var startDate = opt.startDate ? moment(opt.startDate).add(!opt.singleMonth && month === 'month2' ? 1 : 0, 'month') : false;
+            var endDate = opt.endDate ? moment(opt.endDate).add(!opt.singleMonth && month === 'month1' ? -1 : 0, 'month') : false;
+
+            var minSelectableMonth = startDate && date.isSame(startDate, 'year') ? startDate.get('month') : 0;
+            var maxSelectableMonth = endDate && date.isSame(endDate, 'year') ? endDate.get('month') : 11;
+            var minVisibleMonth = Math.min(minSelectableMonth, currentMonth);
+            var maxVisibleMonth = Math.max(maxSelectableMonth, currentMonth);
+
+            if (minVisibleMonth === maxVisibleMonth) { return nonSelectableMonth; }
+
+            var selectData = generateSelectData(
+                {
+                    minSelectable: minSelectableMonth,
+                    maxSelectable: maxSelectableMonth,
+                    minVisible: minVisibleMonth,
+                    maxVisible: maxVisibleMonth,
+                },
+                currentMonth,
+                function (value) { return nameMonth(value); }
+            )
+            return generateSelect('month', selectData);
+        }
+
+        function generateYearElement(date, month) {
+            date = moment(date);
+            var currentYear = date.get('year');
+            var nonSelectableMonth = '<div class="month-element">' + currentYear + '</div>';
+
+            if (!opt.yearSelect) { return nonSelectableMonth; }
+
+            var isYearFunction = opt.yearSelect && typeof opt.yearSelect === 'function';
+            var startDate = opt.startDate ? moment(opt.startDate).add(!opt.singleMonth && month === 'month2' ? 1 : 0, 'month') : false;
+            var endDate = opt.endDate ? moment(opt.endDate).add(!opt.singleMonth && month === 'month1' ? -1 : 0, 'month') : false;
+            var range = isYearFunction ? opt.yearSelect(currentYear) : opt.yearSelect.slice();
+
+            var minSelectableYear = startDate ? Math.max(range[0], startDate.get('year')) : Math.min(range[0], currentYear);
+            var maxSelectableYear = endDate ? Math.min(range[1], endDate.get('year')) : Math.max(range[1], currentYear);
+            var minVisibleYear = Math.min(minSelectableYear, currentYear);
+            var maxVisibleYear = Math.max(maxSelectableYear, currentYear);
+
+            if (minVisibleYear === maxVisibleYear) { return nonSelectableMonth; }
+
+            var selectData = generateSelectData(
+                {
+                    minSelectable: minSelectableYear,
+                    maxSelectable: maxSelectableYear,
+                    minVisible: minVisibleYear,
+                    maxVisible: maxVisibleYear,
+                },
+                currentYear
+            )
+            return generateSelect('year', selectData);
+        }
+
+
+        function generateSelectData(range, current, valueBeautifier) {
+            var data = [];
+            valueBeautifier = valueBeautifier || function(value) { return value; };
+
+            for (var i = range.minVisible; i <= range.maxVisible; i++) {
+                data.push({
+                    value: i,
+                    text: valueBeautifier(i),
+                    selected: i === current,
+                    disabled: ((i < range.minSelectable) || (i > range.maxSelectable)),
+                });
+            }
+
+            return data;
+        }
+
+        function generateSelect(name, data) {
+            var select = '<div class="select-wrapper"><select class="' + name + '" name="' + name + '">';
+            var current;
+
+            for (var i = 0, l = data.length; i < l; i++) {
+                var item = data[i];
+                select += '<option value="' + item.value + '"' +
+                    (item.selected ? ' selected' : '') +
+                    (item.disabled ? ' disabled' : '') + '>' +
+                    item.text + '</option>';
+
+                if (item.selected) {
+                    current = item.text;
+                }
+            }
+
+            select += '</select>' + current + '</div>';
+
+            return select;
+        }
+
+        function bindEvents() {
+            box.find('.day').off("click").click(function(evt) {
                 dayClicked($(this));
             });
 
-            box.find('.day').unbind("mouseenter").mouseenter(function(evt) {
+            box.find('.day').off("mouseenter").mouseenter(function(evt) {
                 dayHovering($(this));
             });
 
-            box.find('.day').unbind("mouseleave").mouseleave(function(evt) {
+            box.find('.day').off("mouseleave").mouseleave(function(evt) {
                 box.find('.date-range-length-tip').hide();
                 if (opt.singleDate) {
                     clearHovering();
                 }
             });
 
-            box.find('.week-number').unbind("click").click(function(evt) {
+            box.find('.week-number').off("click").click(function(evt) {
                 weekNumberClicked($(this));
+            });
+
+            box.find('.month').off("change").change(function(evt) {
+                dateChanged($(this));
+            });
+
+            box.find('.year').off("change").change(function(evt) {
+                dateChanged($(this));
             });
         }
 
@@ -13776,12 +13873,7 @@ if (typeof Object.create !== 'function') {
             }
             var h1 = box.find('table.month1').height();
             var h2 = box.find('table.month2').height();
-
-            if (Math.max(h1, h2) === 0) {
-                box.find('.gap').height(100);
-            } else {
-                box.find('.gap').height(Math.max(h1, h2) + 10);
-            }
+            box.find('.gap').height(Math.max(h1, h2) + 10);
         }
 
         function closeDatePicker() {
@@ -13831,14 +13923,21 @@ if (typeof Object.create !== 'function') {
         }
 
         function getTimeHTML() {
+            var hours = '';
+            for (var index = 1; index < 13; index++) {
+                hours += '<option value="' + (index + '').replace(/^(\d{1})$/, '0$1') + '">' + (index + '').replace(/^(\d{1})$/, '0$1') + '</option>';
+            }
+
+            var minutes = '';
+            for (var index = 0; index < 60; index++) {
+                minutes += '<option value="' + (index + '').replace(/^(\d{1})$/, '0$1') + '">' + (index + '').replace(/^(\d{1})$/, '0$1') + '</option>';
+            }
+
             return '<div>' +
-                '<span>' + translate('Time') + ': <span class="hour-val">00</span>:<span class="minute-val">00</span></span>' +
-                '</div>' +
-                '<div class="hour">' +
-                '<label>' + translate('Hour') + ': <input type="range" class="hour-range" name="hour" min="0" max="23"></label>' +
-                '</div>' +
-                '<div class="minute">' +
-                '<label>' + translate('Minute') + ': <input type="range" class="minute-range" name="minute" min="0" max="59"></label>' +
+                '<span>' + translate('Time') + ': </span>' +
+                '<select class="hour-range" name="hour">' + hours + '</select>' +
+                ': <select class="minute-range" name="minute">' + minutes + '</select>' +
+                ' <select class="meridiem-range" name="meridiem"><option value="AM">AM</option><option value="PM">PM</option></select>' +
                 '</div>';
         }
 
@@ -13846,29 +13945,53 @@ if (typeof Object.create !== 'function') {
             var html = '<div class="date-picker-wrapper';
             if (opt.extraClass) html += ' ' + opt.extraClass + ' ';
             if (opt.singleDate) html += ' single-date ';
+            if (!opt.showShortcuts) html += ' no-shortcuts ';
+            if (!opt.showTopbar) html += ' no-topbar ';
+            if (opt.customTopBar) html += ' custom-topbar ';
             html += '">';
+
+            if (opt.showTopbar) {
+                html += '<div class="drp_top-bar">';
+
+                if (opt.customTopBar) {
+                    if (typeof opt.customTopBar == 'function') opt.customTopBar = opt.customTopBar();
+                    html += '<div class="custom-top">' + opt.customTopBar + '</div>';
+                } else {
+                    html += '<div class="normal-top">' +
+                        '<span class="selection-top">' + translate('selected') + ' </span> <b class="start-day">...</b>';
+                    if (!opt.singleDate) {
+                        html += ' <span class="separator-day">' + opt.separator + '</span> <b class="end-day">...</b> <i class="selected-days">(<span class="selected-days-num">3</span> ' + translate('days') + ')</i>';
+                    }
+                    html += '</div>';
+                    html += '<div class="error-top">error</div>' +
+                        '<div class="default-top">default</div>';
+                }
+
+                html += '<input type="button" class="apply-btn disabled' + getApplyBtnClass() + '" value="' + translate('apply') + '" />';
+                html += '</div>';
+            }
 
             var _colspan = opt.showWeekNumbers ? 6 : 5;
 
-            var arrowPrev = '<i class="icon-left-open-mini"></i>';
+            var arrowPrev = '&lt;';
             if (opt.customArrowPrevSymbol) arrowPrev = opt.customArrowPrevSymbol;
 
-            var arrowNext = '<i class="icon-right-open-mini"></i>';
+            var arrowNext = '&gt;';
             if (opt.customArrowNextSymbol) arrowNext = opt.customArrowNextSymbol;
 
             html += '<div class="month-wrapper">' +
                 '   <table class="month1" cellspacing="0" border="0" cellpadding="0">' +
                 '       <thead>' +
                 '           <tr class="caption">' +
-                '               <th style="width:27px;">' +
-                '                   <div class="prev">' +
+                '               <th>' +
+                '                   <span class="prev">' +
                 arrowPrev +
-                '                   </div>' +
+                '                   </span>' +
                 '               </th>' +
                 '               <th colspan="' + _colspan + '" class="month-name">' +
                 '               </th>' +
-                '               <th style="width:27px;">' +
-                (opt.singleDate || !opt.stickyMonths ? '<div class="next">' + arrowNext + '</div>' : '') +
+                '               <th>' +
+                (opt.singleDate || !opt.stickyMonths ? '<span class="next">' + arrowNext + '</span>' : '') +
                 '               </th>' +
                 '           </tr>' +
                 '           <tr class="week-name">' + getWeekHead() +
@@ -13877,17 +14000,16 @@ if (typeof Object.create !== 'function') {
                 '   </table>';
 
             if (hasMonth2()) {
-                html += '<div class="gap"></div>' +
-                    '<table class="month2" cellspacing="0" border="0" cellpadding="0">' +
+                html += '<table class="month2" cellspacing="0" border="0" cellpadding="0">' +
                     '   <thead>' +
                     '   <tr class="caption">' +
-                    '       <th style="width:27px;">' +
-                    (!opt.stickyMonths ? '<div class="prev">' + arrowPrev + '</div>' : '') +
+                    '       <th>' +
+                    (!opt.stickyMonths ? '<span class="prev">' + arrowPrev + '</span>' : '') +
                     '       </th>' +
                     '       <th colspan="' + _colspan + '" class="month-name">' +
                     '       </th>' +
-                    '       <th style="width:27px;">' +
-                    '           <div class="next">' + arrowNext + '</div>' +
+                    '       <th>' +
+                    '           <span class="next">' + arrowNext + '</span>' +
                     '       </th>' +
                     '   </tr>' +
                     '   <tr class="week-name">' + getWeekHead() +
@@ -13896,16 +14018,86 @@ if (typeof Object.create !== 'function') {
                     '</table>';
 
             }
-
-            html += '<div style="clear:both;height:0;font-size:0;"></div>' +
+            //+'</div>'
+            html += '<div class="dp-clearfix"></div>' +
                 '<div class="time">' +
                 '<div class="time1"></div>';
             if (!opt.singleDate) {
                 html += '<div class="time2"></div>';
             }
             html += '</div>' +
-                '<div style="clear:both;height:0;font-size:0;"></div>' +
-                '</div></div>';
+                '<div class="dp-clearfix"></div>' +
+                '</div>';
+
+            html += '<div class="footer">';
+            if (opt.showShortcuts) {
+                html += '<div class="shortcuts"><b>' + translate('shortcuts') + ' | </b>';
+
+                var data = opt.shortcuts;
+                if (data) {
+                    var name;
+                    if (data['prev-days'] && data['prev-days'].length > 0) {
+                        html += '&nbsp;<span class="prev-days">' + translate('past');
+                        for (var i = 0; i < data['prev-days'].length; i++) {
+                            name = data['prev-days'][i] + ' ';
+                            name += (data['prev-days'][i] > 1) ? translate('days') : translate('day');
+                            html += ' <a href="javascript:;" shortcut="day,-' + data['prev-days'][i] + '">' + name + '</a>';
+                        }
+                        html += '<b> | </b></span>';
+                    }
+
+                    if (data['next-days'] && data['next-days'].length > 0) {
+                        html += '&nbsp;<span class="next-days">' + translate('following');
+                        for (var i = 0; i < data['next-days'].length; i++) {
+                            name = data['next-days'][i] + ' ';
+                            name += (data['next-days'][i] > 1) ? translate('days') : translate('day');
+                            html += ' <a href="javascript:;" shortcut="day,' + data['next-days'][i] + '">' + name + '</a>';
+                        }
+                        html += '<b> | </b></span>';
+                    }
+
+                    if (data.prev && data.prev.length > 0) {
+                        html += '&nbsp;<span class="prev-buttons">' + translate('previous');
+                        for (var i = 0; i < data.prev.length; i++) {
+                            name = translate('prev-' + data.prev[i]);
+                            html += ' <a href="javascript:;" shortcut="prev,' + data.prev[i] + '">' + name + '</a>';
+                        }
+                        html += '</span>';
+                    }
+
+                    if (data.next && data.next.length > 0) {
+                        html += '&nbsp;<span class="next-buttons">' + translate('next');
+                        for (var i = 0; i < data.next.length; i++) {
+                            name = translate('next-' + data.next[i]);
+                            html += ' <a href="javascript:;" shortcut="next,' + data.next[i] + '">' + name + '</a>';
+                        }
+                        html += '<b> | </b></span>';
+                    }
+                }
+
+                if (opt.customShortcuts) {
+                    for (var i = 0; i < opt.customShortcuts.length; i++) {
+                        var sh = opt.customShortcuts[i];
+                        html += '&nbsp;<span class="custom-shortcut"><a href="javascript:;" shortcut="custom">' + sh.name + '</a><b> | </b></span>';
+                    }
+                }
+                html += '</div>';
+            }
+
+            // Add Custom Values Dom
+            if (opt.showCustomValues) {
+                html += '<div class="customValues"><b>' + (opt.customValueLabel || translate('custom-values')) + '</b>';
+
+                if (opt.customValues) {
+                    for (var i = 0; i < opt.customValues.length; i++) {
+                        var val = opt.customValues[i];
+                        html += '&nbsp;<span class="custom-value"><a href="javascript:;" custom="' + val.value + '">' + val.name + '</a></span>';
+                    }
+                }
+            }
+
+            html += '</div></div>';
+
 
             return $(html);
         }
@@ -13953,6 +14145,19 @@ if (typeof Object.create !== 'function') {
             return false;
         }
 
+        function getGapHTML() {
+            var html = ['<div class="gap-top-mask"></div><div class="gap-bottom-mask"></div><div class="gap-lines">'];
+            for (var i = 0; i < 20; i++) {
+                html.push('<div class="gap-line">' +
+                    '<div class="gap-1"></div>' +
+                    '<div class="gap-2"></div>' +
+                    '<div class="gap-3"></div>' +
+                    '</div>');
+            }
+            html.push('</div>');
+            return html.join('');
+        }
+
         function hasMonth2() {
             return (!opt.singleMonth);
         }
@@ -13980,18 +14185,6 @@ if (typeof Object.create !== 'function') {
             }
 
             return attrString;
-        }
-
-        function daysFrom1970(t) {
-            return Math.floor(toLocalTimestamp(t) / 86400000);
-        }
-
-        function toLocalTimestamp(t) {
-            if (moment.isMoment(t)) t = t.toDate().getTime();
-            if (typeof t == 'object' && t.getTime) t = t.getTime();
-            if (typeof t == 'string' && !t.match(/\d{13}/)) t = moment(t, opt.format).toDate().getTime();
-            t = parseInt(t, 10) - new Date().getTimezoneOffset() * 60 * 1000;
-            return t;
         }
 
         function createMonthHTML(d) {
@@ -14148,8 +14341,20 @@ if (typeof Object.create !== 'function') {
             showGap();
         }
 
+        function outsideClickClose(evt) {
+            if (!IsOwnDatePickerClicked(evt, self[0])) {
+                if (box.is(':visible')) closeDatePicker();
+            }
+        }
+
+        var h1 = box.find('table.month1').height();
+        var h2 = box.find('table.month2').height();
+        console.log(h1, h2);
+        box.find('.gap').height(Math.max(h1, h2) + 10);
+
     };
 }));
+
 angular.module('SER.utils', []);
 
 // Key codes
@@ -14959,23 +15164,47 @@ angular.module('SER.datepicker').directive('weekDay', function () {
 
 angular.module('SER.datepicker').directive('serDate', ['$filter', function ($filter) {
 
-    return {
+	return {
         restrict: 'E',
         require: ['ngModel'],
         scope: {
             ngModel: '=',
-            config: '='
+            time: '=?',
+            endOfDay: '=?',
+            remove: '=?',
+            disabled: '=?',
+            min: '=',
+            max: '=',
         },
         controller: ['$scope', function ($scope) {
 
             $scope.placeholder = __('select_date');
-            
-            $scope.clear = function () {
-                $scope.ngModel = null;
-            };
+            $scope.remove = $scope.remove ? $scope.remove : false;
+            $scope.endOfDay = $scope.endOfDay ? $scope.endOfDay : false;
 
         }],
-        link: function (scope, element) {
+        link: function (scope, element, attrs, controller) {
+
+            var formatDate = attrs.formatDate ? attrs.formatDate: 'MMMM D, YYYY';
+            var formatTime = attrs.formatTime ? attrs.formatTime: 'hh:mm A';
+						
+            var setLabelHtml = function (date1) {
+                if (hasValue(date1)){
+                    
+                    if ('time' in attrs) {
+                        element.find('.value-wrapper').html(
+                            '<span>' + moment(date1).format(formatDate) + '<br>' + moment(date1).format(formatTime) + '</span>'
+                        );
+                    } else {
+                        element.find('.value-wrapper').html(
+                            '<span>' + moment(date1).format(formatDate) + '</span>'
+                        );
+                    }
+
+                } else {
+                    element.find('.value-wrapper').html(__('select_date'));
+                }
+            }
 
             var tooltip_instance = element.find('.value-wrapper').tooltipster({
                 content: element.find('.picker-wrapper'),
@@ -14984,60 +15213,102 @@ angular.module('SER.datepicker').directive('serDate', ['$filter', function ($fil
                 trigger: 'click',
                 theme: 'tooltipster-borderless',
                 position: 'bottom',
-                interactive: true
+                interactive: true,
+                functionBefore: function (instance, helper) {
+                        element.addClass('ng-focused');
+                        element.removeClass('ng-blur');
+                        element.triggerHandler('focus');
+                },
+                functionAfter: function (instance, helper) {
+                        element.removeClass('ng-focused');
+                        element.addClass('ng-blur');
+                        element.triggerHandler('blur');
+                }
             });
+
+            var notProcessing = true;
+            var clearResizeTimeout;
 
             var picker_instance = element.find('.date-wrapper').dateRangePicker({
                 inline: true,
                 container: element.find('.date-wrapper'),
+                separator: ' - ',
+                startOfWeek: 'monday',
+                customArrowPrevSymbol: '<i class="icon-left-open-mini"></i>',
+                customArrowNextSymbol: '<i class="icon-right-open-mini"></i>',
                 alwaysOpen: true,
-                language: 'es',
+                highlightToday: false,
+                language: currentLanguageUI ? currentLanguageUI: 'es',
+                showTopbar: false,
                 singleDate: true,
-                singleMonth: true
+                singleMonth: true,
+                monthSelect: true,
+                yearSelect: true,
+                startDate: hasValue(scope.min) ? moment(scope.min).format('YYYY-MM-DD'): false,
+                endDate: hasValue(scope.max) ? moment(scope.max).format('YYYY-MM-DD'): false,
+                time: {
+                    enabled: 'time' in attrs
+                },
+                defaultTime: moment()[scope.endOfDay ? 'endOf': 'startOf']('day').toDate()
             }).bind('datepicker-change', function (event, obj) {
 
-                scope.$apply(function () {
-                    scope.ngModel = obj.date1;
-                });
+                notProcessing = false;
 
-                element.find('.value-wrapper').tooltipster('close');
+                if (!('time' in attrs)){
+                    element.find('.value-wrapper').tooltipster('close');
+                }
 
-            }).bind('datepicker-next-month-finish-clicked', function (event) {
-                element.find('.value-wrapper').tooltipster('reposition');
-            }).bind('datepicker-prev-month-finish-clicked', function (event) {
-                element.find('.value-wrapper').tooltipster('reposition');
+                controller[0].$setViewValue(obj.date1);
+
+                setLabelHtml(obj.date1);
+
+                setTimeout(function () {
+                    notProcessing = true;
+                }, 1000);
+
+            }).bind('datepicker-change-month', function (event) {
+                clearTimeout(clearResizeTimeout);
+                clearResizeTimeout = setTimeout(function () {
+                    element.find('.value-wrapper').tooltipster('reposition');
+                }, 50);
             });
 
             if (scope.ngModel) {
                 picker_instance.data('dateRangePicker').setStart(scope.ngModel, true);
+                setLabelHtml(scope.ngModel);
             }
 
             scope.$watch('ngModel', function (newValue, oldValue) {
-                if (newValue && newValue != oldValue) {
+                if (newValue && newValue !== oldValue && notProcessing) {
                     picker_instance.data('dateRangePicker').setStart(newValue, true);
+                    setLabelHtml(scope.ngModel);
                 }
             }, true);
+
+            scope.clear = function () {
+                setLabelHtml();
+                controller[0].$setViewValue(null);
+                picker_instance.data('dateRangePicker').clear();
+            };
 
         },
         template: function (element, attr) {
 
-            return '' +
-                '<div class="ser-date-wrapper" ng-class="{open: open, \'has-value\': blur}">' +
-
-                    '<div ng-class="{\'bttn-group\': ngModel}" class="row center-center">' +
-                        '<button type="button" class="bttn value-wrapper">{{ (ngModel | date: \'longDate\') || placeholder }}</button>' +
-                        '<button type="button" ng-show="ngModel" class="bttn clear" ng-click="clear()">×</button>' +
-                    '</div>' +
-
-                    '<div class="tooltip-templates">' +
-                        '<div class="picker-wrapper">' +
-                            '<div class="date-wrapper"></div>' +
+                return '' +
+                    '<div class="ser-date-wrapper" ng-class="{open: open, \'has-value\': blur}">' +
+                        '<div ng-class="{\'bttn-group\': ngModel}" class="row center-center">' +
+                                '<button type="button" class="bttn value-wrapper">' + __('select_date') + '</button>' +
+                                '<button type="button" ng-show="ngModel" class="bttn clear" ng-click="clear()">×</button>' +
                         '</div>' +
-                    '</div>' +
-                '</div>';
-        }
-    };
 
+                        '<div class="tooltip-templates">' +
+                                '<div class="picker-wrapper single">' +
+                                        '<div class="date-wrapper"></div>' +
+                                '</div>' +
+                        '</div>' +
+                    '</div>';
+        }
+	};
 
 }]);
 
@@ -15048,19 +15319,41 @@ angular.module('SER.datepicker').directive('serDateRange', ['$filter', function 
         require: ['ngModel'],
         scope: {
             ngModel: '=',
-            config: '='
+            endOfDay: '=?',
+            remove: '=?',
+            disabled: '=?',
+            min: '=',
+            max: '=',
         },
         controller: ['$scope', function ($scope) {
 
-            $scope.placeholder = __('select_date_range');
-
-            $scope.clear = function () {
-                $scope.ngModel = null;
-                $scope.placeholder = __('select_date_range');
-            };
-
         }],
-        link: function (scope, element) {
+        link: function (scope, element, attrs, controller) {
+
+            var formatDate = attrs.formatDate ? attrs.formatDate: 'MMMM D, YYYY';
+            var formatTime = attrs.formatTime ? attrs.formatTime: 'hh:mm A';
+						
+            var setLabelHtml = function (date1, date2) {
+                if (hasValue(date1) && hasValue(date2)){
+                    
+                    if ('time' in attrs) {
+                        element.find('.value-wrapper').html(
+                            '<span>' + moment(date1).format(formatDate) + '<br>' + moment(date1).format(formatTime) + '</span>' + 
+                            '<div class="separator"></div>' + 
+                            '<span>' + moment(date2).format(formatDate) + '<br>' + moment(date2).format(formatTime) + '</span>'
+                        );
+                    } else {
+                        element.find('.value-wrapper').html(
+                            '<span>' + moment(date1).format(formatDate) + '</span>' + 
+                            '<div class="separator"></div>' + 
+                            '<span>' + moment(date2).format(formatDate) + '</span>'
+                        );
+                    }
+
+                } else {
+                    element.find('.value-wrapper').html(__('select_date_range'));
+                }
+            }
 
             var tooltip_instance = element.find('.value-wrapper').tooltipster({
                 content: element.find('.picker-wrapper'),
@@ -15072,46 +15365,77 @@ angular.module('SER.datepicker').directive('serDateRange', ['$filter', function 
                 interactive: true
             });
 
+            var notProcessing = true;
+            var clearResizeTimeout;
+
             var picker_instance = element.find('.date-wrapper').dateRangePicker({
                 inline: true,
                 container: element.find('.date-wrapper'),
+                separator: ' - ',
+                startOfWeek: 'monday',
+                customArrowPrevSymbol: '<i class="icon-left-open-mini"></i>',
+                customArrowNextSymbol: '<i class="icon-right-open-mini"></i>',
                 alwaysOpen: true,
-                language: 'es'
+                showTopbar: false,
+                highlightToday: false,
+                language: currentLanguageUI ? currentLanguageUI: 'es',
+                monthSelect: true,
+                yearSelect: true,
+                startDate: hasValue(scope.min) ? moment(scope.min).format('YYYY-MM-DD'): false,
+                endDate: hasValue(scope.max) ? moment(scope.max).format('YYYY-MM-DD'): false,
+                time: {
+                    enabled: 'time' in attrs
+                },
+                defaultTime: moment().startOf('day').toDate(),
+                defaultEndTime: moment().endOf('day').toDate(),
+                showShortcuts: true,
+                shortcuts :
+                {
+                    'prev': ['week','month', '6month','year']
+                }
             }).bind('datepicker-change', function (event, obj) {
 
-                scope.$apply(function () {
+                notProcessing = false;
 
-                    obj.date1.setHours(0, 0, 0, 0);
-                    obj.date2.setHours(23, 59, 59, 0);
-                    scope.ngModel = {
-                        FromDate: obj.date1,
-                        ToDate: obj.date2
-                    };
+                if (!('time' in attrs)){
+                    element.find('.value-wrapper').tooltipster('close');
+                }
 
-                    scope.placeholder = $filter('date')(obj.date1, 'longDate') + ' - ' + $filter('date')(obj.date2, 'longDate');
+                controller[0].$setViewValue({
+                    FromDate: obj.date1,
+                    ToDate: obj.date2
                 });
 
-                element.find('.value-wrapper').tooltipster('close');
+                setLabelHtml(obj.date1, obj.date2);
 
-            }).bind('datepicker-next-month-finish-clicked', function (event) {
-                element.find('.value-wrapper').tooltipster('reposition');
-            }).bind('datepicker-prev-month-finish-clicked', function (event) {
-                element.find('.value-wrapper').tooltipster('reposition');
+                setTimeout(function () {
+                    notProcessing = true;
+                }, 1000);
+
+            }).bind('datepicker-change-month', function (event) {
+                clearTimeout(clearResizeTimeout);
+                clearResizeTimeout = setTimeout(function () {
+                    element.find('.value-wrapper').tooltipster('reposition');
+                }, 50);
             });
 
             if (scope.ngModel && scope.ngModel.FromDate && scope.ngModel.ToDate) {
-                picker_instance.data('dateRangePicker').setStart(scope.ngModel.FromDate, true);
-                picker_instance.data('dateRangePicker').setEnd(scope.ngModel.ToDate, true);
-                scope.placeholder = $filter('date')(scope.ngModel.FromDate, 'longDate') + ' - ' + $filter('date')(scope.ngModel.ToDate, 'longDate');
+                picker_instance.data('dateRangePicker').setDateRange(scope.ngModel.FromDate, scope.ngModel.ToDate);
+                setLabelHtml(scope.ngModel.FromDate, scope.ngModel.ToDate);
             }
 
             scope.$watch('ngModel', function (newValue, oldValue) {
-                if (hasValue(newValue) && hasValue(newValue.FromDate) && hasValue(newValue.ToDate)) {
-                    scope.placeholder = $filter('date')(newValue.FromDate, 'longDate') + ' - ' + $filter('date')(newValue.ToDate, 'longDate');
-                    picker_instance.data('dateRangePicker').setStart(scope.ngModel.FromDate, true);
-                    picker_instance.data('dateRangePicker').setEnd(scope.ngModel.ToDate, true);
+                if (hasValue(newValue) && hasValue(newValue.FromDate) && hasValue(newValue.ToDate) && notProcessing) {
+                    picker_instance.data('dateRangePicker').setDateRange(scope.ngModel.FromDate, scope.ngModel.ToDate);
+                    setLabelHtml(scope.ngModel.FromDate, scope.ngModel.ToDate);
                 }
             }, true);
+
+            scope.clear = function () {
+                controller[0].$setViewValue(null);
+                picker_instance.data('dateRangePicker').clear();
+                setLabelHtml();
+            };
 
         },
         template: function (element, attr) {
@@ -15120,7 +15444,7 @@ angular.module('SER.datepicker').directive('serDateRange', ['$filter', function 
                 '<div class="ser-date-wrapper" ng-class="{open: open, \'has-value\': blur}">' +
 
                     '<div ng-class="{\'bttn-group\': ngModel}" class="row center-center">' +
-                        '<button type="button" class="bttn value-wrapper">{{ placeholder }}</button>' +
+                        '<button type="button" class="bttn value-wrapper">' + __('select_date_range') + '</button>' +
                         '<button type="button" ng-show="ngModel" class="bttn clear" ng-click="clear()">×</button>' +
                     '</div>' +
 

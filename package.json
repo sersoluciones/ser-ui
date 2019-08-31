@@ -19,6 +19,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
+    "gulp-gzip": "latest",
     "gulp-jsonminify": "latest",
     "gulp-minify-css": "latest",
     "gulp-rename": "^1.2.2",
@@ -27,7 +28,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "latest",
     "gulp-wrap": "latest",
-    "streamqueue": "^1.1.1",
-    "gulp-gzip": "latest"
+    "jquery-date-range-picker": "^1.0.4",
+    "streamqueue": "^1.1.1"
   }
 }

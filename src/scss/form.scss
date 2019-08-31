@@ -159,13 +159,31 @@ label{
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
-    
-    input:not(.not-styled):focus,
+
+    input:not(.not-styled),
+    textarea:not(.not-styled),
+    .selector-container .selector-input,
+    select:not(.not-styled) {
+
+        &:hover,
+        &:focus{
+            box-shadow: 0px 0px 7px 1px rgba(black, 0.1);
+        }
+    }
+
+    /* input:not(.not-styled):focus,
     textarea:not(.not-styled):focus,
     .selector-container.open .selector-input,
     select:not(.not-styled):focus {
-        border: 1px solid #66dee9;
+        box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.3);
     }
+
+    input:not(.not-styled):hover,
+    textarea:not(.not-styled):hover,
+    .selector-container .selector-input:hover,
+    select:not(.not-styled):hover {
+        box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.3);
+    } */
 
     [ng-messages].ng-active{
         margin-top: 8px;
@@ -228,11 +246,15 @@ select[disabled],
             color: white;
         }
 
-        input:not(.not-styled):focus,
-        textarea:not(.not-styled):focus,
-        .selector-container.open .selector-input,
-        select:not(.not-styled):focus {
-            border: 1px solid rgba(#66dee9, 0.4);
+        input:not(.not-styled),
+        textarea:not(.not-styled),
+        .selector-container .selector-input,
+        select:not(.not-styled) {
+    
+            &:hover,
+            &:focus{
+                box-shadow: 0px 0px 7px 1px rgba(black, 0.4);
+            }
         }
 
         input.ng-invalid.ng-dirty:not(.not-styled), 
