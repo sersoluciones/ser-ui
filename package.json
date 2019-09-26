@@ -1,5 +1,5 @@
 {
-  "name": "ser-ui",
+  "name": "ser-ui-ng1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sersoluciones/ser-ui.git"
+    "url": "git+https://github.com/sersoluciones/ser-ui-ng1.git"
   },
   "author": "SER Soluciones SAS",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sersoluciones/ser-ui/issues"
+    "url": "https://github.com/sersoluciones/ser-ui-ng1/issues"
   },
-  "homepage": "https://github.com/sersoluciones/ser-ui#readme",
+  "homepage": "https://github.com/sersoluciones/ser-ui-ng1#readme",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
