@@ -1,20 +1,19 @@
 ﻿@import 'mixins.scss';
-@import 'colors.scss';
 
 body{
     font-size: 14px;
-    color: rgba(0,0,0,0.87);
+    color: rgba(black,0.87);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    text-shadow: rgba(0, 0, 0, 0.15) 0 0 1px;
-    margin: 0;
+    text-shadow: rgba(black, 0.15) 0 0 1px;
+    margin: 8px 0;
     font-weight: normal;
 }
 
 .info {
-    color: $blue-primary;
-    fill: $blue-primary;
+    color: var(--blue-primary);
+    fill: var(--blue-primary);
 }
 
 .success {
@@ -33,6 +32,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .warning {
-    color: $orange-font;
-    fill: $orange-font;
+    color: var(--orange-font);
+    fill: var(--orange-font);
+}
+
+.scheme-dark{
+  color: rgba(white,0.87);
+
+  h1, h2, h3, h4, h5, h6 {
+    text-shadow: rgba(white, 0.15) 0 0 1px;
+  }
 }

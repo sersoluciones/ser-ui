@@ -1,7 +1,4 @@
-﻿@import 'mixins.scss';
-@import 'colors.scss';
-
-ser-autocomplete {
+﻿ser-autocomplete {
     position: relative;
     display: block;
 }
@@ -31,20 +28,20 @@ ser-autocomplete {
     .item {
         padding: 0 4px;
     }
-    
+
     .not-results {
         padding: 8px;
     }
-    
+
     .results {
         .item:hover {
-            background: $grey-hover;
+            background: var(--grey-hover);
         }
     }
 }
 
-.dark-mode {
+.scheme-dark {
     .ser-autocomplete-results{
-        background-color: $dark-grey-6dp;
+        background-color: var(--dark-grey-6dp);
     }
 }

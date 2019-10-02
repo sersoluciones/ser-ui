@@ -1,5 +1,4 @@
 ﻿@import 'mixins.scss';
-@import 'colors.scss';
 
 table {
     border-collapse: collapse;
@@ -12,12 +11,12 @@ table {
 }
 
 table.bordered {
-    border: 1px solid $grey-border;
+    border: 1px solid var(--grey-border);
 }
 
 table.bordered th,
 table.bordered td {
-    border: 1px solid $grey-border;
+    border: 1px solid var(--grey-border);
     border-collapse: collapse;
 }
 

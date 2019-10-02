@@ -1,5 +1,4 @@
 ﻿@import 'mixins.scss';
-@import 'colors.scss';
 
 .dropzone{
     position: relative;
@@ -14,7 +13,7 @@
     .placeholder{
         text-align: center;
     }
-    
+
     .thumbnail{
         background-size: contain;
         background-repeat: no-repeat;
@@ -22,7 +21,7 @@
         min-height: 200px;
         width: 200px;
     }
-    
+
     .clean-file{
         position: absolute;
         bottom: -22px;
@@ -32,7 +31,7 @@
     &.file{
         min-height: 50px;
     }
-    
+
     &.dragover{
         background-color: grey;
         color: white;
@@ -41,7 +40,7 @@
 }
 
 
-.dark-mode {
+.scheme-dark {
     .dropzone {
         border: 2px dashed rgba(white, 0.55);
     }

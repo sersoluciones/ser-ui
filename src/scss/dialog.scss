@@ -1,5 +1,4 @@
 @import 'mixins.scss';
-@import 'colors.scss';
 
 .dialog-message {
     @include row;
@@ -15,7 +14,7 @@
             max-width: 100%;
         }
     }
-    
+
     .text {
         margin-left: 24px;
         text-align: right;
@@ -43,13 +42,13 @@ md-dialog {
     }
 }
 
-.dark-mode {
+.scheme-dark {
     md-dialog {
-        background-color: $dark-grey-0dp;
+        background-color: var(--dark-grey-0dp);
         color: rgba(white, 0.87);
-    
+
         .md-actions, md-dialog-actions {
-            background-color: $dark-grey-0dp;
+            background-color: var(--dark-grey-0dp);
         }
     }
 }

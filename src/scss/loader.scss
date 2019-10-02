@@ -1,5 +1,4 @@
 ﻿@import 'mixins.scss';
-@import 'colors.scss';
 
 .loader-wrapper{
     position: absolute;
@@ -17,23 +16,23 @@
     .logo{
         width: 60px;
     }
-    
+
     .message{
         margin-top: 16px;
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 600;
     }
-    
+
     .message:after {
       overflow: hidden;
       position: absolute;
-      -webkit-animation: ellipsis steps(4,end) 4s infinite;      
+      -webkit-animation: ellipsis steps(4,end) 4s infinite;
       animation: ellipsis steps(4,end) 4s infinite;
       content: "...";
       width: 0px;
     }
-    
+
 }
 
 .loader-wrapper.fixed{
@@ -44,13 +43,13 @@
 
 @keyframes ellipsis {
   to {
-    width: 20px;    
+    width: 20px;
   }
 }
 
 @-webkit-keyframes ellipsis {
   to {
-    width: 20px;   
+    width: 20px;
   }
 }
 
@@ -133,7 +132,7 @@
 .dots:after {
   overflow: hidden;
   position: absolute;
-  -webkit-animation: ellipsis steps(4,end) 4s infinite;      
+  -webkit-animation: ellipsis steps(4,end) 4s infinite;
   animation: ellipsis steps(4,end) 4s infinite;
   content: "...";
   width: 0px;
@@ -181,13 +180,13 @@ loader-backdrop {
     }
 }
 
-.dark-mode {
+.scheme-dark {
     .loader {
-        background-color: rgba($dark-grey-1dp, 0.95);
+        background-color: rgba(var(--dark-grey-1dp), 0.95);
     }
 
     .loader-wrapper{
-        background-color: $dark-grey-0dp;
+        background-color: var(--dark-grey-0dp);
 
         .logo.light{
             display: none;

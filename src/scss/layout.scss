@@ -1,11 +1,11 @@
 ﻿@import 'mixins.scss';
-@import 'colors.scss';
 
 html,
 body{
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 body{
@@ -50,26 +50,6 @@ body{
     }
 }
 
-.align-center{
-    text-align: center;
-}
-
-.align-left{
-    text-align: left;
-}
-
-.align-right {
-    text-align: right;
-}
-
-.align-justify {
-    text-align: justify;
-}
-
-.align-vertical{
-    vertical-align: middle;
-}
-
 .uppercase{
     text-transform: uppercase;
 }
@@ -95,7 +75,7 @@ small {
 .white-box{
     margin: 16px;
     padding: 16px;
-    border-radius: 4px; 
+    border-radius: 4px;
     background: white;
     @include md-shadow;
 }
@@ -111,90 +91,8 @@ small {
     font-size: 13px;
 }
 
-.border-bottom{
-    @include border-b;
-    padding: 4px 0;
-}
-
-.border-top {
-    @include border-t;
-}
-
-.border-right {
-    @include border-r;
-}
-
-.border-left {
-    @include border-l;
-}
-
 .border {
-    border: 1px solid $grey-border;
-}
-
-.border-tlr {
-    @include border-t;
-    @include border-l;
-    @include border-r;
-}
-
-.border-blr {
-    @include border-b;
-    @include border-l;
-    @include border-r;
-}
-
-.border-tbl {
-    @include border-t;
-    @include border-b;
-    @include border-l;
-}
-
-.border-tbr {
-    @include border-t;
-    @include border-b;
-    @include border-r;
-}
-
-.border-lr {
-    @include border-l;
-    @include border-r;
-}
-
-.border-br {
-    @include border-b;
-    @include border-r;
-}
-
-.border-bl {
-    @include border-b;
-    @include border-l;
-}
-
-.border-tr {
-    @include border-t;
-    @include border-r;
-}
-
-.border-tl {
-    @include border-t;
-    @include border-l;
-}
-
-.border-t {
-    @include border-t;
-}
-
-.border-b {
-    @include border-b;
-}
-
-.border-l {
-    @include border-l;
-}
-
-.border-r {
-    @include border-r;
+    border: 1px solid var(--grey-border);
 }
 
 .borderless{
@@ -412,7 +310,7 @@ i.red{
 }
 
 i.blue{
-    color: $light-blue-font;
+    color: var(--light-blue-font);
 }
 
 .bold {
@@ -453,7 +351,7 @@ i.blue{
 }
 
 .divider {
-    border-top: 1px solid $grey-border;
+    border-top: 1px solid var(--grey-border);
     margin: 16px 0;
 }
 
@@ -504,39 +402,39 @@ button.print {
 }
 
 .dp0 {
-    background-color: $light-grey-0dp;
+    background-color: var(--light-grey-0dp);
 }
 
 .dp1 {
-    background-color: $light-grey-1dp;
+    background-color: var(--light-grey-1dp);
 }
 
 .dp2 {
-    background-color: $light-grey-2dp;
+    background-color: var(--light-grey-2dp);
 }
 
-.dark-mode {
+.scheme-dark {
     .dp0 {
-        background-color: $dark-grey-0dp;
+        background-color: var(--dark-grey-0dp);
     }
 
     .dp1 {
-        background-color: $dark-grey-1dp;
+        background-color: var(--dark-grey-1dp);
     }
 
     .dp2 {
-        background-color: $dark-grey-2dp;
+        background-color: var(--dark-grey-2dp);
     }
 
     .dp3 {
-        background-color: $dark-grey-3dp;
+        background-color: var(--dark-grey-3dp);
     }
 
     .dp4 {
-        background-color: $dark-grey-4dp;
+        background-color: var(--dark-grey-4dp);
     }
 
     .dp6 {
-        background-color: $dark-grey-6dp;
+        background-color: var(--dark-grey-6dp);
     }
 }

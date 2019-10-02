@@ -1,19 +1,18 @@
 ﻿@import 'mixins.scss';
-@import 'colors.scss';
 
 .breadcrumb {
     font-size: rem(12);
     margin: 16px;
     padding: 12px;
     border-radius: 4px;
-    background-color: $light-grey-1dp;
+    background-color: var(--light-grey-1dp);
     transition: all 500ms;
 
     em, a {
         font-style: normal;
         padding: 0 10px;
         display: inline-block;
-        white-space: nowrap; 
+        white-space: nowrap;
     }
 
     em {
@@ -29,7 +28,7 @@
         -moz-transition: all linear 0.2s;
         transition: all linear 0.2s;
         color: rgba(black, 0.6);
-        text-decoration: underline; 
+        text-decoration: underline;
     }
 
     ul {
@@ -44,23 +43,23 @@
     li:after {
         display: inline-block;
         content: '/';
-        color: $primary_color;
+        color: var(--primary_color);
     }
 
     li:last-child:after {
-        display: none; 
+        display: none;
     }
 
     li:first-child em,
     li:first-child a {
-        padding-left: 0; 
+        padding-left: 0;
     }
 
     li.active em,
     li.active a {
         text-decoration: none;
         cursor: text;
-        color: rgba(black, 0.4); 
+        color: rgba(black, 0.4);
     }
 }
 
@@ -72,7 +71,7 @@
 
 .dark-mode {
     .breadcrumb {
-        background-color: $dark-grey-1dp;
+        background-color: var(--dark-grey-1dp);
 
         li.active em, li.active a, em {
             color: rgba(white, 0.4);

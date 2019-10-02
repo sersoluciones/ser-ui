@@ -1,36 +1,35 @@
 @import 'mixins.scss';
-@import 'colors.scss';
 
 .chip {
     padding: 4px 12px;
     color: black;
-    background: $grey-hover;
+    background: var(--grey-hover);
     margin-left: 8px;
     border-radius: 6px;
 }
 
 .chip.blue {
-    background: $blue-background;
+    background: var(--blue-background);
 }
 
 .chip.light-blue {
-    background: $light-blue-background;
+    background: var(--light-blue-background);
 }
 
 .chip.green {
-    background: $green-background;
+    background: var(--green-background);
 }
 
 .chip.yellow {
-    background: $yellow-background;
+    background: var(--yellow-background);
 }
 
 .chip.orange {
-    background: $orange-background;
+    background: var(--orange-background);
 }
 
 .chip.red {
-    background: $red-border;
+    background: var(--red-border);
 }
 
 ser-chips {

@@ -1,5 +1,4 @@
 ﻿@import 'mixins.scss';
-@import 'colors.scss';
 
 .preview-file-header {
     position: absolute;
@@ -27,7 +26,7 @@
             max-width: 100%;
         }
     }
-    
+
     object{
         max-width: 100%;
         max-height: 100%;
@@ -35,14 +34,14 @@
         height: 3000px;
         border: 0;
     }
-    
+
     .description {
         background: white;
         padding: 8px;
         font-weight: bold;
         border-radius: 4px;
         margin-top: 8px;
-    }    
+    }
 }
 
 .spzoom-zoom {
@@ -74,6 +73,6 @@
 .spzoom-loader {
     width: 24px;
     height: 24px;
-    background: url('../images/spzoom-loader.gif') 50% 50% no-repeat scroll #fff;
+    //background: url('../images/spzoom-loader.gif') 50% 50% no-repeat scroll #fff;
     border: 1px solid #ccc;
 }

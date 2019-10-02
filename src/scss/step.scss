@@ -1,5 +1,4 @@
 ﻿@import 'mixins.scss';
-@import 'colors.scss';
 
 .steps {
     list-style: none;
@@ -52,7 +51,7 @@
         color: #21771b;
     }
 
-    > li.is-complete:before, 
+    > li.is-complete:before,
     > li.is-complete:after {
         color: #21771b;
         background-color: #87ec6d;

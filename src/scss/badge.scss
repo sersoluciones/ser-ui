@@ -1,5 +1,4 @@
 @import 'mixins.scss';
-@import 'colors.scss';
 
 .bdg {
     position: absolute;
@@ -16,23 +15,23 @@
 }
 
 .bdg.light-blue {
-    background: $light-blue-background;
+  background: var(--light-blue-background);
 }
 
 .bdg.blue {
-    background: $blue-background;
+    background: var(--blue-background);
 }
 
 .bdg.green {
-    background: $green-background;
+    background: var(--green-background);
 }
 
 .bdg.yellow {
-    background: $yellow-background;
+    background: var(--yellow-background);
 }
 
 .bdg.orange {
-    background: $orange-border;
+    background: var(--orange-border);
     color: white;
 }
 

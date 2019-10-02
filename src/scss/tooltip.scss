@@ -1,5 +1,4 @@
 ﻿@import 'mixins.scss';
-@import 'colors.scss';
 
 [tooltipster-menu]{
     cursor: pointer;
@@ -256,7 +255,7 @@
 
 /**
  * DEFAULT STYLE OF THE SIDETIP PLUGIN
- * 
+ *
  * All styles are "namespaced" with .tooltipster-sidetip to prevent
  * conflicts between plugins.
  */
