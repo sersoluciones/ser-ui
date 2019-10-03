@@ -5,6 +5,10 @@ $browser-context: 14; // Default
   @return #{$pixels/$context}rem;
 }
 
+@function toRGB ($color) {
+    @return red($color) + ", " + green($color) + ", " + blue($color);
+}
+
 @mixin row{
     box-sizing: border-box;
     display: -webkit-box;
