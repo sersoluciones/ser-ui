@@ -18383,7 +18383,7 @@ angular.module('SER.selector', []).directive('selector', [
                                 '</li>' +
                             '</ul>' +
                             '<input ng-model="search" class="selector-search-input not-styled" placeholder="{{!hasValue() ? placeholder : \'\'}}"' +
-                                'ng-disabled="disabled" ng-readonly="disableSearch" ng-required="required && !hasValue()" autocomplete="off">' +
+                                'ng-disabled="disabled" ng-readonly="disableSearch" autocomplete="off">' +
                             '<div ng-if="!multiple" class="selector-helper selector-global-helper" ng-click="!disabled && removeButton && unset()">' +
                                 '<span class="selector-icon"></span>' +
                             '</div>' +
