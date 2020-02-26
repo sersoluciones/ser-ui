@@ -56,7 +56,7 @@ angular.module('SER.search').directive('ngEnter', function () {
     };
 });
 
-angular.module('SER.search').directive('crudSearch', function search() {
+angular.module('SER.search').directive('finishTyping', function search() {
 
     return {
         restrict: 'A',
