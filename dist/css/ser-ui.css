@@ -45,26 +45,20 @@ ser-autocomplete {
   min-height: 14px;
   text-align: center;
   font-size: 14px; }
-
-.bdg.light-blue {
-  background: var(--light-blue-background); }
-
-.bdg.blue {
-  background: var(--blue-background); }
-
-.bdg.green {
-  background: var(--green-background); }
-
-.bdg.yellow {
-  background: var(--yellow-background); }
-
-.bdg.orange {
-  background: var(--orange-border);
-  color: white; }
-
-.bdg.red {
-  background: red;
-  color: white; }
+  .bdg.light-blue {
+    background: var(--light-blue-background); }
+  .bdg.blue {
+    background: var(--blue-background); }
+  .bdg.green {
+    background: var(--green-background); }
+  .bdg.yellow {
+    background: var(--yellow-background); }
+  .bdg.orange {
+    background: var(--orange-border);
+    color: white; }
+  .bdg.red {
+    background: red;
+    color: white; }
 
 .breadcrumb {
   font-size: 0.85714rem;
@@ -290,24 +284,18 @@ ser-autocomplete {
   background: var(--grey-hover);
   margin-left: 8px;
   border-radius: 6px; }
-
-.chip.blue {
-  background: var(--blue-background); }
-
-.chip.light-blue {
-  background: var(--light-blue-background); }
-
-.chip.green {
-  background: var(--green-background); }
-
-.chip.yellow {
-  background: var(--yellow-background); }
-
-.chip.orange {
-  background: var(--orange-background); }
-
-.chip.red {
-  background: var(--red-border); }
+  .chip.blue {
+    background: var(--blue-background); }
+  .chip.light-blue {
+    background: var(--light-blue-background); }
+  .chip.green {
+    background: var(--green-background); }
+  .chip.yellow {
+    background: var(--yellow-background); }
+  .chip.orange {
+    background: var(--orange-background); }
+  .chip.red {
+    background: var(--red-border); }
 
 ser-chips {
   box-sizing: border-box;
@@ -3964,6 +3952,14 @@ md-icon {
 
 .scheme-dark .dp6 {
   background-color: var(--dark-grey-6dp); }
+
+.leaflet-container .leaflet-control-mouseposition {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 5px #bbb;
+  padding: 0 5px;
+  margin: 0;
+  color: #333;
+  font: 11px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif; }
 
 .loader-wrapper {
   position: absolute;

@@ -10,7 +10,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var wrap = require("gulp-wrap");
 var gzip = require("gulp-gzip");
 
-gulp.task('deploy', ['deploy-css', 'deploy-js']);
+gulp.task('default', ['deploy-css', 'deploy-js']);
 
 gulp.task('deploy-js', function () {
     gulp.src([
@@ -40,6 +40,9 @@ gulp.task('deploy-js', function () {
         'src/js/barcode.js',
         'src/js/diff.js',
         'src/js/map.js',
+        'src/js/leaflet-mouseposition.js',
+        'src/js/leaflet-fullscreen.js',
+        'src/js/google-maps-functions.js',
         'src/js/sentry.js',
         'src/js/main.js'
     ])

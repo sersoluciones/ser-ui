@@ -28,6 +28,18 @@ angular.module('SER.map').service('mapFunctions', [
             checkLatLog: function (Latitude, Longitude) {
                 return (-90 <= Latitude) && (90 >= Latitude) && (-180 <= Longitude) && (180 >= Longitude);
             },
+            distancePoints: function (lon1, lat1, lon2, lat2) {
+                var a = Math.sin(((lat2 - lat1) * Math.PI / 180) / 2) * Math.sin(((lat2 - lat1) * Math.PI / 180) / 2) + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(((lon2 - lon1) * Math.PI / 180) / 2) * Math.sin(((lon2 - lon1) * Math.PI / 180) / 2);
+                return (6371 * (2 * Math.asin(Math.sqrt(a)))) * 1.60934;
+            },
+            cutPrecision: function (obj, e) {
+                if ('number' === typeof obj[0]) {
+                    for (var i = 0; i < obj.length; i++) obj[i] = Math.round(obj[i] * e) / e;
+                } else {
+                    var arr = obj.features || obj.geometries || obj.coordinates || obj;
+                    for (var i = 0; i < arr.length; i++) this.cutPrecision(arr[i], e);
+                }
+            },
             middlePoint: function (options) {
 
                 var optionsSrc = {
@@ -69,61 +81,7 @@ angular.module('SER.map').service('mapFunctions', [
                     return false;
                 }
         
-            },
-            distancePoints: function (lon1, lat1, lon2, lat2) {
-                // Distancia en Kilometros
-        
-                var R = 6371;
-                //var dLat = ((lat2-lat1) * Math.PI/180);
-                //var dLon = ((lon2-lon1) * Math.PI/180);
-                var a = Math.sin(((lat2 - lat1) * Math.PI / 180) / 2) * Math.sin(((lat2 - lat1) * Math.PI / 180) / 2) + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(((lon2 - lon1) * Math.PI / 180) / 2) * Math.sin(((lon2 - lon1) * Math.PI / 180) / 2);
-                var c = 2 * Math.asin(Math.sqrt(a));
-                var d = R * c;
-                return (d * 1.60934);
-            },
-            cutPrecision: function (obj, e) {
-                if ('number' === typeof obj[0]) {
-                    for (var i = 0; i < obj.length; i++) obj[i] = Math.round(obj[i] * e) / e;
-                } else {
-                    var arr = obj.features || obj.geometries || obj.coordinates || obj;
-                    for (var i = 0; i < arr.length; i++) this.cutPrecision(arr[i], e);
-                }
-            },
-            processPoints: function (geometry, callback, thisArg) {
-                if (geometry instanceof google.maps.LatLng) {
-                    callback.call(thisArg, geometry);
-                } else if (geometry instanceof google.maps.Data.Point) {
-                    callback.call(thisArg, geometry.get());
-                } else {
-                    geometry.getArray().forEach(function(g) {
-                        this.processPoints(g, callback, thisArg);
-                    });
-                }
-            },
-            generateGeoJSONCircle: function (center, radius, numSides) {
-
-                var points = [], degreeStep = 360 / numSides;
-            
-                for(var i = 0; i < numSides; i++){
-                   var gpos = google.maps.geometry.spherical.computeOffset(center, radius, degreeStep * i);
-                   points.push([gpos.lng(), gpos.lat()]);
-                }
-            
-                points.push(points[0]);
-            
-                return {
-                   type: 'Polygon',
-                   coordinates: [ points ]
-                };
-            
-            },
-            getLatLngLiteralArray: function (array) {
-                var latLngArray = [];
-                for(var index = 0; index < array.length; index++){
-                    latLngArray.push({lat: array[index][1], lng: array[index][0]});
-                }
-                return latLngArray;
-             }
+            }
         }
 
     }

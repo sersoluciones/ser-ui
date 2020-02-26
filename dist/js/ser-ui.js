@@ -18816,6 +18816,18 @@ angular.module('SER.map').service('mapFunctions', [
             checkLatLog: function (Latitude, Longitude) {
                 return (-90 <= Latitude) && (90 >= Latitude) && (-180 <= Longitude) && (180 >= Longitude);
             },
+            distancePoints: function (lon1, lat1, lon2, lat2) {
+                var a = Math.sin(((lat2 - lat1) * Math.PI / 180) / 2) * Math.sin(((lat2 - lat1) * Math.PI / 180) / 2) + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(((lon2 - lon1) * Math.PI / 180) / 2) * Math.sin(((lon2 - lon1) * Math.PI / 180) / 2);
+                return (6371 * (2 * Math.asin(Math.sqrt(a)))) * 1.60934;
+            },
+            cutPrecision: function (obj, e) {
+                if ('number' === typeof obj[0]) {
+                    for (var i = 0; i < obj.length; i++) obj[i] = Math.round(obj[i] * e) / e;
+                } else {
+                    var arr = obj.features || obj.geometries || obj.coordinates || obj;
+                    for (var i = 0; i < arr.length; i++) this.cutPrecision(arr[i], e);
+                }
+            },
             middlePoint: function (options) {
 
                 var optionsSrc = {
@@ -18857,26 +18869,271 @@ angular.module('SER.map').service('mapFunctions', [
                     return false;
                 }
         
-            },
-            distancePoints: function (lon1, lat1, lon2, lat2) {
-                // Distancia en Kilometros
-        
-                var R = 6371;
-                //var dLat = ((lat2-lat1) * Math.PI/180);
-                //var dLon = ((lon2-lon1) * Math.PI/180);
-                var a = Math.sin(((lat2 - lat1) * Math.PI / 180) / 2) * Math.sin(((lat2 - lat1) * Math.PI / 180) / 2) + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(((lon2 - lon1) * Math.PI / 180) / 2) * Math.sin(((lon2 - lon1) * Math.PI / 180) / 2);
-                var c = 2 * Math.asin(Math.sqrt(a));
-                var d = R * c;
-                return (d * 1.60934);
-            },
-            cutPrecision: function (obj, e) {
-                if ('number' === typeof obj[0]) {
-                    for (var i = 0; i < obj.length; i++) obj[i] = Math.round(obj[i] * e) / e;
+            }
+        }
+
+    }
+]);
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['leaflet'], factory);
+    } else if (typeof module !== 'undefined') {
+        // Node/CommonJS
+        module.exports = factory(require('leaflet'));
+    } else {
+        // Browser globals
+        if (typeof window.L === 'undefined') {
+            throw new Error('Leaflet must be loaded first');
+        }
+        factory(window.L);
+    }
+}(function (L) {
+
+    L.Control.MousePosition = L.Control.extend({
+
+        _pos: null,
+    
+        options: {
+            position: 'bottomright',
+            separator: ' | ',
+            emptyString: '',
+            lngFirst: false,
+            numDigits: 5,
+            lngFormatter: undefined,
+            latFormatter: undefined,
+            formatter: undefined,
+            prefix: "",
+            wrapLng: true,
+        },
+    
+        onAdd: function (map) {
+            this._container = L.DomUtil.create('div', 'leaflet-control-mouseposition');
+            L.DomEvent.disableClickPropagation(this._container);
+            map.on('mousemove', this._onMouseMove, this);
+            this._container.innerHTML = this.options.emptyString;
+            return this._container;
+        },
+    
+        onRemove: function (map) {
+            map.off('mousemove', this._onMouseMove)
+        },
+    
+        getLatLng: function() {
+            return this._pos;
+        },
+    
+        _onMouseMove: function (e) {
+            this._pos = e.latlng.wrap();
+            var lngValue = this.options.wrapLng ? e.latlng.wrap().lng : e.latlng.lng;
+            var latValue = e.latlng.lat;
+            var lng;
+            var lat;
+            var value;
+            var prefixAndValue;
+    
+            if (this.options.formatter) {
+                prefixAndValue = this.options.formatter(lngValue, latValue);
+            } else {
+                lng = this.options.lngFormatter ? this.options.lngFormatter(lngValue) : L.Util.formatNum(lngValue, this.options.numDigits);
+                lat = this.options.latFormatter ? this.options.latFormatter(latValue) : L.Util.formatNum(latValue, this.options.numDigits);
+                value = this.options.lngFirst ? lng + this.options.separator + lat : lat + this.options.separator + lng;
+                prefixAndValue = this.options.prefix + ' ' + value;
+            }
+    
+            this._container.innerHTML = prefixAndValue;
+        }
+    
+    });
+    
+    L.Map.mergeOptions({
+        positionControl: false
+    });
+    
+    L.Map.addInitHook(function () {
+        if (this.options.positionControl) {
+            this.positionControl = new L.Control.MousePosition();
+            this.addControl(this.positionControl);
+        }
+    });
+    
+    L.control.mousePosition = function (options) {
+        return new L.Control.MousePosition(options);
+    };
+}));
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD
+        define(['leaflet'], factory);
+    } else if (typeof module !== 'undefined') {
+        // Node/CommonJS
+        module.exports = factory(require('leaflet'));
+    } else {
+        // Browser globals
+        if (typeof window.L === 'undefined') {
+            throw new Error('Leaflet must be loaded first');
+        }
+        factory(window.L);
+    }
+}(function (L) {
+    
+    L.Control.Fullscreen = L.Control.extend({
+        options: {
+            position: 'topleft',
+            title: {
+                'false': 'View Fullscreen',
+                'true': 'Exit Fullscreen'
+            }
+        },
+
+        onAdd: function (map) {
+            var container = L.DomUtil.create('div', 'leaflet-control-fullscreen leaflet-bar leaflet-control');
+
+            this.link = L.DomUtil.create('a', 'leaflet-control-fullscreen-button leaflet-bar-part', container);
+            this.link.href = '#';
+
+            this._map = map;
+            this._map.on('fullscreenchange', this._toggleTitle, this);
+            this._toggleTitle();
+
+            L.DomEvent.on(this.link, 'click', this._click, this);
+
+            return container;
+        },
+
+        _click: function (e) {
+            L.DomEvent.stopPropagation(e);
+            L.DomEvent.preventDefault(e);
+            this._map.toggleFullscreen(this.options);
+        },
+
+        _toggleTitle: function() {
+            this.link.title = this.options.title[this._map.isFullscreen()];
+        }
+    });
+
+    L.Map.include({
+        isFullscreen: function () {
+            return this._isFullscreen || false;
+        },
+
+        toggleFullscreen: function (options) {
+            var container = this.getContainer();
+            if (this.isFullscreen()) {
+                if (options && options.pseudoFullscreen) {
+                    this._disablePseudoFullscreen(container);
+                } else if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
                 } else {
-                    var arr = obj.features || obj.geometries || obj.coordinates || obj;
-                    for (var i = 0; i < arr.length; i++) this.cutPrecision(arr[i], e);
+                    this._disablePseudoFullscreen(container);
                 }
-            },
+            } else {
+                if (options && options.pseudoFullscreen) {
+                    this._enablePseudoFullscreen(container);
+                } else if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.mozRequestFullScreen) {
+                    container.mozRequestFullScreen();
+                } else if (container.webkitRequestFullscreen) {
+                    container.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                } else if (container.msRequestFullscreen) {
+                    container.msRequestFullscreen();
+                } else {
+                    this._enablePseudoFullscreen(container);
+                }
+            }
+
+        },
+
+        _enablePseudoFullscreen: function (container) {
+            L.DomUtil.addClass(container, 'leaflet-pseudo-fullscreen');
+            this._setFullscreen(true);
+            this.fire('fullscreenchange');
+        },
+
+        _disablePseudoFullscreen: function (container) {
+            L.DomUtil.removeClass(container, 'leaflet-pseudo-fullscreen');
+            this._setFullscreen(false);
+            this.fire('fullscreenchange');
+        },
+
+        _setFullscreen: function(fullscreen) {
+            this._isFullscreen = fullscreen;
+            var container = this.getContainer();
+            if (fullscreen) {
+                L.DomUtil.addClass(container, 'leaflet-fullscreen-on');
+            } else {
+                L.DomUtil.removeClass(container, 'leaflet-fullscreen-on');
+            }
+            this.invalidateSize();
+        },
+
+        _onFullscreenChange: function (e) {
+            var fullscreenElement =
+                document.fullscreenElement ||
+                document.mozFullScreenElement ||
+                document.webkitFullscreenElement ||
+                document.msFullscreenElement;
+
+            if (fullscreenElement === this.getContainer() && !this._isFullscreen) {
+                this._setFullscreen(true);
+                this.fire('fullscreenchange');
+            } else if (fullscreenElement !== this.getContainer() && this._isFullscreen) {
+                this._setFullscreen(false);
+                this.fire('fullscreenchange');
+            }
+        }
+    });
+
+    L.Map.mergeOptions({
+        fullscreenControl: false
+    });
+
+    L.Map.addInitHook(function () {
+        if (this.options.fullscreenControl) {
+            this.fullscreenControl = new L.Control.Fullscreen(this.options.fullscreenControl);
+            this.addControl(this.fullscreenControl);
+        }
+
+        var fullscreenchange;
+
+        if ('onfullscreenchange' in document) {
+            fullscreenchange = 'fullscreenchange';
+        } else if ('onmozfullscreenchange' in document) {
+            fullscreenchange = 'mozfullscreenchange';
+        } else if ('onwebkitfullscreenchange' in document) {
+            fullscreenchange = 'webkitfullscreenchange';
+        } else if ('onmsfullscreenchange' in document) {
+            fullscreenchange = 'MSFullscreenChange';
+        }
+
+        if (fullscreenchange) {
+            var onFullscreenChange = L.bind(this._onFullscreenChange, this);
+
+            this.whenReady(function () {
+                L.DomEvent.on(document, fullscreenchange, onFullscreenChange);
+            });
+
+            this.on('unload', function () {
+                L.DomEvent.off(document, fullscreenchange, onFullscreenChange);
+            });
+        }
+    });
+
+    L.control.fullscreen = function (options) {
+        return new L.Control.Fullscreen(options);
+    };
+}));
+angular.module('SER.map').service('googleMapsFunctions', [
+    function () {
+
+        return {
             processPoints: function (geometry, callback, thisArg) {
                 if (geometry instanceof google.maps.LatLng) {
                     callback.call(thisArg, geometry);
@@ -18911,7 +19168,7 @@ angular.module('SER.map').service('mapFunctions', [
                     latLngArray.push({lat: array[index][1], lng: array[index][0]});
                 }
                 return latLngArray;
-             }
+            }
         }
 
     }
