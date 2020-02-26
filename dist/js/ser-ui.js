@@ -17846,6 +17846,32 @@ angular.module('SER.search').directive('ngEnter', function () {
     };
 });
 
+angular.module('SER.search').directive('crudSearch', function search() {
+
+    return {
+        restrict: 'A',
+        require: ['ngModel'],
+        scope: {
+            fetch: '='
+        },
+        link: function (scope, elem) {
+
+            var inputChangedPromise;
+
+            elem.on('keyup', function () {
+                if (inputChangedPromise) {
+                    clearTimeout(inputChangedPromise);
+                }
+                inputChangedPromise = setTimeout(function () {
+                    scope.fetch();
+                }, 500);
+            });
+
+        }
+    };
+  
+});
+
 //angular.module('SER.search').directive('highlightText', ['$interpolate', '$parse', function search($interpolate, $parse) {
 //    return {
 //        terminal: true,
