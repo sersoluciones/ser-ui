@@ -62,7 +62,7 @@ angular.module('SER.search').directive('finishTyping', function search() {
         restrict: 'A',
         require: ['ngModel'],
         scope: {
-            fetch: '='
+            finishTyping: '='
         },
         link: function (scope, elem) {
 
