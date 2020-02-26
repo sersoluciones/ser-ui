@@ -17846,13 +17846,13 @@ angular.module('SER.search').directive('ngEnter', function () {
     };
 });
 
-angular.module('SER.search').directive('crudSearch', function search() {
+angular.module('SER.search').directive('finishTyping', function search() {
 
     return {
         restrict: 'A',
         require: ['ngModel'],
         scope: {
-            fetch: '='
+            finishTyping: '='
         },
         link: function (scope, elem) {
 
@@ -17863,7 +17863,7 @@ angular.module('SER.search').directive('crudSearch', function search() {
                     clearTimeout(inputChangedPromise);
                 }
                 inputChangedPromise = setTimeout(function () {
-                    scope.fetch();
+                    scope.finishTyping();
                 }, 500);
             });
 
