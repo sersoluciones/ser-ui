@@ -73,7 +73,7 @@ angular.module('SER.search').directive('finishTyping', function search() {
                     clearTimeout(inputChangedPromise);
                 }
                 inputChangedPromise = setTimeout(function () {
-                    scope.fetch();
+                    scope.finishTyping();
                 }, 500);
             });
 
