@@ -18900,6 +18900,19 @@ angular.module('SER.map').service('mapFunctions', [
 
     }
 ]);
+angular.module('SER.list', []);
+
+angular.module('SER.list').directive('whenScrolled', function() {
+    return function(scope, elm, attr) {
+        var raw = elm[0];
+
+        elm.bind('scroll', function() {
+            if (raw.scrollTop + raw.offsetHeight >= raw.scrollHeight) {
+                scope.$apply(attr.whenScrolled);
+            }
+        });
+    };
+});
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD
@@ -19228,6 +19241,7 @@ angular.module('SER', [
     'SER.tooltipster',
     'SER.datepicker',
     'SER.chip',
+    'SER.list',
     'SER.loader',
     'SER.filters',
     'SER.barcode',

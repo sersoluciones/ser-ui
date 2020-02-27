@@ -40,6 +40,7 @@ gulp.task('deploy-js', function () {
         'src/js/barcode.js',
         'src/js/diff.js',
         'src/js/map.js',
+        'src/js/list.js',
         'src/js/leaflet-mouseposition.js',
         'src/js/leaflet-fullscreen.js',
         'src/js/google-maps-functions.js',

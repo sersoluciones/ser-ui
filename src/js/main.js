@@ -8,6 +8,7 @@
     'SER.tooltipster',
     'SER.datepicker',
     'SER.chip',
+    'SER.list',
     'SER.loader',
     'SER.filters',
     'SER.barcode',
