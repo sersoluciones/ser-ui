@@ -246,5 +246,19 @@ function getLogo(name, version, url) {
 }
 
 if (bowser) {
-    $('body').addClass('bos-' + bowser.osname.replace(/ /g,"") + ' bosv-' + bowser.osversion.replace(/ /g, "") + ' bn-' + bowser.name.replace(/ /g,"") + ' bv-' + bowser.version.replace(/ /g,""));
+    if (bowser.osname) {
+        $('body').addClass('bos-' + bowser.osname.replace(/ /g,""));
+    }
+
+    if (typeof bowser.osversion === 'string') {
+        $('body').addClass('bosv-' + bowser.osversion.replace(/ /g, ""));
+    }
+
+    if (typeof bowser.name === 'string') {
+        $('body').addClass('bn-' + bowser.name.replace(/ /g, ""));
+    }
+
+    if (typeof bowser.version === 'string') {
+        $('body').addClass('bv-' + bowser.version.replace(/ /g, ""));
+    }
 }
